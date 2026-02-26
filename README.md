@@ -16,8 +16,9 @@ These latents are then fed into strong generative foundations, such as **Versati
 
 ---
 
-## 2. Example Results (Image Generation)
+## 2. Example Results (Image Generation & Retrieval)
 
+### 2.1 Reconstructed Images
 Below are some successful examples of Ground Truth (GT) stimulus images shown to the subjects, alongside the corresponding Generative outputs derived purely from decoding their non-invasive MEG Brain signals.
 
 *(Note: The generated images rely on decoded brain features averaged across 12 trials, intelligently combining shapes from AutoKL and semantics from CLIP).*
@@ -27,6 +28,19 @@ Below are some successful examples of Ground Truth (GT) stimulus images shown to
 | <img src="results/image_generation/P1_all_refactored/bear_20n_40s_avg12_gt.png" width="300"/> | <img src="results/image_generation/P1_all_refactored/bear_20n_40s_avg12_gen.png" width="300"/> |
 | <img src="results/image_generation/P1_all_refactored/limousine_15s_07s_avg12_gt.png" width="300"/> | <img src="results/image_generation/P1_all_refactored/limousine_15s_07s_avg12_gen.png" width="300"/> |
 | <img src="results/image_generation/P1_all_refactored/eggbeater_15s_27s_avg12_gt.png" width="300"/> | <img src="results/image_generation/P1_all_refactored/eggbeater_15s_27s_avg12_gen.png" width="300"/> |
+
+### 2.2 Semantic Retrieval Performance
+To quantitatively evaluate how well the decoded signals capture the semantics and structures of the seen objects, we conduct **Top-5 Retrieval Classification** tasks. We measure this under two stringencies:
+* **Small-Set Retrieval (200-way)**: Classifying the MEG predictions against a pool of 200 distinct visual categories. Here, we average the MEG predictions of 12 identical-category trials to amplify the signal-to-noise ratio.
+* **Large-Set Retrieval (2400-way)**: A much harder, single-trial classification. We attempt to retrieve the exact image out of a pool of 2,400 distinct images, using only a single 1-second MEG trial. 
+
+| Feature Space | Small-Set Top-5 Acc. (200-way) | Large-Set Top-5 Acc. (2400-way) |
+| :--- | :---: | :---: |
+| **CLIP Vision** (Visual Semantics) | **46.75%** | **4.52%** |
+| **CLIP Text** (Conceptual Semantics) | **20.75%** | **1.38%** |
+| **AutoKL** (Spatial Topology) | **6.62%**  | **0.56%** |
+
+*Note: Random chance for Small-Set Top-5 is 2.5%, and for Large-Set Top-5 is 0.20%. Across all 4 participants, our `BrainModule` significantly outperforms random chance, proving that visual semantics can be faithfully identified from MEG dynamics.*
 
 ---
 
