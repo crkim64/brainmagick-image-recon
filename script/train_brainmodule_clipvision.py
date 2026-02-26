@@ -23,29 +23,35 @@ except ImportError:
 # 1. 설정 (Configuration)
 # ==========================================
 CONFIG = {
-    'batch_size': 4,      
+    'batch_size': 128,      
     'lr': 3e-4,             
     'epochs': 100,
     'patience': 10,         
-    'device': 'cuda:0' if torch.cuda.is_available() else 'cpu',
+    'device': 'cuda',
     'subjects': ['P1', 'P2', 'P3', 'P4'],
     
     # 데이터 스펙
     'in_channels': 271,     
-    'time_len': 281,        
+    'time_len': 180,        
     
-    # Output Dimensions
-    'out_dim_clip': 768,       # CLIP Global Vector (Mean)
-    'out_dim_mse': 257 * 768,  # CLIP Full Sequence (Flattened)
+    # [수정] Vision Feature Dimensions
+    # Target: CLS Token (768) for both Heads
     
-    'lambda_loss': 0,     
+    # 1. CLIP Head (Semantic): CLS Token (768)
+    'out_dim_clip': 768,    
+    
+    # 2. MSE Head (Reconstruction): CLS Token (768)
+    'out_dim_mse': 768, 
+    
+    'lambda_loss': 0.5,     
+    'target_normalization': True, # [NEW] User Request
     
     # 경로 설정
     'data_dir': './data',   
     'train_meg_path': './data/train/combined_train.h5',
-    'train_feat_path': './data/extracted_features/combined_clip_vision_train.h5', 
+    'train_feat_path': './data/extracted_features/combined_clip_vision_train_cls.h5', 
     'pos_dir': './data/sensor_positions',
-    'ckpt_dir': './checkpoints/clip_vision', 
+    'ckpt_dir': './checkpoints/clip_vision_hybrid', 
     'log_dir': './logs'                 
 }
 
@@ -116,7 +122,7 @@ class BatchObject:
 # 4. 데이터셋 정의 (Full CLIP Vision Sequence + Stats)
 # ==========================================
 class FullCLIPDataset(Dataset):
-    def __init__(self, meg_path, feat_path, pos_dir, subjects, stats_save_path):
+    def __init__(self, meg_path, feat_path, pos_dir, subjects, stats_save_path, target_normalization=True):
         self.meg_path = meg_path
         self.feat_path = feat_path
         self.subjects = subjects
@@ -135,31 +141,37 @@ class FullCLIPDataset(Dataset):
             else:
                 pos = np.random.rand(271, 2)
             self.subject_positions_list.append(torch.tensor(pos, dtype=torch.float32))
-            
-        # [추가] Generation을 위한 CLIP 통계값 계산 및 저장
-        # 학습에는 사용하지 않지만, 추후 Inference 시 필요함
+        
+        self.target_normalization = target_normalization
+
+        # [수정] MSE Normalization
+        # Load Mean/Std and apply (target - mean) / std
         if not os.path.exists(stats_save_path):
-            log_print("📊 Calculating Full CLIP Vision Mean/Std (for generation)...")
+            log_print("📊 Calculating Full CLIP Vision Mean/Std...")
             self._compute_and_save_stats(feat_path, stats_save_path)
         else:
-            log_print(f"📊 CLIP stats found at {stats_save_path}")
-        
+            log_print(f"📊 Full CLIP Vision stats found at {stats_save_path}")
+
+        stats = np.load(stats_save_path)
+        self.target_mean = torch.from_numpy(stats['mean']).float()
+        self.target_std = torch.from_numpy(stats['std']).float()
+
         self.meg_hf = None
         self.feat_hf = None
 
     def _compute_and_save_stats(self, feat_path, save_path, chunk_size=1000):
         with h5py.File(feat_path, 'r') as f:
-            dset = f['features'] # (N, 257, 768)
+            dset = f['features'] 
             n_samples = dset.shape[0]
-            out_dim = 257 * 768 
+            out_dim = 768 
             
             sum_features = np.zeros(out_dim, dtype=np.float64)
             sum_sq_features = np.zeros(out_dim, dtype=np.float64)
             
             for i in tqdm(range(0, n_samples, chunk_size), desc="Stats"):
                 chunk = dset[i : i + chunk_size] 
-                # Flatten -> (B, 197376)
-                chunk = chunk.reshape(chunk.shape[0], -1) 
+                # [Optimized] Already extracted CLS token in preprocessed file
+                # Shape: (B, 768)
                 
                 sum_features += np.sum(chunk, axis=0)
                 sum_sq_features += np.sum(chunk ** 2, axis=0)
@@ -168,7 +180,6 @@ class FullCLIPDataset(Dataset):
             variance = (sum_sq_features / n_samples) - (mean ** 2)
             std = np.sqrt(np.maximum(variance, 1e-6))
             
-            # 저장
             np.savez(save_path, mean=mean, std=std)
 
     def __len__(self):
@@ -186,15 +197,20 @@ class FullCLIPDataset(Dataset):
         ex_id = self.exemplars[idx]
         unique_img_id = cat_id * 100 + ex_id
         
-        # Load Raw CLIP Feature (257, 768)
+        # [Optimized] CLIP Vision Feature Load (CLS Token)
+        # Shape: (768,)
         feat_raw = self.feat_hf['features'][idx]
         
-        # 1. MSE Target: Flattened (Raw Value)
-        target_mse = torch.from_numpy(feat_raw.reshape(-1)).float()
+        target_raw = torch.from_numpy(feat_raw).float()
         
-        # 2. CLIP Target: Global Mean Vector (Raw Value)
-        feat_mean = np.mean(feat_raw, axis=0)
-        target_clip = torch.from_numpy(feat_mean).float()
+        if self.target_normalization:
+            target_raw = (target_raw - self.target_mean) / (self.target_std + 1e-6)
+        
+        # 1. MSE Target: Raw
+        target_mse = target_raw
+        
+        # 2. CLIP Target: Raw
+        target_clip = target_raw.clone()
         
         meg_tensor = torch.from_numpy(meg_data).float()
         subj_tensor = torch.tensor(subj_idx, dtype=torch.long)
@@ -226,12 +242,18 @@ class BrainDecodingLoss(nn.Module):
         soft_labels = labels_mask / labels_mask.sum(dim=1, keepdim=True)
         
         log_probs = F.log_softmax(logits, dim=1)
+        # Standard Cross Entropy Loss
         loss = -torch.sum(soft_labels * log_probs, dim=1).mean()
+        
         return loss
 
     def forward(self, pred_clip, pred_mse, target_clip, target_mse, img_ids):
+        # MSE: Full Sequence Raw Values
         l_mse = self.mse(pred_mse, target_mse)
+        
+        # CLIP: Global Vector SoftCLIP
         l_clip = self.soft_clip_loss(pred_clip, target_clip, img_ids)
+        
         loss = self.lambda_loss * l_clip + (1 - self.lambda_loss) * l_mse
         return loss, l_clip, l_mse
 
@@ -246,13 +268,14 @@ def main():
     log_print("="*50)
     
     # Dataset Load
-    stats_path = os.path.join(CONFIG['ckpt_dir'], 'clip_stats.npz')
+    stats_path = os.path.join(CONFIG['ckpt_dir'], 'clip_vision_stats.npz')
     full_dataset = FullCLIPDataset(
         meg_path=CONFIG['train_meg_path'],
         feat_path=CONFIG['train_feat_path'],
         pos_dir=CONFIG['pos_dir'],
         subjects=CONFIG['subjects'],
-        stats_save_path=stats_path # 저장만 함
+        stats_save_path=stats_path, # 저장만 함
+        target_normalization=CONFIG['target_normalization']
     )
     
     train_size = int(0.8 * len(full_dataset))
@@ -262,57 +285,37 @@ def main():
     
     log_print(f"📊 Dataset Split -> Train: {len(train_dataset)}, Val: {len(val_dataset)}")
 
+    # DataLoader
     train_loader = DataLoader(train_dataset, batch_size=CONFIG['batch_size'], shuffle=True, num_workers=4, pin_memory=True, drop_last=True)
     val_loader = DataLoader(val_dataset, batch_size=CONFIG['batch_size'], shuffle=False, num_workers=4, pin_memory=True, drop_last=True)
 
     # Model Init
+    # Model Init
     model = BrainModule(
-        in_channels={'meg': CONFIG['in_channels']}, 
-        out_dim_clip=CONFIG['out_dim_clip'], # 768
-        out_dim_mse=CONFIG['out_dim_mse'],   # 197376
-        time_len=CONFIG['time_len'], 
-        hidden={'meg': 320}, 
+        n_time_steps=CONFIG['time_len'],
+        in_channels=CONFIG['in_channels'],
         n_subjects=len(CONFIG['subjects']),
-        merger=True, merger_pos_dim=512, merger_channels=270,
-        rewrite=True, glu=1, glu_context=1,
-        skip=True, batch_norm=True, post_skip=True, scale=1.0, 
-        subject_layers=True
+        target_dim=CONFIG['out_dim_clip'], # 768
+        use_clip_head=True,
+        use_mse_head=True,
     ).to(CONFIG['device'])
-
-    if model.merger:
-        model.merger.position_getter.get_positions = lambda batch: batch.meg_positions.to(CONFIG['device'])
-        model.merger.position_getter.is_invalid = lambda pos: torch.zeros(pos.shape[0], pos.shape[1], dtype=torch.bool).to(pos.device)
 
     # Optimizer & Loss
     optimizer = optim.Adam(model.parameters(), lr=CONFIG['lr'], betas=(0.9, 0.999))
     criterion = BrainDecodingLoss(lambda_loss=CONFIG['lambda_loss']).to(CONFIG['device'])
-    scaler = torch.cuda.amp.GradScaler() # Fix: Add GradScaler
-
+    
     best_model_path = os.path.join(CONFIG['ckpt_dir'], 'best_model.pth')
     early_stopping = EarlyStopping(patience=CONFIG['patience'], path=best_model_path)
 
-    # Start from scratch
-    start_epoch = 0
-    # resume_path = os.path.join(CONFIG['ckpt_dir'], 'epoch_20.pth')
-    # if os.path.exists(resume_path):
-    #     log_print(f"🔄 Resuming from checkpoint: {resume_path}")
-    #     checkpoint = torch.load(resume_path, map_location=CONFIG['device'])
-    #     model.load_state_dict(checkpoint)
-    #     start_epoch = 20
-    #     log_print(f"🔄 Resumed at Epoch {start_epoch}")
+    log_print("🚀 Start Training Loop (Standard FP32)...")
 
-    log_print("🚀 Start Training Loop...")
-
-    for epoch in range(start_epoch, CONFIG['epochs']):
+    for epoch in range(CONFIG['epochs']):
         start_time = time.time()
         
         model.train()
         train_loss, train_clip, train_mse = 0, 0, 0
         
         pbar = tqdm(train_loader, desc=f"Epoch {epoch+1}/{CONFIG['epochs']} [Train]")
-        
-        accumulation_steps = 8 # 32 / 4 = 8
-        optimizer.zero_grad()
         
         for i, (meg, t_clip, t_mse, subj_idx, pos, img_ids) in enumerate(pbar):
             meg = meg.to(CONFIG['device'])
@@ -321,26 +324,23 @@ def main():
             subj_idx = subj_idx.to(CONFIG['device'])
             img_ids = img_ids.to(CONFIG['device'])
             
-            batch = BatchObject(meg, subj_idx, pos)
+            # 1. Forward
+            outputs = model(meg, subj_idx)
+            out_clip = outputs['clip']
+            out_mse = outputs['mse']
             
-            with torch.cuda.amp.autocast(enabled=True):
-                out_clip, out_mse = model({'meg': meg}, batch)
-                loss, l_clip, l_mse = criterion(out_clip, out_mse, t_clip, t_mse, img_ids)
-                loss = loss / accumulation_steps
+            # 2. Loss
+            loss, l_clip, l_mse = criterion(out_clip, out_mse, t_clip, t_mse, img_ids)
             
-            # loss.backward()
-            scaler.scale(loss).backward() # Fix: Use scaler
+            # 3. Backward
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
             
-            if (i + 1) % accumulation_steps == 0:
-                scaler.step(optimizer) # Fix: Use scaler step
-                scaler.update()        # Fix: Update scaler
-                optimizer.zero_grad()
-                torch.cuda.empty_cache()
-            
-            train_loss += loss.item() * accumulation_steps
+            train_loss += loss.item()
             train_clip += l_clip.item()
             train_mse += l_mse.item()
-            pbar.set_postfix({'L': f"{loss.item() * accumulation_steps:.20f}", 'CLIP': f"{l_clip.item():.4f}", 'MSE': f"{l_mse.item():.20f}"})
+            pbar.set_postfix({'L': f"{loss.item():.6f}", 'CLIP': f"{l_clip.item():.4f}", 'MSE': f"{l_mse.item():.6f}"})
         
         avg_train_loss = train_loss / len(train_loader)
 
@@ -355,9 +355,10 @@ def main():
                 subj_idx = subj_idx.to(CONFIG['device'])
                 img_ids = img_ids.to(CONFIG['device'])
                 
-                batch = BatchObject(meg, subj_idx, pos)
+                outputs = model(meg, subj_idx)
+                out_clip = outputs['clip']
+                out_mse = outputs['mse']
                 
-                out_clip, out_mse = model({'meg': meg}, batch)
                 loss, l_clip, l_mse = criterion(out_clip, out_mse, t_clip, t_mse, img_ids)
                 
                 val_loss += loss.item()
@@ -371,8 +372,8 @@ def main():
         elapsed = time.time() - start_time
         
         log_msg = (f"Epoch {epoch+1} | Time: {elapsed:.1f}s | "
-                   f"Train Loss: {avg_train_loss:.20f} | "
-                   f"Val Loss: {avg_val_loss:.20f} (CLIP: {avg_val_clip:.6f}, MSE: {avg_val_mse:.20f})")
+                   f"Train Loss: {avg_train_loss:.6f} | "
+                   f"Val Loss: {avg_val_loss:.6f} (CLIP: {avg_val_clip:.4f}, MSE: {avg_val_mse:.6f})")
         log_print(log_msg)
         
         early_stopping(avg_val_loss, model)

@@ -31,11 +31,12 @@ versatile_diffusion/pretrained/
 *.onnx
 
 # Logs & Outputs
-logs/
-results/
+# logs/
+# results/
+images_meg/
 versatile_diffusion/log/
-*.log
-*.png
+# *.log
+# *.png
 *.jpg
 *.jpeg
 *.gif

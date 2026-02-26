@@ -446,3 +446,814 @@
 2026-02-07 20:04:07 - 🚀 Start Training Loop...
 2026-02-07 20:09:49 - Epoch 23 | Time: 1355.8s | Train Loss: 0.7196704615 | Val Loss: nan (CLIP: nan, MSE: nan)
 2026-02-07 20:09:50 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_final/best_model.pth
+2026-02-11 01:56:07 - 
+==================================================
+2026-02-11 01:56:07 - 🚀 Initializing Training (Target: AutoKL only)
+2026-02-11 01:56:07 -    CLIP Dim: 4096 (Full), MSE Dim: 4096 (Full)
+2026-02-11 01:56:07 - ==================================================
+2026-02-11 01:56:07 - 📊 Calculating AutoKL Mean/Std (for future use)...
+2026-02-11 01:56:11 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-11 01:56:14 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-11 03:24:49 - 
+==================================================
+2026-02-11 03:24:49 - 🚀 Initializing Training (Target: AutoKL only)
+2026-02-11 03:24:49 -    CLIP Dim: 4096 (Full), MSE Dim: 4096 (Full)
+2026-02-11 03:24:49 - ==================================================
+2026-02-11 03:24:49 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-11 03:24:52 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-11 03:28:11 - Epoch 1 | Time: 198.7s | Train Loss: 2.523050 | Val Loss: 2.519030 (CLIP: 4.852536, MSE: 0.185524)
+2026-02-11 03:28:11 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 03:31:30 - Epoch 2 | Time: 199.1s | Train Loss: 2.519295 | Val Loss: 2.519131 (CLIP: 4.852756, MSE: 0.185506)
+2026-02-11 03:31:30 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-11 03:34:48 - Epoch 3 | Time: 198.2s | Train Loss: 2.518811 | Val Loss: 2.517673 (CLIP: 4.849769, MSE: 0.185578)
+2026-02-11 03:34:49 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 03:37:36 - Epoch 4 | Time: 167.3s | Train Loss: 2.512862 | Val Loss: 2.507195 (CLIP: 4.828472, MSE: 0.185918)
+2026-02-11 03:37:36 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 03:40:17 - Epoch 5 | Time: 161.2s | Train Loss: 2.502656 | Val Loss: 2.499292 (CLIP: 4.812944, MSE: 0.185641)
+2026-02-11 03:40:18 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 03:43:01 - Epoch 6 | Time: 163.7s | Train Loss: 2.495852 | Val Loss: 2.496260 (CLIP: 4.806900, MSE: 0.185620)
+2026-02-11 03:43:02 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 03:45:46 - Epoch 7 | Time: 164.3s | Train Loss: 2.489818 | Val Loss: 2.495097 (CLIP: 4.804469, MSE: 0.185726)
+2026-02-11 03:45:46 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 03:48:28 - Epoch 8 | Time: 161.5s | Train Loss: 2.484164 | Val Loss: 2.498560 (CLIP: 4.811275, MSE: 0.185844)
+2026-02-11 03:48:28 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-11 03:51:08 - Epoch 9 | Time: 160.3s | Train Loss: 2.476110 | Val Loss: 2.501584 (CLIP: 4.817307, MSE: 0.185861)
+2026-02-11 03:51:08 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-11 03:53:50 - Epoch 10 | Time: 161.5s | Train Loss: 2.466103 | Val Loss: 2.502497 (CLIP: 4.819109, MSE: 0.185885)
+2026-02-11 03:53:50 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-11 03:53:50 - 💾 Checkpoint saved: ./checkpoints/autokl_hybrid/epoch_10.pth
+2026-02-11 03:56:32 - Epoch 11 | Time: 161.9s | Train Loss: 2.454514 | Val Loss: 2.507025 (CLIP: 4.828008, MSE: 0.186042)
+2026-02-11 03:56:32 - 🛑 EarlyStopping counter: 4 out of 10
+2026-02-11 03:59:12 - Epoch 12 | Time: 160.7s | Train Loss: 2.440190 | Val Loss: 2.512606 (CLIP: 4.839020, MSE: 0.186192)
+2026-02-11 03:59:12 - 🛑 EarlyStopping counter: 5 out of 10
+2026-02-11 04:01:55 - Epoch 13 | Time: 162.1s | Train Loss: 2.423354 | Val Loss: 2.516257 (CLIP: 4.846205, MSE: 0.186309)
+2026-02-11 04:01:55 - 🛑 EarlyStopping counter: 6 out of 10
+2026-02-11 04:04:36 - Epoch 14 | Time: 161.1s | Train Loss: 2.403416 | Val Loss: 2.519789 (CLIP: 4.853418, MSE: 0.186159)
+2026-02-11 04:04:36 - 🛑 EarlyStopping counter: 7 out of 10
+2026-02-11 04:07:17 - Epoch 15 | Time: 161.4s | Train Loss: 2.378101 | Val Loss: 2.527194 (CLIP: 4.867806, MSE: 0.186582)
+2026-02-11 04:07:17 - 🛑 EarlyStopping counter: 8 out of 10
+2026-02-11 04:09:58 - Epoch 16 | Time: 161.2s | Train Loss: 2.347362 | Val Loss: 2.536532 (CLIP: 4.886594, MSE: 0.186470)
+2026-02-11 04:09:58 - 🛑 EarlyStopping counter: 9 out of 10
+2026-02-11 04:12:39 - Epoch 17 | Time: 160.3s | Train Loss: 2.322994 | Val Loss: 2.538755 (CLIP: 4.890918, MSE: 0.186592)
+2026-02-11 04:12:39 - 🛑 EarlyStopping counter: 10 out of 10
+2026-02-11 04:12:39 - 🛑 Early stopping triggered!
+2026-02-11 04:12:39 - 🎉 Training Finished!
+2026-02-11 13:59:30 - 
+==================================================
+2026-02-11 13:59:30 - 🚀 Initializing Training (Target: AutoKL only)
+2026-02-11 13:59:30 -    CLIP Dim: 4096 (Full), MSE Dim: 4096 (Full)
+2026-02-11 13:59:30 - ==================================================
+2026-02-11 13:59:30 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-11 13:59:32 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-11 14:02:59 - Epoch 1 | Time: 207.4s | Train Loss: 0.654199 | Val Loss: 0.652380 (CLIP: 4.852940, MSE: 0.185651)
+2026-02-11 14:02:59 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 14:05:29 - Epoch 2 | Time: 149.1s | Train Loss: 0.652672 | Val Loss: 0.652219 (CLIP: 4.852280, MSE: 0.185546)
+2026-02-11 14:05:29 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 14:07:56 - Epoch 3 | Time: 147.0s | Train Loss: 0.652603 | Val Loss: 0.652158 (CLIP: 4.852239, MSE: 0.185482)
+2026-02-11 14:07:56 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 14:10:27 - Epoch 4 | Time: 150.6s | Train Loss: 0.652533 | Val Loss: 0.652126 (CLIP: 4.852181, MSE: 0.185454)
+2026-02-11 14:10:27 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 14:12:58 - Epoch 5 | Time: 150.9s | Train Loss: 0.652502 | Val Loss: 0.652067 (CLIP: 4.851664, MSE: 0.185445)
+2026-02-11 14:12:58 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 14:15:38 - Epoch 6 | Time: 160.5s | Train Loss: 0.652568 | Val Loss: 0.652234 (CLIP: 4.852697, MSE: 0.185516)
+2026-02-11 14:15:38 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-11 14:18:12 - Epoch 7 | Time: 153.3s | Train Loss: 0.652242 | Val Loss: 0.651733 (CLIP: 4.848238, MSE: 0.185455)
+2026-02-11 14:18:12 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 14:20:42 - Epoch 8 | Time: 149.6s | Train Loss: 0.651399 | Val Loss: 0.650611 (CLIP: 4.837168, MSE: 0.185438)
+2026-02-11 14:20:42 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 14:23:09 - Epoch 9 | Time: 147.6s | Train Loss: 0.649658 | Val Loss: 0.649919 (CLIP: 4.828924, MSE: 0.185585)
+2026-02-11 14:23:10 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 14:25:37 - Epoch 10 | Time: 147.1s | Train Loss: 0.648213 | Val Loss: 0.648920 (CLIP: 4.819259, MSE: 0.185549)
+2026-02-11 14:25:37 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 14:25:37 - 💾 Checkpoint saved: ./checkpoints/autokl_hybrid/epoch_10.pth
+2026-02-11 14:28:05 - Epoch 11 | Time: 148.0s | Train Loss: 0.646940 | Val Loss: 0.649051 (CLIP: 4.821120, MSE: 0.185488)
+2026-02-11 14:28:05 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-11 14:30:33 - Epoch 12 | Time: 148.2s | Train Loss: 0.645481 | Val Loss: 0.648786 (CLIP: 4.818737, MSE: 0.185458)
+2026-02-11 14:30:34 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 14:33:01 - Epoch 13 | Time: 147.8s | Train Loss: 0.643574 | Val Loss: 0.649805 (CLIP: 4.828477, MSE: 0.185508)
+2026-02-11 14:33:01 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-11 14:35:28 - Epoch 14 | Time: 146.5s | Train Loss: 0.641450 | Val Loss: 0.649605 (CLIP: 4.825504, MSE: 0.185616)
+2026-02-11 14:35:28 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-11 14:37:54 - Epoch 15 | Time: 145.8s | Train Loss: 0.639020 | Val Loss: 0.650745 (CLIP: 4.837134, MSE: 0.185590)
+2026-02-11 14:37:54 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-11 14:40:21 - Epoch 16 | Time: 147.3s | Train Loss: 0.636360 | Val Loss: 0.651352 (CLIP: 4.842752, MSE: 0.185641)
+2026-02-11 14:40:21 - 🛑 EarlyStopping counter: 4 out of 10
+2026-02-11 14:42:48 - Epoch 17 | Time: 147.0s | Train Loss: 0.633860 | Val Loss: 0.652125 (CLIP: 4.850406, MSE: 0.185650)
+2026-02-11 14:42:48 - 🛑 EarlyStopping counter: 5 out of 10
+2026-02-11 14:45:14 - Epoch 18 | Time: 146.0s | Train Loss: 0.630610 | Val Loss: 0.653104 (CLIP: 4.858095, MSE: 0.185883)
+2026-02-11 14:45:14 - 🛑 EarlyStopping counter: 6 out of 10
+2026-02-11 14:47:40 - Epoch 19 | Time: 146.5s | Train Loss: 0.627400 | Val Loss: 0.653837 (CLIP: 4.867661, MSE: 0.185635)
+2026-02-11 14:47:40 - 🛑 EarlyStopping counter: 7 out of 10
+2026-02-11 14:50:07 - Epoch 20 | Time: 146.5s | Train Loss: 0.623824 | Val Loss: 0.654257 (CLIP: 4.871000, MSE: 0.185729)
+2026-02-11 14:50:07 - 🛑 EarlyStopping counter: 8 out of 10
+2026-02-11 14:50:07 - 💾 Checkpoint saved: ./checkpoints/autokl_hybrid/epoch_20.pth
+2026-02-11 14:52:35 - Epoch 21 | Time: 147.8s | Train Loss: 0.619637 | Val Loss: 0.655195 (CLIP: 4.879120, MSE: 0.185870)
+2026-02-11 14:52:35 - 🛑 EarlyStopping counter: 9 out of 10
+2026-02-11 14:55:02 - Epoch 22 | Time: 147.5s | Train Loss: 0.615449 | Val Loss: 0.656532 (CLIP: 4.890095, MSE: 0.186136)
+2026-02-11 14:55:02 - 🛑 EarlyStopping counter: 10 out of 10
+2026-02-11 14:55:02 - 🛑 Early stopping triggered!
+2026-02-11 14:55:02 - 🎉 Training Finished!
+2026-02-11 15:38:07 - 
+==================================================
+2026-02-11 15:38:07 - 🚀 Initializing Training (Target: AutoKL only)
+2026-02-11 15:38:07 -    CLIP Dim: 4096 (Full), MSE Dim: 4096 (Full)
+2026-02-11 15:38:07 - ==================================================
+2026-02-11 15:38:07 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-11 15:38:09 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-11 15:40:33 - Epoch 1 | Time: 144.4s | Train Loss: 0.186115 | Val Loss: 0.185570 (CLIP: 4.871600, MSE: 0.185570)
+2026-02-11 15:40:33 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 15:43:02 - Epoch 2 | Time: 148.7s | Train Loss: 0.185900 | Val Loss: 0.185543 (CLIP: 4.871431, MSE: 0.185543)
+2026-02-11 15:43:02 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 15:45:29 - Epoch 3 | Time: 146.7s | Train Loss: 0.185874 | Val Loss: 0.185468 (CLIP: 4.871358, MSE: 0.185468)
+2026-02-11 15:45:29 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 15:47:58 - Epoch 4 | Time: 149.2s | Train Loss: 0.185888 | Val Loss: 0.185541 (CLIP: 4.871356, MSE: 0.185541)
+2026-02-11 15:47:58 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-11 15:50:27 - Epoch 5 | Time: 148.8s | Train Loss: 0.185883 | Val Loss: 0.185445 (CLIP: 4.871322, MSE: 0.185445)
+2026-02-11 15:50:27 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 15:52:58 - Epoch 6 | Time: 150.2s | Train Loss: 0.185864 | Val Loss: 0.185488 (CLIP: 4.871313, MSE: 0.185488)
+2026-02-11 15:52:58 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-11 15:55:25 - Epoch 7 | Time: 147.6s | Train Loss: 0.185860 | Val Loss: 0.185435 (CLIP: 4.871268, MSE: 0.185435)
+2026-02-11 15:55:25 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 15:57:54 - Epoch 8 | Time: 148.6s | Train Loss: 0.185863 | Val Loss: 0.185459 (CLIP: 4.871258, MSE: 0.185459)
+2026-02-11 15:57:54 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-11 16:00:25 - Epoch 9 | Time: 150.8s | Train Loss: 0.185860 | Val Loss: 0.185434 (CLIP: 4.871258, MSE: 0.185434)
+2026-02-11 16:00:25 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 16:02:59 - Epoch 10 | Time: 154.1s | Train Loss: 0.185878 | Val Loss: 0.185479 (CLIP: 4.871247, MSE: 0.185479)
+2026-02-11 16:02:59 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-11 16:02:59 - 💾 Checkpoint saved: ./checkpoints/autokl_hybrid/epoch_10.pth
+2026-02-11 17:16:37 - 
+==================================================
+2026-02-11 17:16:37 - 🚀 Initializing Training (Target: AutoKL only)
+2026-02-11 17:16:37 -    CLIP Dim: 4096 (Full), MSE Dim: 4096 (Full)
+2026-02-11 17:16:37 - ==================================================
+2026-02-11 17:16:37 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-11 17:16:39 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-11 17:19:03 - Epoch 1 | Time: 143.9s | Train Loss: 0.187653 | Val Loss: 0.186069 (CLIP: 4.875504, MSE: 0.186069)
+2026-02-11 17:19:03 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 17:21:27 - Epoch 2 | Time: 143.9s | Train Loss: 0.186153 | Val Loss: 0.185815 (CLIP: 4.875731, MSE: 0.185815)
+2026-02-11 17:21:27 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 17:23:52 - Epoch 3 | Time: 145.0s | Train Loss: 0.186015 | Val Loss: 0.185595 (CLIP: 4.875421, MSE: 0.185595)
+2026-02-11 17:23:52 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 17:26:20 - Epoch 4 | Time: 147.6s | Train Loss: 0.185990 | Val Loss: 0.185566 (CLIP: 4.875316, MSE: 0.185566)
+2026-02-11 17:26:20 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 17:28:45 - Epoch 5 | Time: 144.6s | Train Loss: 0.185952 | Val Loss: 0.185520 (CLIP: 4.874931, MSE: 0.185520)
+2026-02-11 17:28:45 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 17:31:09 - Epoch 6 | Time: 144.0s | Train Loss: 0.186023 | Val Loss: 0.185508 (CLIP: 4.875637, MSE: 0.185508)
+2026-02-11 17:31:09 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 17:33:37 - Epoch 7 | Time: 147.8s | Train Loss: 0.185925 | Val Loss: 0.185510 (CLIP: 4.875343, MSE: 0.185510)
+2026-02-11 17:33:37 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-11 17:36:53 - Epoch 8 | Time: 195.9s | Train Loss: 0.185907 | Val Loss: 0.185494 (CLIP: 4.875523, MSE: 0.185494)
+2026-02-11 17:36:53 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 17:40:14 - Epoch 9 | Time: 200.3s | Train Loss: 0.185880 | Val Loss: 0.185494 (CLIP: 4.875833, MSE: 0.185494)
+2026-02-11 17:40:14 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-11 17:43:30 - Epoch 10 | Time: 196.3s | Train Loss: 0.185891 | Val Loss: 0.185510 (CLIP: 4.876452, MSE: 0.185510)
+2026-02-11 17:43:30 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-11 17:43:30 - 💾 Checkpoint saved: ./checkpoints/autokl_hybrid/epoch_10.pth
+2026-02-11 17:46:44 - Epoch 11 | Time: 194.0s | Train Loss: 0.185878 | Val Loss: 0.185464 (CLIP: 4.876298, MSE: 0.185464)
+2026-02-11 17:46:45 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 17:49:57 - Epoch 12 | Time: 192.2s | Train Loss: 0.185865 | Val Loss: 0.185476 (CLIP: 4.876659, MSE: 0.185476)
+2026-02-11 17:49:57 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-11 17:53:09 - Epoch 13 | Time: 192.2s | Train Loss: 0.185864 | Val Loss: 0.185467 (CLIP: 4.876395, MSE: 0.185467)
+2026-02-11 17:53:09 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-11 17:56:20 - Epoch 14 | Time: 191.4s | Train Loss: 0.185879 | Val Loss: 0.185453 (CLIP: 4.876790, MSE: 0.185453)
+2026-02-11 17:56:21 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 17:59:31 - Epoch 15 | Time: 189.8s | Train Loss: 0.185878 | Val Loss: 0.185448 (CLIP: 4.876665, MSE: 0.185448)
+2026-02-11 17:59:31 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 18:02:39 - Epoch 16 | Time: 188.5s | Train Loss: 0.185859 | Val Loss: 0.185446 (CLIP: 4.876640, MSE: 0.185446)
+2026-02-11 18:02:40 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 18:05:54 - Epoch 17 | Time: 194.6s | Train Loss: 0.185863 | Val Loss: 0.185556 (CLIP: 4.876610, MSE: 0.185556)
+2026-02-11 18:05:54 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-11 18:09:07 - Epoch 18 | Time: 192.6s | Train Loss: 0.185857 | Val Loss: 0.185443 (CLIP: 4.876950, MSE: 0.185443)
+2026-02-11 18:09:07 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 18:12:18 - Epoch 19 | Time: 191.3s | Train Loss: 0.185865 | Val Loss: 0.185457 (CLIP: 4.877187, MSE: 0.185457)
+2026-02-11 18:12:18 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-11 18:15:28 - Epoch 20 | Time: 189.2s | Train Loss: 0.185881 | Val Loss: 0.185657 (CLIP: 4.876467, MSE: 0.185657)
+2026-02-11 18:15:28 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-11 18:15:28 - 💾 Checkpoint saved: ./checkpoints/autokl_hybrid/epoch_20.pth
+2026-02-11 18:18:41 - Epoch 21 | Time: 193.2s | Train Loss: 0.185848 | Val Loss: 0.185480 (CLIP: 4.876926, MSE: 0.185480)
+2026-02-11 18:18:41 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-11 18:21:53 - Epoch 22 | Time: 192.5s | Train Loss: 0.185861 | Val Loss: 0.185445 (CLIP: 4.876461, MSE: 0.185445)
+2026-02-11 18:21:53 - 🛑 EarlyStopping counter: 4 out of 10
+2026-02-11 18:25:03 - Epoch 23 | Time: 189.7s | Train Loss: 0.185835 | Val Loss: 0.185443 (CLIP: 4.876672, MSE: 0.185443)
+2026-02-11 18:25:03 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 18:28:14 - Epoch 24 | Time: 190.8s | Train Loss: 0.185859 | Val Loss: 0.185445 (CLIP: 4.877587, MSE: 0.185445)
+2026-02-11 18:28:14 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-11 18:31:24 - Epoch 25 | Time: 190.2s | Train Loss: 0.185841 | Val Loss: 0.185458 (CLIP: 4.876886, MSE: 0.185458)
+2026-02-11 18:31:24 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-11 18:34:38 - Epoch 26 | Time: 193.3s | Train Loss: 0.185855 | Val Loss: 0.185527 (CLIP: 4.877380, MSE: 0.185527)
+2026-02-11 18:34:38 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-11 18:37:51 - Epoch 27 | Time: 193.0s | Train Loss: 0.185864 | Val Loss: 0.185463 (CLIP: 4.876792, MSE: 0.185463)
+2026-02-11 18:37:51 - 🛑 EarlyStopping counter: 4 out of 10
+2026-02-11 18:41:05 - Epoch 28 | Time: 194.1s | Train Loss: 0.185846 | Val Loss: 0.185566 (CLIP: 4.877092, MSE: 0.185566)
+2026-02-11 18:41:05 - 🛑 EarlyStopping counter: 5 out of 10
+2026-02-11 18:43:30 - Epoch 29 | Time: 145.0s | Train Loss: 0.185851 | Val Loss: 0.185438 (CLIP: 4.877105, MSE: 0.185438)
+2026-02-11 18:43:30 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 18:45:55 - Epoch 30 | Time: 144.6s | Train Loss: 0.185845 | Val Loss: 0.185443 (CLIP: 4.877248, MSE: 0.185443)
+2026-02-11 18:45:55 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-11 18:45:55 - 💾 Checkpoint saved: ./checkpoints/autokl_hybrid/epoch_30.pth
+2026-02-11 18:48:19 - Epoch 31 | Time: 143.9s | Train Loss: 0.185842 | Val Loss: 0.185438 (CLIP: 4.877077, MSE: 0.185438)
+2026-02-11 18:48:19 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-11 18:50:42 - Epoch 32 | Time: 142.9s | Train Loss: 0.185846 | Val Loss: 0.185461 (CLIP: 4.877114, MSE: 0.185461)
+2026-02-11 18:50:42 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-11 18:53:04 - Epoch 33 | Time: 142.2s | Train Loss: 0.185841 | Val Loss: 0.185434 (CLIP: 4.876891, MSE: 0.185434)
+2026-02-11 18:53:04 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-11 18:55:27 - Epoch 34 | Time: 143.2s | Train Loss: 0.185844 | Val Loss: 0.185557 (CLIP: 4.877231, MSE: 0.185557)
+2026-02-11 18:55:27 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-11 18:57:51 - Epoch 35 | Time: 143.6s | Train Loss: 0.185828 | Val Loss: 0.185448 (CLIP: 4.877029, MSE: 0.185448)
+2026-02-11 18:57:51 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-11 19:00:14 - Epoch 36 | Time: 143.1s | Train Loss: 0.185829 | Val Loss: 0.185457 (CLIP: 4.876765, MSE: 0.185457)
+2026-02-11 19:00:14 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-11 19:02:37 - Epoch 37 | Time: 143.0s | Train Loss: 0.185845 | Val Loss: 0.185496 (CLIP: 4.877261, MSE: 0.185496)
+2026-02-11 19:02:37 - 🛑 EarlyStopping counter: 4 out of 10
+2026-02-11 19:05:01 - Epoch 38 | Time: 144.0s | Train Loss: 0.185823 | Val Loss: 0.185489 (CLIP: 4.877165, MSE: 0.185489)
+2026-02-11 19:05:01 - 🛑 EarlyStopping counter: 5 out of 10
+2026-02-11 19:07:25 - Epoch 39 | Time: 143.6s | Train Loss: 0.185829 | Val Loss: 0.185438 (CLIP: 4.876701, MSE: 0.185438)
+2026-02-11 19:07:25 - 🛑 EarlyStopping counter: 6 out of 10
+2026-02-11 19:09:49 - Epoch 40 | Time: 144.7s | Train Loss: 0.185832 | Val Loss: 0.185559 (CLIP: 4.877193, MSE: 0.185559)
+2026-02-11 19:09:49 - 🛑 EarlyStopping counter: 7 out of 10
+2026-02-11 19:09:49 - 💾 Checkpoint saved: ./checkpoints/autokl_hybrid/epoch_40.pth
+2026-02-11 19:12:14 - Epoch 41 | Time: 144.1s | Train Loss: 0.185829 | Val Loss: 0.185442 (CLIP: 4.877150, MSE: 0.185442)
+2026-02-11 19:12:14 - 🛑 EarlyStopping counter: 8 out of 10
+2026-02-11 19:14:35 - Epoch 42 | Time: 141.0s | Train Loss: 0.185831 | Val Loss: 0.185448 (CLIP: 4.876916, MSE: 0.185448)
+2026-02-11 19:14:35 - 🛑 EarlyStopping counter: 9 out of 10
+2026-02-11 19:16:58 - Epoch 43 | Time: 143.2s | Train Loss: 0.185816 | Val Loss: 0.185440 (CLIP: 4.876984, MSE: 0.185440)
+2026-02-11 19:16:58 - 🛑 EarlyStopping counter: 10 out of 10
+2026-02-11 19:16:58 - 🛑 Early stopping triggered!
+2026-02-11 19:16:58 - 🎉 Training Finished!
+2026-02-12 01:44:35 - 
+==================================================
+2026-02-12 01:44:35 - 🚀 Initializing Training (Target: AutoKL only)
+2026-02-12 01:44:35 -    CLIP Dim: 4096 (Full), MSE Dim: 4096 (Full)
+2026-02-12 01:44:35 - ==================================================
+2026-02-12 01:44:35 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-12 01:44:37 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-12 01:47:04 - Epoch 1 | Time: 146.8s | Train Loss: 0.188063 | Val Loss: 0.185960 (CLIP: 4.872917, MSE: 0.185960)
+2026-02-12 01:47:04 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 01:49:30 - Epoch 2 | Time: 146.0s | Train Loss: 0.186253 | Val Loss: 0.185666 (CLIP: 4.872319, MSE: 0.185666)
+2026-02-12 01:49:30 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 01:51:56 - Epoch 3 | Time: 146.1s | Train Loss: 0.186082 | Val Loss: 0.185590 (CLIP: 4.872477, MSE: 0.185590)
+2026-02-12 01:51:56 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 01:54:25 - Epoch 4 | Time: 148.2s | Train Loss: 0.186004 | Val Loss: 0.185784 (CLIP: 4.872691, MSE: 0.185784)
+2026-02-12 01:54:25 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-12 01:56:53 - Epoch 5 | Time: 148.1s | Train Loss: 0.185976 | Val Loss: 0.185606 (CLIP: 4.872658, MSE: 0.185606)
+2026-02-12 01:56:53 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-12 01:59:23 - Epoch 6 | Time: 149.7s | Train Loss: 0.185956 | Val Loss: 0.185807 (CLIP: 4.872638, MSE: 0.185807)
+2026-02-12 01:59:23 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-12 02:02:04 - Epoch 7 | Time: 161.1s | Train Loss: 0.186011 | Val Loss: 0.185497 (CLIP: 4.872828, MSE: 0.185497)
+2026-02-12 02:02:04 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 02:04:35 - Epoch 8 | Time: 151.0s | Train Loss: 0.185895 | Val Loss: 0.185498 (CLIP: 4.873101, MSE: 0.185498)
+2026-02-12 02:04:35 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-12 02:07:03 - Epoch 9 | Time: 148.0s | Train Loss: 0.185897 | Val Loss: 0.185488 (CLIP: 4.873053, MSE: 0.185488)
+2026-02-12 02:07:03 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 02:09:30 - Epoch 10 | Time: 146.8s | Train Loss: 0.185881 | Val Loss: 0.185478 (CLIP: 4.873501, MSE: 0.185478)
+2026-02-12 02:09:30 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 02:09:30 - 💾 Checkpoint saved: ./checkpoints/autokl_hybrid/epoch_10.pth
+2026-02-12 02:11:56 - Epoch 11 | Time: 145.6s | Train Loss: 0.185877 | Val Loss: 0.185557 (CLIP: 4.873538, MSE: 0.185557)
+2026-02-12 02:11:56 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-12 02:14:20 - Epoch 12 | Time: 143.6s | Train Loss: 0.185876 | Val Loss: 0.185479 (CLIP: 4.873525, MSE: 0.185479)
+2026-02-12 02:14:20 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-12 02:16:45 - Epoch 13 | Time: 144.9s | Train Loss: 0.185880 | Val Loss: 0.185488 (CLIP: 4.873688, MSE: 0.185488)
+2026-02-12 02:16:45 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-12 02:19:11 - Epoch 14 | Time: 146.1s | Train Loss: 0.185868 | Val Loss: 0.185452 (CLIP: 4.873506, MSE: 0.185452)
+2026-02-12 02:19:11 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 02:21:39 - Epoch 15 | Time: 148.2s | Train Loss: 0.185858 | Val Loss: 0.185480 (CLIP: 4.873793, MSE: 0.185480)
+2026-02-12 02:21:39 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-12 02:24:05 - Epoch 16 | Time: 145.4s | Train Loss: 0.185872 | Val Loss: 0.185554 (CLIP: 4.873691, MSE: 0.185554)
+2026-02-12 02:24:05 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-12 02:26:32 - Epoch 17 | Time: 147.0s | Train Loss: 0.185862 | Val Loss: 0.185472 (CLIP: 4.873605, MSE: 0.185472)
+2026-02-12 02:26:32 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-12 02:28:57 - Epoch 18 | Time: 145.8s | Train Loss: 0.185868 | Val Loss: 0.185465 (CLIP: 4.873338, MSE: 0.185465)
+2026-02-12 02:28:57 - 🛑 EarlyStopping counter: 4 out of 10
+2026-02-12 02:31:22 - Epoch 19 | Time: 144.7s | Train Loss: 0.185861 | Val Loss: 0.185443 (CLIP: 4.873229, MSE: 0.185443)
+2026-02-12 02:31:22 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 02:33:50 - Epoch 20 | Time: 147.6s | Train Loss: 0.185858 | Val Loss: 0.185457 (CLIP: 4.873057, MSE: 0.185457)
+2026-02-12 02:33:50 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-12 02:33:50 - 💾 Checkpoint saved: ./checkpoints/autokl_hybrid/epoch_20.pth
+2026-02-12 02:36:22 - Epoch 21 | Time: 151.5s | Train Loss: 0.185857 | Val Loss: 0.185474 (CLIP: 4.873159, MSE: 0.185474)
+2026-02-12 02:36:22 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-12 02:38:57 - Epoch 22 | Time: 155.6s | Train Loss: 0.185845 | Val Loss: 0.185468 (CLIP: 4.872945, MSE: 0.185468)
+2026-02-12 02:38:57 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-12 02:40:40 - 
+==================================================
+2026-02-12 02:40:40 - 🚀 Initializing Training (Target: AutoKL only)
+2026-02-12 02:40:40 -    CLIP Dim: 4096 (Full), MSE Dim: 4096 (Full)
+2026-02-12 02:40:40 - ==================================================
+2026-02-12 02:40:40 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-12 02:40:42 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-12 02:43:11 - Epoch 1 | Time: 149.0s | Train Loss: 0.187970 | Val Loss: 0.185874 (CLIP: 4.879519, MSE: 0.185874)
+2026-02-12 02:43:11 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 02:45:38 - Epoch 2 | Time: 146.7s | Train Loss: 0.186190 | Val Loss: 0.185683 (CLIP: 4.878379, MSE: 0.185683)
+2026-02-12 02:45:38 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 02:48:16 - Epoch 3 | Time: 157.5s | Train Loss: 0.186062 | Val Loss: 0.185605 (CLIP: 4.878191, MSE: 0.185605)
+2026-02-12 02:48:16 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 02:50:48 - Epoch 4 | Time: 152.1s | Train Loss: 0.186084 | Val Loss: 0.185563 (CLIP: 4.878184, MSE: 0.185563)
+2026-02-12 02:50:48 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 02:53:16 - Epoch 5 | Time: 148.0s | Train Loss: 0.185962 | Val Loss: 0.185546 (CLIP: 4.878492, MSE: 0.185546)
+2026-02-12 02:53:17 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 02:55:45 - Epoch 6 | Time: 148.5s | Train Loss: 0.185937 | Val Loss: 0.185519 (CLIP: 4.878219, MSE: 0.185519)
+2026-02-12 02:55:45 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 02:58:14 - Epoch 7 | Time: 148.8s | Train Loss: 0.185920 | Val Loss: 0.185501 (CLIP: 4.877978, MSE: 0.185501)
+2026-02-12 02:58:14 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 03:00:42 - Epoch 8 | Time: 147.9s | Train Loss: 0.185894 | Val Loss: 0.185495 (CLIP: 4.877817, MSE: 0.185495)
+2026-02-12 03:00:43 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 03:03:12 - Epoch 9 | Time: 149.0s | Train Loss: 0.185907 | Val Loss: 0.185478 (CLIP: 4.877767, MSE: 0.185478)
+2026-02-12 03:03:12 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 03:05:41 - Epoch 10 | Time: 149.1s | Train Loss: 0.185890 | Val Loss: 0.185478 (CLIP: 4.877819, MSE: 0.185478)
+2026-02-12 03:05:41 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 03:05:41 - 💾 Checkpoint saved: ./checkpoints/autokl_hybrid/epoch_10.pth
+2026-02-12 03:08:11 - Epoch 11 | Time: 150.0s | Train Loss: 0.185861 | Val Loss: 0.185464 (CLIP: 4.877912, MSE: 0.185464)
+2026-02-12 03:08:12 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 03:10:43 - Epoch 12 | Time: 151.0s | Train Loss: 0.185875 | Val Loss: 0.185486 (CLIP: 4.877805, MSE: 0.185486)
+2026-02-12 03:10:43 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-12 03:13:14 - Epoch 13 | Time: 151.7s | Train Loss: 0.185876 | Val Loss: 0.185496 (CLIP: 4.877364, MSE: 0.185496)
+2026-02-12 03:13:14 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-12 03:15:44 - Epoch 14 | Time: 149.5s | Train Loss: 0.185874 | Val Loss: 0.185453 (CLIP: 4.877382, MSE: 0.185453)
+2026-02-12 03:15:44 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 03:18:12 - Epoch 15 | Time: 148.2s | Train Loss: 0.185862 | Val Loss: 0.185479 (CLIP: 4.877383, MSE: 0.185479)
+2026-02-12 03:18:12 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-12 03:20:41 - Epoch 16 | Time: 149.0s | Train Loss: 0.185871 | Val Loss: 0.185519 (CLIP: 4.877262, MSE: 0.185519)
+2026-02-12 03:20:41 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-12 03:23:11 - Epoch 17 | Time: 150.1s | Train Loss: 0.185857 | Val Loss: 0.185505 (CLIP: 4.876431, MSE: 0.185505)
+2026-02-12 03:23:11 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-12 03:25:42 - Epoch 18 | Time: 150.6s | Train Loss: 0.185858 | Val Loss: 0.185444 (CLIP: 4.876511, MSE: 0.185444)
+2026-02-12 03:25:42 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 03:28:10 - Epoch 19 | Time: 147.6s | Train Loss: 0.185859 | Val Loss: 0.185460 (CLIP: 4.876312, MSE: 0.185460)
+2026-02-12 03:28:10 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-12 03:30:37 - Epoch 20 | Time: 146.9s | Train Loss: 0.185843 | Val Loss: 0.185454 (CLIP: 4.875994, MSE: 0.185454)
+2026-02-12 03:30:37 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-12 03:30:37 - 💾 Checkpoint saved: ./checkpoints/autokl_hybrid/epoch_20.pth
+2026-02-12 03:33:06 - Epoch 21 | Time: 149.3s | Train Loss: 0.185846 | Val Loss: 0.185499 (CLIP: 4.875768, MSE: 0.185499)
+2026-02-12 03:33:06 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-12 03:35:35 - Epoch 22 | Time: 148.5s | Train Loss: 0.185844 | Val Loss: 0.185481 (CLIP: 4.875230, MSE: 0.185481)
+2026-02-12 03:35:35 - 🛑 EarlyStopping counter: 4 out of 10
+2026-02-12 03:38:04 - Epoch 23 | Time: 148.8s | Train Loss: 0.185831 | Val Loss: 0.185443 (CLIP: 4.874927, MSE: 0.185443)
+2026-02-12 03:38:04 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 03:40:31 - Epoch 24 | Time: 146.9s | Train Loss: 0.185848 | Val Loss: 0.185438 (CLIP: 4.874522, MSE: 0.185438)
+2026-02-12 03:40:31 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 03:43:02 - Epoch 25 | Time: 150.6s | Train Loss: 0.185834 | Val Loss: 0.185454 (CLIP: 4.874503, MSE: 0.185454)
+2026-02-12 03:43:02 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-12 03:43:10 - 
+==================================================
+2026-02-12 03:43:10 - 🚀 Initializing Training (Target: AutoKL only)
+2026-02-12 03:43:10 -    CLIP Dim: 4096 (Full), MSE Dim: 4096 (Full)
+2026-02-12 03:43:10 - ==================================================
+2026-02-12 03:43:10 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-12 03:43:11 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-12 03:44:39 - 
+==================================================
+2026-02-12 03:44:39 - 🚀 Initializing Training (Target: AutoKL only)
+2026-02-12 03:44:39 -    CLIP Dim: 4096 (Full), MSE Dim: 4096 (Full)
+2026-02-12 03:44:39 - ==================================================
+2026-02-12 03:44:39 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-12 03:44:41 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-12 03:47:13 - Epoch 1 | Time: 152.0s | Train Loss: 0.421463 | Val Loss: 0.419308 (CLIP: 4.852034, MSE: 0.186007)
+2026-02-12 03:47:13 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 03:49:44 - Epoch 2 | Time: 151.5s | Train Loss: 0.419586 | Val Loss: 0.419144 (CLIP: 4.852003, MSE: 0.185835)
+2026-02-12 03:49:45 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 03:52:17 - Epoch 3 | Time: 152.4s | Train Loss: 0.419375 | Val Loss: 0.418979 (CLIP: 4.852115, MSE: 0.185656)
+2026-02-12 03:52:17 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 03:54:50 - Epoch 4 | Time: 152.7s | Train Loss: 0.419304 | Val Loss: 0.418904 (CLIP: 4.852417, MSE: 0.185561)
+2026-02-12 03:54:50 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 03:57:24 - Epoch 5 | Time: 153.3s | Train Loss: 0.419247 | Val Loss: 0.418930 (CLIP: 4.852643, MSE: 0.185576)
+2026-02-12 03:57:24 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-12 03:59:54 - Epoch 6 | Time: 150.1s | Train Loss: 0.419102 | Val Loss: 0.418945 (CLIP: 4.853461, MSE: 0.185550)
+2026-02-12 03:59:54 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-12 04:02:28 - Epoch 7 | Time: 153.9s | Train Loss: 0.418907 | Val Loss: 0.419129 (CLIP: 4.857761, MSE: 0.185517)
+2026-02-12 04:02:28 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-12 04:05:06 - Epoch 8 | Time: 158.4s | Train Loss: 0.418636 | Val Loss: 0.419401 (CLIP: 4.862865, MSE: 0.185534)
+2026-02-12 04:05:06 - 🛑 EarlyStopping counter: 4 out of 10
+2026-02-12 04:07:36 - Epoch 9 | Time: 149.7s | Train Loss: 0.418352 | Val Loss: 0.419616 (CLIP: 4.867703, MSE: 0.185507)
+2026-02-12 04:07:36 - 🛑 EarlyStopping counter: 5 out of 10
+2026-02-12 04:10:06 - Epoch 10 | Time: 150.1s | Train Loss: 0.418115 | Val Loss: 0.419706 (CLIP: 4.868707, MSE: 0.185548)
+2026-02-12 04:10:06 - 🛑 EarlyStopping counter: 6 out of 10
+2026-02-12 04:10:06 - 💾 Checkpoint saved: ./checkpoints/autokl_hybrid/epoch_10.pth
+2026-02-12 04:12:42 - Epoch 11 | Time: 155.8s | Train Loss: 0.417863 | Val Loss: 0.420138 (CLIP: 4.877566, MSE: 0.185536)
+2026-02-12 04:12:42 - 🛑 EarlyStopping counter: 7 out of 10
+2026-02-12 04:15:13 - Epoch 12 | Time: 151.1s | Train Loss: 0.417647 | Val Loss: 0.420082 (CLIP: 4.877602, MSE: 0.185475)
+2026-02-12 04:15:13 - 🛑 EarlyStopping counter: 8 out of 10
+2026-02-12 04:17:42 - Epoch 13 | Time: 149.4s | Train Loss: 0.417286 | Val Loss: 0.420440 (CLIP: 4.884374, MSE: 0.185496)
+2026-02-12 04:17:42 - 🛑 EarlyStopping counter: 9 out of 10
+2026-02-12 04:20:13 - Epoch 14 | Time: 150.2s | Train Loss: 0.416912 | Val Loss: 0.420685 (CLIP: 4.889338, MSE: 0.185493)
+2026-02-12 04:20:13 - 🛑 EarlyStopping counter: 10 out of 10
+2026-02-12 04:20:13 - 🛑 Early stopping triggered!
+2026-02-12 04:20:13 - 🎉 Training Finished!
+2026-02-12 19:01:05 - 
+==================================================
+2026-02-12 19:01:05 - 🚀 Initializing Training (Target: AutoKL only)
+2026-02-12 19:01:05 -    CLIP Dim: 4096 (Full), MSE Dim: 4096 (Full)
+2026-02-12 19:01:05 - ==================================================
+2026-02-12 19:01:05 - 📊 AutoKL stats found at ./checkpoints/autokl_hybrid/autokl_stats.npz
+2026-02-12 19:01:05 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-12 19:01:07 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-12 19:03:40 - Epoch 1 | Time: 153.1s | Train Loss: 2.932358 | Val Loss: 2.925656 (CLIP: 4.852233, MSE: 0.999079)
+2026-02-12 19:03:40 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 19:06:10 - Epoch 2 | Time: 150.1s | Train Loss: 2.927133 | Val Loss: 2.925919 (CLIP: 4.852932, MSE: 0.998905)
+2026-02-12 19:06:10 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-12 19:08:41 - Epoch 3 | Time: 151.1s | Train Loss: 2.926438 | Val Loss: 2.925504 (CLIP: 4.852527, MSE: 0.998482)
+2026-02-12 19:08:42 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 19:11:14 - Epoch 4 | Time: 152.0s | Train Loss: 2.926073 | Val Loss: 2.925541 (CLIP: 4.852606, MSE: 0.998476)
+2026-02-12 19:11:14 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-12 19:13:45 - Epoch 5 | Time: 151.5s | Train Loss: 2.925983 | Val Loss: 2.925337 (CLIP: 4.852260, MSE: 0.998414)
+2026-02-12 19:13:45 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-12 19:16:14 - Epoch 6 | Time: 149.1s | Train Loss: 2.925363 | Val Loss: 2.926142 (CLIP: 4.853923, MSE: 0.998361)
+2026-02-12 19:16:14 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-12 19:18:45 - Epoch 7 | Time: 150.2s | Train Loss: 2.924566 | Val Loss: 2.926966 (CLIP: 4.855584, MSE: 0.998347)
+2026-02-12 19:18:45 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-12 19:21:15 - Epoch 8 | Time: 150.4s | Train Loss: 2.923353 | Val Loss: 2.927959 (CLIP: 4.857581, MSE: 0.998337)
+2026-02-12 19:21:15 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-12 19:23:48 - Epoch 9 | Time: 153.1s | Train Loss: 2.922651 | Val Loss: 2.928747 (CLIP: 4.859159, MSE: 0.998334)
+2026-02-12 19:23:48 - 🛑 EarlyStopping counter: 4 out of 10
+2026-02-12 19:26:21 - Epoch 10 | Time: 152.4s | Train Loss: 2.921697 | Val Loss: 2.929881 (CLIP: 4.861353, MSE: 0.998409)
+2026-02-12 19:26:21 - 🛑 EarlyStopping counter: 5 out of 10
+2026-02-12 19:26:21 - 💾 Checkpoint saved: ./checkpoints/autokl_hybrid/epoch_10.pth
+2026-02-12 19:28:49 - Epoch 11 | Time: 148.6s | Train Loss: 2.920766 | Val Loss: 2.931290 (CLIP: 4.864170, MSE: 0.998409)
+2026-02-12 19:28:49 - 🛑 EarlyStopping counter: 6 out of 10
+2026-02-12 19:31:16 - Epoch 12 | Time: 147.1s | Train Loss: 2.920086 | Val Loss: 2.932566 (CLIP: 4.866584, MSE: 0.998548)
+2026-02-12 19:31:16 - 🛑 EarlyStopping counter: 7 out of 10
+2026-02-12 19:33:40 - Epoch 13 | Time: 144.0s | Train Loss: 2.919193 | Val Loss: 2.933656 (CLIP: 4.868932, MSE: 0.998380)
+2026-02-12 19:33:40 - 🛑 EarlyStopping counter: 8 out of 10
+2026-02-12 19:36:06 - Epoch 14 | Time: 145.5s | Train Loss: 2.918204 | Val Loss: 2.934883 (CLIP: 4.871328, MSE: 0.998438)
+2026-02-12 19:36:06 - 🛑 EarlyStopping counter: 9 out of 10
+2026-02-12 19:38:31 - Epoch 15 | Time: 145.5s | Train Loss: 2.917264 | Val Loss: 2.934675 (CLIP: 4.871028, MSE: 0.998322)
+2026-02-12 19:38:31 - 🛑 EarlyStopping counter: 10 out of 10
+2026-02-12 19:38:31 - 🛑 Early stopping triggered!
+2026-02-12 19:38:31 - 🎉 Training Finished!
+2026-02-13 01:42:12 - 
+==================================================
+2026-02-13 01:42:12 - 🚀 Initializing Training (Target: AutoKL only)
+2026-02-13 01:42:12 -    CLIP Dim: 4096 (Full), MSE Dim: 4096 (Full)
+2026-02-13 01:42:12 - ==================================================
+2026-02-13 01:42:12 - 📊 Calculating AutoKL Mean/Std...
+2026-02-13 01:42:15 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-13 01:42:18 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-13 01:46:15 - Epoch 1 | Time: 236.8s | Train Loss: 2.936856 | Val Loss: 2.928914 (CLIP: 4.856768, MSE: 1.001060)
+2026-02-13 01:46:15 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-13 01:49:35 - Epoch 2 | Time: 200.2s | Train Loss: 2.924767 | Val Loss: 2.923737 (CLIP: 4.848733, MSE: 0.998741)
+2026-02-13 01:49:36 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-13 01:52:52 - Epoch 3 | Time: 196.8s | Train Loss: 2.916616 | Val Loss: 2.923357 (CLIP: 4.848356, MSE: 0.998357)
+2026-02-13 01:52:53 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-13 01:56:10 - Epoch 4 | Time: 197.2s | Train Loss: 2.902403 | Val Loss: 2.922950 (CLIP: 4.848676, MSE: 0.997225)
+2026-02-13 01:56:10 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-13 01:59:28 - Epoch 5 | Time: 198.0s | Train Loss: 2.880678 | Val Loss: 2.922789 (CLIP: 4.848993, MSE: 0.996586)
+2026-02-13 01:59:29 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-13 02:02:45 - Epoch 6 | Time: 195.9s | Train Loss: 2.855891 | Val Loss: 2.923752 (CLIP: 4.851256, MSE: 0.996247)
+2026-02-13 02:02:45 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-13 02:06:12 - Epoch 7 | Time: 207.4s | Train Loss: 2.825493 | Val Loss: 2.930774 (CLIP: 4.864123, MSE: 0.997426)
+2026-02-13 02:06:12 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-13 02:09:39 - Epoch 8 | Time: 207.1s | Train Loss: 2.789159 | Val Loss: 2.936912 (CLIP: 4.876016, MSE: 0.997808)
+2026-02-13 02:09:39 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-13 02:13:07 - Epoch 9 | Time: 207.5s | Train Loss: 2.736458 | Val Loss: 2.954452 (CLIP: 4.907614, MSE: 1.001290)
+2026-02-13 02:13:07 - 🛑 EarlyStopping counter: 4 out of 10
+2026-02-13 02:16:36 - Epoch 10 | Time: 209.2s | Train Loss: 2.664792 | Val Loss: 2.968933 (CLIP: 4.932277, MSE: 1.005589)
+2026-02-13 02:16:36 - 🛑 EarlyStopping counter: 5 out of 10
+2026-02-13 02:16:36 - 💾 Checkpoint saved: ./checkpoints/autokl_hybrid/epoch_10.pth
+2026-02-13 02:20:06 - Epoch 11 | Time: 209.4s | Train Loss: 2.568793 | Val Loss: 3.010842 (CLIP: 5.007091, MSE: 1.014594)
+2026-02-13 02:20:06 - 🛑 EarlyStopping counter: 6 out of 10
+2026-02-13 02:23:34 - Epoch 12 | Time: 208.5s | Train Loss: 2.451030 | Val Loss: 3.056440 (CLIP: 5.087636, MSE: 1.025245)
+2026-02-13 02:23:34 - 🛑 EarlyStopping counter: 7 out of 10
+2026-02-13 02:27:04 - Epoch 13 | Time: 209.8s | Train Loss: 2.304309 | Val Loss: 3.112278 (CLIP: 5.189413, MSE: 1.035144)
+2026-02-13 02:27:04 - 🛑 EarlyStopping counter: 8 out of 10
+2026-02-13 02:30:33 - Epoch 14 | Time: 208.8s | Train Loss: 2.152552 | Val Loss: 3.172925 (CLIP: 5.298684, MSE: 1.047167)
+2026-02-13 02:30:33 - 🛑 EarlyStopping counter: 9 out of 10
+2026-02-13 02:34:06 - Epoch 15 | Time: 213.4s | Train Loss: 2.001926 | Val Loss: 3.228554 (CLIP: 5.389326, MSE: 1.067782)
+2026-02-13 02:34:06 - 🛑 EarlyStopping counter: 10 out of 10
+2026-02-13 02:34:06 - 🛑 Early stopping triggered!
+2026-02-13 02:34:06 - 🎉 Training Finished!
+2026-02-19 14:36:30 - 
+==================================================
+2026-02-19 14:36:30 - 🚀 Initializing Training (Target: AutoKL only)
+2026-02-19 14:36:30 -    CLIP Dim: 4096 (Full), MSE Dim: 4096 (Full)
+2026-02-19 14:36:30 - ==================================================
+2026-02-19 14:36:30 - 📊 AutoKL stats found at ./checkpoints/autokl_hybrid/autokl_stats.npz
+2026-02-19 14:36:30 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-19 14:45:17 - 
+==================================================
+2026-02-19 14:45:17 - 🚀 Initializing Training (Target: AutoKL only)
+2026-02-19 14:45:17 -    CLIP Dim: 4096 (Full), MSE Dim: 4096 (Full)
+2026-02-19 14:45:17 - ==================================================
+2026-02-19 14:45:17 - 📊 AutoKL stats found at ./checkpoints/autokl_hybrid/autokl_stats.npz
+2026-02-19 14:45:17 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-19 14:45:20 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-19 14:48:44 - Epoch 1 | Time: 204.8s | Train Loss: 2.937579 | Val Loss: 2.932954 (CLIP: 4.861515, MSE: 1.004393)
+2026-02-19 14:48:45 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-19 14:51:53 - Epoch 2 | Time: 188.7s | Train Loss: 2.929943 | Val Loss: 2.932382 (CLIP: 4.861715, MSE: 1.003049)
+2026-02-19 14:51:54 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-19 14:55:04 - Epoch 3 | Time: 190.8s | Train Loss: 2.926703 | Val Loss: 2.934131 (CLIP: 4.865278, MSE: 1.002985)
+2026-02-19 14:55:04 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-19 14:58:15 - Epoch 4 | Time: 190.9s | Train Loss: 2.920175 | Val Loss: 2.937619 (CLIP: 4.872190, MSE: 1.003048)
+2026-02-19 14:58:15 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-19 15:01:25 - Epoch 5 | Time: 189.6s | Train Loss: 2.907981 | Val Loss: 2.940024 (CLIP: 4.876812, MSE: 1.003235)
+2026-02-19 15:01:25 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-19 15:04:40 - Epoch 6 | Time: 194.9s | Train Loss: 2.898730 | Val Loss: 2.941805 (CLIP: 4.880151, MSE: 1.003459)
+2026-02-19 15:04:40 - 🛑 EarlyStopping counter: 4 out of 10
+2026-02-19 15:07:54 - Epoch 7 | Time: 193.9s | Train Loss: 2.892583 | Val Loss: 2.942159 (CLIP: 4.880593, MSE: 1.003725)
+2026-02-19 15:07:54 - 🛑 EarlyStopping counter: 5 out of 10
+2026-02-19 15:11:08 - Epoch 8 | Time: 194.8s | Train Loss: 2.887041 | Val Loss: 2.942944 (CLIP: 4.882401, MSE: 1.003487)
+2026-02-19 15:11:08 - 🛑 EarlyStopping counter: 6 out of 10
+2026-02-19 15:14:20 - Epoch 9 | Time: 191.7s | Train Loss: 2.881223 | Val Loss: 2.943796 (CLIP: 4.884314, MSE: 1.003279)
+2026-02-19 15:14:20 - 🛑 EarlyStopping counter: 7 out of 10
+2026-02-19 15:17:36 - Epoch 10 | Time: 195.6s | Train Loss: 2.875672 | Val Loss: 2.945562 (CLIP: 4.887583, MSE: 1.003540)
+2026-02-19 15:17:36 - 🛑 EarlyStopping counter: 8 out of 10
+2026-02-19 15:17:36 - 💾 Checkpoint saved: ./checkpoints/autokl_hybrid/epoch_10.pth
+2026-02-19 15:20:49 - Epoch 11 | Time: 192.9s | Train Loss: 2.869272 | Val Loss: 2.946546 (CLIP: 4.889701, MSE: 1.003390)
+2026-02-19 15:20:49 - 🛑 EarlyStopping counter: 9 out of 10
+2026-02-19 15:24:02 - Epoch 12 | Time: 192.9s | Train Loss: 2.863470 | Val Loss: 2.948611 (CLIP: 4.893528, MSE: 1.003694)
+2026-02-19 15:24:02 - 🛑 EarlyStopping counter: 10 out of 10
+2026-02-19 15:24:02 - 🛑 Early stopping triggered!
+2026-02-19 15:24:02 - 🎉 Training Finished!
+2026-02-19 19:15:25 - 
+==================================================
+2026-02-19 19:15:25 - 🚀 Initializing Training (Target: AutoKL only)
+2026-02-19 19:15:25 -    CLIP Dim: 4096 (Full), MSE Dim: 4096 (Full)
+2026-02-19 19:15:25 - ==================================================
+2026-02-19 19:15:25 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-19 19:15:27 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-19 19:18:34 - Epoch 1 | Time: 187.2s | Train Loss: 2.528731 | Val Loss: 2.523563 (CLIP: 4.860168, MSE: 0.186957)
+2026-02-19 19:18:34 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-19 19:21:43 - Epoch 2 | Time: 188.8s | Train Loss: 2.523072 | Val Loss: 2.523035 (CLIP: 4.859069, MSE: 0.187001)
+2026-02-19 19:21:43 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-19 19:24:53 - Epoch 3 | Time: 189.5s | Train Loss: 2.520777 | Val Loss: 2.523399 (CLIP: 4.859925, MSE: 0.186873)
+2026-02-19 19:24:53 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-19 19:28:18 - Epoch 4 | Time: 205.2s | Train Loss: 2.516914 | Val Loss: 2.527643 (CLIP: 4.868362, MSE: 0.186924)
+2026-02-19 19:28:18 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-19 19:31:30 - Epoch 5 | Time: 192.0s | Train Loss: 2.508797 | Val Loss: 2.530668 (CLIP: 4.873883, MSE: 0.187453)
+2026-02-19 19:31:30 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-19 19:34:45 - Epoch 6 | Time: 194.7s | Train Loss: 2.499069 | Val Loss: 2.529838 (CLIP: 4.872552, MSE: 0.187123)
+2026-02-19 19:34:45 - 🛑 EarlyStopping counter: 4 out of 10
+2026-02-19 19:38:00 - Epoch 7 | Time: 195.6s | Train Loss: 2.492106 | Val Loss: 2.531604 (CLIP: 4.875924, MSE: 0.187285)
+2026-02-19 19:38:00 - 🛑 EarlyStopping counter: 5 out of 10
+2026-02-19 19:41:30 - Epoch 8 | Time: 209.4s | Train Loss: 2.486221 | Val Loss: 2.533434 (CLIP: 4.879401, MSE: 0.187467)
+2026-02-19 19:41:30 - 🛑 EarlyStopping counter: 6 out of 10
+2026-02-19 19:44:47 - Epoch 9 | Time: 197.5s | Train Loss: 2.479307 | Val Loss: 2.533669 (CLIP: 4.879846, MSE: 0.187492)
+2026-02-19 19:44:47 - 🛑 EarlyStopping counter: 7 out of 10
+2026-02-19 19:48:05 - Epoch 10 | Time: 197.5s | Train Loss: 2.470729 | Val Loss: 2.534315 (CLIP: 4.880923, MSE: 0.187707)
+2026-02-19 19:48:05 - 🛑 EarlyStopping counter: 8 out of 10
+2026-02-19 19:48:05 - 💾 Checkpoint saved: ./checkpoints/autokl_hybrid/epoch_10.pth
+2026-02-19 19:51:30 - Epoch 11 | Time: 204.8s | Train Loss: 2.460351 | Val Loss: 2.534786 (CLIP: 4.881828, MSE: 0.187745)
+2026-02-19 19:51:30 - 🛑 EarlyStopping counter: 9 out of 10
+2026-02-19 23:11:51 - 
+==================================================
+2026-02-19 23:11:51 - 🚀 Initializing Training (Target: AutoKL only)
+2026-02-19 23:11:51 -    CLIP Dim: 4096 (Full), MSE Dim: 4096 (Full)
+2026-02-19 23:11:51 - ==================================================
+2026-02-19 23:11:51 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-19 23:11:53 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-19 23:15:30 - Epoch 1 | Time: 216.9s | Train Loss: 2.526045 | Val Loss: 2.521445 (CLIP: 4.855952, MSE: 0.186937)
+2026-02-19 23:15:30 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-19 23:18:39 - Epoch 2 | Time: 188.8s | Train Loss: 2.514413 | Val Loss: 2.515284 (CLIP: 4.844207, MSE: 0.186360)
+2026-02-19 23:18:39 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-19 23:21:47 - Epoch 3 | Time: 188.3s | Train Loss: 2.506134 | Val Loss: 2.514052 (CLIP: 4.841337, MSE: 0.186767)
+2026-02-19 23:21:48 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-19 23:24:57 - Epoch 4 | Time: 189.3s | Train Loss: 2.496913 | Val Loss: 2.511491 (CLIP: 4.835882, MSE: 0.187100)
+2026-02-19 23:24:57 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-19 23:28:01 - Epoch 5 | Time: 183.6s | Train Loss: 2.485055 | Val Loss: 2.509212 (CLIP: 4.831674, MSE: 0.186751)
+2026-02-19 23:28:01 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-19 23:31:11 - Epoch 6 | Time: 189.5s | Train Loss: 2.471612 | Val Loss: 2.513390 (CLIP: 4.839732, MSE: 0.187049)
+2026-02-19 23:31:11 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-19 23:34:27 - Epoch 7 | Time: 196.0s | Train Loss: 2.458624 | Val Loss: 2.512342 (CLIP: 4.837479, MSE: 0.187206)
+2026-02-19 23:34:27 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-19 23:37:37 - Epoch 8 | Time: 190.1s | Train Loss: 2.443588 | Val Loss: 2.512437 (CLIP: 4.837459, MSE: 0.187416)
+2026-02-19 23:37:37 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-19 23:40:45 - Epoch 9 | Time: 188.3s | Train Loss: 2.425855 | Val Loss: 2.514339 (CLIP: 4.841072, MSE: 0.187605)
+2026-02-19 23:40:45 - 🛑 EarlyStopping counter: 4 out of 10
+2026-02-19 23:44:03 - Epoch 10 | Time: 197.9s | Train Loss: 2.405736 | Val Loss: 2.520057 (CLIP: 4.851477, MSE: 0.188637)
+2026-02-19 23:44:03 - 🛑 EarlyStopping counter: 5 out of 10
+2026-02-19 23:44:03 - 💾 Checkpoint saved: ./checkpoints/autokl_hybrid/epoch_10.pth
+2026-02-19 23:47:16 - Epoch 11 | Time: 192.8s | Train Loss: 2.382045 | Val Loss: 2.522653 (CLIP: 4.855340, MSE: 0.189966)
+2026-02-19 23:47:16 - 🛑 EarlyStopping counter: 6 out of 10
+2026-02-19 23:50:23 - Epoch 12 | Time: 186.6s | Train Loss: 2.352070 | Val Loss: 2.529911 (CLIP: 4.867417, MSE: 0.192405)
+2026-02-19 23:50:23 - 🛑 EarlyStopping counter: 7 out of 10
+2026-02-19 23:53:33 - Epoch 13 | Time: 190.9s | Train Loss: 2.314336 | Val Loss: 2.540878 (CLIP: 4.889029, MSE: 0.192726)
+2026-02-19 23:53:33 - 🛑 EarlyStopping counter: 8 out of 10
+2026-02-19 23:56:48 - Epoch 14 | Time: 194.7s | Train Loss: 2.266767 | Val Loss: 2.548270 (CLIP: 4.902946, MSE: 0.193593)
+2026-02-19 23:56:48 - 🛑 EarlyStopping counter: 9 out of 10
+2026-02-20 00:00:01 - Epoch 15 | Time: 192.6s | Train Loss: 2.206043 | Val Loss: 2.561954 (CLIP: 4.931721, MSE: 0.192187)
+2026-02-20 00:00:01 - 🛑 EarlyStopping counter: 10 out of 10
+2026-02-20 00:00:01 - 🛑 Early stopping triggered!
+2026-02-20 00:00:01 - 🎉 Training Finished!
+2026-02-20 13:50:03 - 
+==================================================
+2026-02-20 13:50:03 - 🚀 Initializing Training (Target: AutoKL only)
+2026-02-20 13:50:03 -    CLIP Dim: 4096 (Full), MSE Dim: 4096 (Full)
+2026-02-20 13:50:03 - ==================================================
+2026-02-20 13:50:03 - 📊 AutoKL stats found at ./checkpoints/autokl_hybrid/autokl_stats.npz
+2026-02-20 13:50:03 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-20 13:50:05 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-20 13:54:19 - Epoch 1 | Time: 254.5s | Train Loss: 2.935185 | Val Loss: 2.924868 (CLIP: 4.849245, MSE: 1.000491)
+2026-02-20 13:54:19 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-20 13:57:47 - Epoch 2 | Time: 207.5s | Train Loss: 2.919342 | Val Loss: 2.920805 (CLIP: 4.842122, MSE: 0.999488)
+2026-02-20 13:57:47 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-20 14:01:12 - Epoch 3 | Time: 204.4s | Train Loss: 2.910274 | Val Loss: 2.918935 (CLIP: 4.839074, MSE: 0.998796)
+2026-02-20 14:01:12 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-20 14:04:40 - Epoch 4 | Time: 208.7s | Train Loss: 2.899463 | Val Loss: 2.916975 (CLIP: 4.835520, MSE: 0.998430)
+2026-02-20 14:04:41 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-20 14:08:05 - Epoch 5 | Time: 204.4s | Train Loss: 2.887974 | Val Loss: 2.919297 (CLIP: 4.839265, MSE: 0.999330)
+2026-02-20 14:08:05 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-20 14:11:26 - Epoch 6 | Time: 200.8s | Train Loss: 2.873816 | Val Loss: 2.922878 (CLIP: 4.846222, MSE: 0.999534)
+2026-02-20 14:11:26 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-20 14:14:53 - Epoch 7 | Time: 207.3s | Train Loss: 2.861227 | Val Loss: 2.921080 (CLIP: 4.843193, MSE: 0.998967)
+2026-02-20 14:14:53 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-20 14:18:24 - Epoch 8 | Time: 210.7s | Train Loss: 2.847952 | Val Loss: 2.921626 (CLIP: 4.843602, MSE: 0.999650)
+2026-02-20 14:18:24 - 🛑 EarlyStopping counter: 4 out of 10
+2026-02-20 14:21:54 - Epoch 9 | Time: 209.9s | Train Loss: 2.832740 | Val Loss: 2.920587 (CLIP: 4.841436, MSE: 0.999739)
+2026-02-20 14:21:54 - 🛑 EarlyStopping counter: 5 out of 10
+2026-02-20 14:25:15 - Epoch 10 | Time: 201.2s | Train Loss: 2.815089 | Val Loss: 2.929131 (CLIP: 4.855603, MSE: 1.002659)
+2026-02-20 14:25:15 - 🛑 EarlyStopping counter: 6 out of 10
+2026-02-20 14:25:15 - 💾 Checkpoint saved: ./checkpoints/autokl_hybrid/epoch_10.pth
+2026-02-20 14:28:44 - Epoch 11 | Time: 208.2s | Train Loss: 2.794932 | Val Loss: 2.930439 (CLIP: 4.856038, MSE: 1.004839)
+2026-02-20 14:28:44 - 🛑 EarlyStopping counter: 7 out of 10
+2026-02-20 14:32:19 - Epoch 12 | Time: 215.5s | Train Loss: 2.770853 | Val Loss: 2.933250 (CLIP: 4.862548, MSE: 1.003952)
+2026-02-20 14:32:19 - 🛑 EarlyStopping counter: 8 out of 10
+2026-02-20 14:35:53 - Epoch 13 | Time: 214.1s | Train Loss: 2.743861 | Val Loss: 2.939595 (CLIP: 4.870225, MSE: 1.008966)
+2026-02-20 14:35:53 - 🛑 EarlyStopping counter: 9 out of 10
+2026-02-20 14:39:31 - Epoch 14 | Time: 218.0s | Train Loss: 2.712137 | Val Loss: 2.943293 (CLIP: 4.880515, MSE: 1.006071)
+2026-02-20 14:39:31 - 🛑 EarlyStopping counter: 10 out of 10
+2026-02-20 14:39:31 - 🛑 Early stopping triggered!
+2026-02-20 14:39:31 - 🎉 Training Finished!
+2026-02-24 01:55:34 - 
+==================================================
+2026-02-24 01:55:34 - 🚀 Initializing Training (Target: AutoKL only)
+2026-02-24 01:55:34 -    CLIP Dim: 4096 (Full), MSE Dim: 4096 (Full)
+2026-02-24 01:55:34 - ==================================================
+2026-02-24 01:55:34 - 📊 Calculating AutoKL Mean/Std...
+2026-02-24 01:55:38 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-24 01:55:39 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-24 02:00:10 - 
+==================================================
+2026-02-24 02:00:10 - 🚀 Initializing Training (Target: AutoKL only)
+2026-02-24 02:00:10 -    CLIP Dim: 4096 (Full), MSE Dim: 4096 (Full)
+2026-02-24 02:00:10 - ==================================================
+2026-02-24 02:00:10 - 📊 AutoKL stats found at ./checkpoints/autokl_hybrid/autokl_stats.npz
+2026-02-24 02:00:10 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-24 02:00:11 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-24 02:02:05 - Epoch 1 | Time: 113.4s | Train Loss: 2.937320 | Val Loss: 2.931603 (CLIP: 4.859712, MSE: 1.003495)
+2026-02-24 02:02:05 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-24 02:03:19 - 
+==================================================
+2026-02-24 02:03:19 - 🚀 Initializing Training (Target: AutoKL only)
+2026-02-24 02:03:19 -    CLIP Dim: 4096 (Full), MSE Dim: 4096 (Full)
+2026-02-24 02:03:19 - ==================================================
+2026-02-24 02:03:19 - 📊 AutoKL stats found at ./checkpoints/autokl_hybrid/autokl_stats.npz
+2026-02-24 02:03:19 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-24 02:03:22 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-24 02:04:41 - Epoch 2 | Time: 156.4s | Train Loss: 2.924133 | Val Loss: 2.915563 (CLIP: 4.830850, MSE: 1.000276)
+2026-02-24 02:04:42 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-24 02:06:51 - Epoch 3 | Time: 129.0s | Train Loss: 2.899811 | Val Loss: 2.893896 (CLIP: 4.793421, MSE: 0.994371)
+2026-02-24 02:06:51 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-24 02:08:54 - Epoch 4 | Time: 122.7s | Train Loss: 2.874085 | Val Loss: 2.883212 (CLIP: 4.773042, MSE: 0.993382)
+2026-02-24 02:08:54 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-24 02:10:56 - Epoch 5 | Time: 122.7s | Train Loss: 2.851270 | Val Loss: 2.871722 (CLIP: 4.753710, MSE: 0.989733)
+2026-02-24 02:10:57 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-24 02:12:58 - Epoch 6 | Time: 120.9s | Train Loss: 2.829982 | Val Loss: 2.864267 (CLIP: 4.740276, MSE: 0.988258)
+2026-02-24 02:12:58 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-24 02:15:03 - Epoch 7 | Time: 124.6s | Train Loss: 2.807261 | Val Loss: 2.861346 (CLIP: 4.735796, MSE: 0.986896)
+2026-02-24 02:15:03 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-24 02:17:06 - Epoch 8 | Time: 122.9s | Train Loss: 2.782482 | Val Loss: 2.851483 (CLIP: 4.717554, MSE: 0.985412)
+2026-02-24 02:17:06 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-24 02:19:11 - Epoch 9 | Time: 125.5s | Train Loss: 2.755704 | Val Loss: 2.854129 (CLIP: 4.721397, MSE: 0.986861)
+2026-02-24 02:19:11 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-24 02:21:16 - Epoch 10 | Time: 124.2s | Train Loss: 2.724243 | Val Loss: 2.854296 (CLIP: 4.720663, MSE: 0.987929)
+2026-02-24 02:21:16 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-24 02:21:16 - 💾 Checkpoint saved: ./checkpoints/autokl_hybrid/epoch_10.pth
+2026-02-24 02:23:22 - Epoch 11 | Time: 126.7s | Train Loss: 2.689669 | Val Loss: 2.852501 (CLIP: 4.717584, MSE: 0.987417)
+2026-02-24 02:23:22 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-24 02:25:23 - Epoch 12 | Time: 121.0s | Train Loss: 2.648855 | Val Loss: 2.860146 (CLIP: 4.730865, MSE: 0.989427)
+2026-02-24 02:25:23 - 🛑 EarlyStopping counter: 4 out of 10
+2026-02-24 02:27:33 - Epoch 13 | Time: 129.7s | Train Loss: 2.603914 | Val Loss: 2.870982 (CLIP: 4.746226, MSE: 0.995738)
+2026-02-24 02:27:33 - 🛑 EarlyStopping counter: 5 out of 10
+2026-02-24 02:29:38 - Epoch 14 | Time: 124.4s | Train Loss: 2.549363 | Val Loss: 2.875965 (CLIP: 4.755327, MSE: 0.996604)
+2026-02-24 02:29:38 - 🛑 EarlyStopping counter: 6 out of 10
+2026-02-24 02:31:40 - Epoch 15 | Time: 122.5s | Train Loss: 2.491495 | Val Loss: 2.886633 (CLIP: 4.775700, MSE: 0.997567)
+2026-02-24 02:31:40 - 🛑 EarlyStopping counter: 7 out of 10
+2026-02-24 02:33:38 - Epoch 16 | Time: 118.1s | Train Loss: 2.426696 | Val Loss: 2.910427 (CLIP: 4.813461, MSE: 1.007393)
+2026-02-24 02:33:38 - 🛑 EarlyStopping counter: 8 out of 10
+2026-02-24 02:35:39 - Epoch 17 | Time: 120.4s | Train Loss: 2.354318 | Val Loss: 2.940397 (CLIP: 4.865819, MSE: 1.014975)
+2026-02-24 02:35:39 - 🛑 EarlyStopping counter: 9 out of 10
+2026-02-24 02:37:43 - Epoch 18 | Time: 124.5s | Train Loss: 2.282052 | Val Loss: 2.963709 (CLIP: 4.903016, MSE: 1.024402)
+2026-02-24 02:37:43 - 🛑 EarlyStopping counter: 10 out of 10
+2026-02-24 02:37:43 - 🛑 Early stopping triggered!
+2026-02-24 02:37:43 - 🎉 Training Finished!
+2026-02-25 09:57:15 - 
+==================================================
+2026-02-25 09:57:15 - 🚀 Initializing Training (Target: AutoKL only)
+2026-02-25 09:57:15 -    CLIP Dim: 4096 (Full), MSE Dim: 4096 (Full)
+2026-02-25 09:57:15 - ==================================================
+2026-02-25 09:57:15 - 📊 AutoKL stats found at ./checkpoints/autokl_hybrid/autokl_stats.npz
+2026-02-25 09:57:15 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-25 09:57:16 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-25 09:58:59 - Epoch 1 | Time: 102.4s | Train Loss: 3.906732 | Val Loss: 3.897482 (CLIP: 4.860931, MSE: 1.007137)
+2026-02-25 09:58:59 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-25 10:00:35 - Epoch 2 | Time: 96.0s | Train Loss: 3.894455 | Val Loss: 3.894691 (CLIP: 4.857584, MSE: 1.006011)
+2026-02-25 10:00:35 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-25 10:02:19 - Epoch 3 | Time: 103.9s | Train Loss: 3.882625 | Val Loss: 3.876463 (CLIP: 4.834788, MSE: 1.001487)
+2026-02-25 10:02:19 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-25 10:03:55 - Epoch 4 | Time: 95.8s | Train Loss: 3.850899 | Val Loss: 3.849687 (CLIP: 4.800250, MSE: 0.997998)
+2026-02-25 10:03:55 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-25 10:05:30 - Epoch 5 | Time: 94.8s | Train Loss: 3.811730 | Val Loss: 3.829114 (CLIP: 4.773830, MSE: 0.994967)
+2026-02-25 10:05:30 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-25 10:07:06 - Epoch 6 | Time: 95.5s | Train Loss: 3.773435 | Val Loss: 3.817142 (CLIP: 4.758284, MSE: 0.993717)
+2026-02-25 10:07:06 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-25 10:08:45 - Epoch 7 | Time: 98.7s | Train Loss: 3.735320 | Val Loss: 3.808001 (CLIP: 4.745884, MSE: 0.994351)
+2026-02-25 10:08:45 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-25 10:10:23 - Epoch 8 | Time: 98.5s | Train Loss: 3.697006 | Val Loss: 3.794659 (CLIP: 4.728232, MSE: 0.993941)
+2026-02-25 10:10:24 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-25 10:12:05 - Epoch 9 | Time: 100.9s | Train Loss: 3.654104 | Val Loss: 3.793708 (CLIP: 4.726485, MSE: 0.995378)
+2026-02-25 10:12:05 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-25 10:13:43 - Epoch 10 | Time: 98.1s | Train Loss: 3.605374 | Val Loss: 3.789794 (CLIP: 4.720848, MSE: 0.996632)
+2026-02-25 10:13:43 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-25 10:13:43 - 💾 Checkpoint saved: ./checkpoints/autokl_hybrid/epoch_10.pth
+2026-02-25 10:15:25 - Epoch 11 | Time: 101.7s | Train Loss: 3.547053 | Val Loss: 3.796468 (CLIP: 4.730052, MSE: 0.995717)
+2026-02-25 10:15:25 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-25 10:17:03 - Epoch 12 | Time: 97.6s | Train Loss: 3.478489 | Val Loss: 3.801321 (CLIP: 4.735417, MSE: 0.999035)
+2026-02-25 10:17:03 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-25 10:18:41 - Epoch 13 | Time: 98.6s | Train Loss: 3.401825 | Val Loss: 3.816598 (CLIP: 4.755184, MSE: 1.000841)
+2026-02-25 10:18:41 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-25 10:20:21 - Epoch 14 | Time: 100.3s | Train Loss: 3.308918 | Val Loss: 3.839604 (CLIP: 4.784079, MSE: 1.006179)
+2026-02-25 10:20:21 - 🛑 EarlyStopping counter: 4 out of 10
+2026-02-25 10:22:02 - Epoch 15 | Time: 100.6s | Train Loss: 3.208077 | Val Loss: 3.852875 (CLIP: 4.800855, MSE: 1.008933)
+2026-02-25 10:22:02 - 🛑 EarlyStopping counter: 5 out of 10
+2026-02-25 10:23:42 - Epoch 16 | Time: 99.9s | Train Loss: 3.099530 | Val Loss: 3.873831 (CLIP: 4.828504, MSE: 1.009811)
+2026-02-25 10:23:42 - 🛑 EarlyStopping counter: 6 out of 10
+2026-02-25 10:25:21 - Epoch 17 | Time: 98.7s | Train Loss: 2.982686 | Val Loss: 3.914587 (CLIP: 4.880322, MSE: 1.017382)
+2026-02-25 10:25:21 - 🛑 EarlyStopping counter: 7 out of 10
+2026-02-25 10:27:01 - Epoch 18 | Time: 100.4s | Train Loss: 2.868203 | Val Loss: 3.947108 (CLIP: 4.921804, MSE: 1.023019)
+2026-02-25 10:27:01 - 🛑 EarlyStopping counter: 8 out of 10
+2026-02-25 10:28:59 - Epoch 19 | Time: 118.0s | Train Loss: 2.746976 | Val Loss: 3.984481 (CLIP: 4.969530, MSE: 1.029336)
+2026-02-25 10:28:59 - 🛑 EarlyStopping counter: 9 out of 10
+2026-02-25 10:30:44 - Epoch 20 | Time: 105.3s | Train Loss: 2.632367 | Val Loss: 4.014382 (CLIP: 5.007316, MSE: 1.035579)
+2026-02-25 10:30:44 - 🛑 EarlyStopping counter: 10 out of 10
+2026-02-25 10:30:44 - 🛑 Early stopping triggered!
+2026-02-25 10:30:44 - 🎉 Training Finished!
+2026-02-25 14:02:04 - 
+==================================================
+2026-02-25 14:02:04 - 🚀 Initializing Training (Target: AutoKL only)
+2026-02-25 14:02:04 -    CLIP Dim: 4096 (Full), MSE Dim: 4096 (Full)
+2026-02-25 14:02:04 - ==================================================
+2026-02-25 14:02:04 - 📊 AutoKL stats found at ./checkpoints/autokl_hybrid/autokl_stats.npz
+2026-02-25 14:02:04 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-25 14:02:06 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-25 14:03:40 - Epoch 1 | Time: 94.6s | Train Loss: 1.979382 | Val Loss: 1.972569 (CLIP: 4.869973, MSE: 1.006768)
+2026-02-25 14:03:41 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-25 14:05:14 - Epoch 2 | Time: 93.0s | Train Loss: 1.966878 | Val Loss: 1.968419 (CLIP: 4.864502, MSE: 1.003059)
+2026-02-25 14:05:14 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-25 14:06:47 - Epoch 3 | Time: 93.5s | Train Loss: 1.965758 | Val Loss: 1.968116 (CLIP: 4.863514, MSE: 1.002983)
+2026-02-25 14:06:47 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-25 14:08:22 - Epoch 4 | Time: 94.6s | Train Loss: 1.965123 | Val Loss: 1.967260 (CLIP: 4.861699, MSE: 1.002446)
+2026-02-25 14:08:22 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-25 14:09:55 - Epoch 5 | Time: 92.9s | Train Loss: 1.964232 | Val Loss: 1.967200 (CLIP: 4.862208, MSE: 1.002197)
+2026-02-25 14:09:55 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-25 14:11:30 - Epoch 6 | Time: 94.5s | Train Loss: 1.962764 | Val Loss: 1.968964 (CLIP: 4.867089, MSE: 1.002922)
+2026-02-25 14:11:30 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-25 14:13:07 - Epoch 7 | Time: 96.7s | Train Loss: 1.960051 | Val Loss: 1.969594 (CLIP: 4.871117, MSE: 1.002420)
+2026-02-25 14:13:07 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-25 14:14:13 - 
+==================================================
+2026-02-25 14:14:13 - 🚀 Initializing Training (Target: AutoKL only)
+2026-02-25 14:14:13 -    CLIP Dim: 4096 (Full), MSE Dim: 4096 (Full)
+2026-02-25 14:14:13 - ==================================================
+2026-02-25 14:14:13 - 📊 AutoKL stats found at ./checkpoints/autokl_hybrid/autokl_stats.npz
+2026-02-25 14:14:13 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-25 14:14:15 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-25 14:15:52 - Epoch 1 | Time: 97.4s | Train Loss: 3.906327 | Val Loss: 3.897407 (CLIP: 4.860879, MSE: 1.006991)
+2026-02-25 14:15:52 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-25 14:17:32 - Epoch 2 | Time: 99.5s | Train Loss: 3.892962 | Val Loss: 3.893003 (CLIP: 4.855820, MSE: 1.004552)
+2026-02-25 14:17:32 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-25 14:19:10 - Epoch 3 | Time: 98.6s | Train Loss: 3.878086 | Val Loss: 3.868755 (CLIP: 4.825024, MSE: 0.999950)
+2026-02-25 14:19:11 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-25 14:20:49 - Epoch 4 | Time: 98.5s | Train Loss: 3.846293 | Val Loss: 3.840705 (CLIP: 4.788286, MSE: 0.997961)
+2026-02-25 14:20:50 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-25 14:22:28 - Epoch 5 | Time: 98.8s | Train Loss: 3.805628 | Val Loss: 3.830034 (CLIP: 4.775156, MSE: 0.994668)
+2026-02-25 14:22:29 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-25 14:24:05 - Epoch 6 | Time: 96.5s | Train Loss: 3.770127 | Val Loss: 3.812377 (CLIP: 4.752009, MSE: 0.993482)
+2026-02-25 14:24:05 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-25 14:25:42 - Epoch 7 | Time: 96.7s | Train Loss: 3.734600 | Val Loss: 3.804104 (CLIP: 4.741276, MSE: 0.992588)
+2026-02-25 14:25:42 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-25 14:27:20 - Epoch 8 | Time: 98.1s | Train Loss: 3.696569 | Val Loss: 3.797160 (CLIP: 4.731820, MSE: 0.993179)
+2026-02-25 14:27:20 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-25 14:28:59 - Epoch 9 | Time: 98.6s | Train Loss: 3.652628 | Val Loss: 3.794945 (CLIP: 4.728829, MSE: 0.993291)
+2026-02-25 14:28:59 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-25 14:30:46 - Epoch 10 | Time: 106.6s | Train Loss: 3.600133 | Val Loss: 3.792612 (CLIP: 4.724338, MSE: 0.997433)
+2026-02-25 14:30:46 - ✅ Validation loss decreased. Saving best model to ./checkpoints/autokl_hybrid/best_model.pth
+2026-02-25 14:30:46 - 💾 Checkpoint saved: ./checkpoints/autokl_hybrid/epoch_10.pth
+2026-02-25 14:32:36 - Epoch 11 | Time: 109.9s | Train Loss: 3.540190 | Val Loss: 3.799653 (CLIP: 4.733742, MSE: 0.997384)
+2026-02-25 14:32:36 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-25 14:34:14 - Epoch 12 | Time: 98.0s | Train Loss: 3.469835 | Val Loss: 3.811690 (CLIP: 4.748408, MSE: 1.001537)
+2026-02-25 14:34:14 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-25 14:35:52 - Epoch 13 | Time: 98.3s | Train Loss: 3.387522 | Val Loss: 3.828507 (CLIP: 4.770292, MSE: 1.003152)
+2026-02-25 14:35:52 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-25 14:37:41 - Epoch 14 | Time: 109.0s | Train Loss: 3.293189 | Val Loss: 3.841371 (CLIP: 4.786927, MSE: 1.004703)
+2026-02-25 14:37:41 - 🛑 EarlyStopping counter: 4 out of 10
+2026-02-25 14:39:31 - Epoch 15 | Time: 109.3s | Train Loss: 3.189876 | Val Loss: 3.868480 (CLIP: 4.821990, MSE: 1.007949)
+2026-02-25 14:39:31 - 🛑 EarlyStopping counter: 5 out of 10
+2026-02-25 14:41:09 - Epoch 16 | Time: 98.0s | Train Loss: 3.077100 | Val Loss: 3.897784 (CLIP: 4.858568, MSE: 1.015432)
+2026-02-25 14:41:09 - 🛑 EarlyStopping counter: 6 out of 10
+2026-02-25 14:43:02 - Epoch 17 | Time: 113.2s | Train Loss: 2.960958 | Val Loss: 3.934057 (CLIP: 4.905341, MSE: 1.020205)
+2026-02-25 14:43:02 - 🛑 EarlyStopping counter: 7 out of 10
+2026-02-25 14:44:44 - Epoch 18 | Time: 101.8s | Train Loss: 2.838986 | Val Loss: 3.968065 (CLIP: 4.948821, MSE: 1.025796)
+2026-02-25 14:44:44 - 🛑 EarlyStopping counter: 8 out of 10
+2026-02-25 14:46:29 - Epoch 19 | Time: 105.1s | Train Loss: 2.728259 | Val Loss: 3.991496 (CLIP: 4.978303, MSE: 1.031074)
+2026-02-25 14:46:29 - 🛑 EarlyStopping counter: 9 out of 10
+2026-02-25 14:48:10 - Epoch 20 | Time: 101.1s | Train Loss: 2.607894 | Val Loss: 4.028864 (CLIP: 5.025662, MSE: 1.038472)
+2026-02-25 14:48:10 - 🛑 EarlyStopping counter: 10 out of 10
+2026-02-25 14:48:10 - 🛑 Early stopping triggered!
+2026-02-25 14:48:10 - 🎉 Training Finished!

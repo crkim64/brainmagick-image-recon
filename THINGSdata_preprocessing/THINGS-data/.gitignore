@@ -1,0 +1,7 @@
+*scenePRF_Fix.py
+__pycache__
+*.egg-info
+*.vscode/
+.*
+MRI/build
+!/.gitignore

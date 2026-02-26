@@ -27,12 +27,12 @@ CONFIG = {
     'lr': 3e-4,             
     'epochs': 100,
     'patience': 10,         
-    'device': 'cuda:0' if torch.cuda.is_available() else 'cpu',
+    'device': 'cuda' if torch.cuda.is_available() else 'cpu',
     'subjects': ['P1', 'P2', 'P3', 'P4'],
     
     # Data Specs
     'in_channels': 271,     
-    'time_len': 281,        
+    'time_len': 180,        
     
     # Output Dimensions
     'out_dim_clip': 768,       # Ignored

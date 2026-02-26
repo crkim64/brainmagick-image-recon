@@ -1,71 +1,62 @@
+
 import torch
 import torch.nn as nn
 import pandas as pd
-from model.brainmodule import BrainModule
+import numpy as np
+import sys
+import os
 
-# ==========================================
-# Mock Batch Helper
-# ==========================================
-class MockBatchWithPositions:
-    def __init__(self, batch_size, n_subjects):
-        self.subject_index = torch.zeros(batch_size, dtype=torch.long)
-        self.meg_positions = torch.randn(batch_size, 272, 2) 
+# Add project root to path
+sys.path.append(os.getcwd())
+
+from model.brainmodule import BrainModule
 
 def count_module_params(module):
     if module is None: return 0
     return sum(p.numel() for p in module.parameters())
 
 def main():
-    print("🚀 모델 파라미터 정밀 분석 중...")
+    print("🚀 Analyzing New BrainModule Architecture implementation...")
     
-    # 1. 모델 설정 (사용자분의 최신 코드 반영)
-    in_channels = {'meg': 272}
-    hidden_channels = {'meg': 320}
-    out_dim = 768
-    time_len = 181
+    # 1. Model Configuration
+    # We use in_channels=271 because sensor_positions_P1.npy has 271 sensors.
     n_subjects = 4
-
+    time_len = 181
+    in_channels = 271 
+    target_dim=768
+    
     model = BrainModule(
-        in_channels=in_channels,
-        out_dim=out_dim,
-        time_len=time_len,
-        hidden=hidden_channels,
         n_subjects=n_subjects,
-        depth=2,
-        
-        # [논문 스펙]
-        merger=True,
-        merger_channels=270,
-        merger_pos_dim=512,
-        rewrite=True,
-        glu=1,
-        glu_context=1,
-        
-        subject_layers=True 
+        n_time_steps=time_len,
+        in_channels=in_channels,
+        target_dim=target_dim,
+        use_clip_head=True,
+        use_mse_head=True,
     )
-
-    # Merger Patch
-    if model.merger:
-        model.merger.position_getter.get_positions = lambda batch: torch.randn(1, 272, 2).to(next(model.parameters()).device)
-        model.merger.position_getter.is_invalid = lambda pos: torch.zeros(1, 272, dtype=torch.bool).to(pos.device)
+   
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model.to(device)
 
     # ==========================================
-    # Hook 등록 및 데이터 수집
+    # 2. Register Hooks
     # ==========================================
     layer_stats = []
 
-    # 일반 Hook 함수
-    def get_info_hook(name, extra_module=None):
+    def get_info_hook(name):
         def hook(module, input, output):
-            if isinstance(input, tuple) and len(input) > 0: in_shape = list(input[0].shape)
-            else: in_shape = "Unknown"
-            if isinstance(output, torch.Tensor): out_shape = list(output.shape)
-            else: out_shape = "Unknown"
+            if isinstance(input, tuple) and len(input) > 0: 
+                in_shape = list(input[0].shape)
+            else: 
+                in_shape = "Unknown"
             
-            # 파라미터 계산 시 extra_module(GLU 등)이 있으면 합산
-            current_params = count_module_params(module)
-            extra_params = count_module_params(extra_module)
-            total_params = current_params + extra_params
+            if isinstance(output, torch.Tensor): 
+                out_shape = list(output.shape)
+            elif isinstance(output, dict):
+                out_shape = {k: list(v.shape) for k, v in output.items()}
+            else: 
+                out_shape = "Unknown"
+            
+            total_params = count_module_params(module)
 
             layer_stats.append({
                 "Layer Name": name, 
@@ -76,52 +67,46 @@ def main():
         return hook
 
     hooks = []
+    
+    # Register hooks for key components
+    hooks.append(model.spatial_attention.register_forward_hook(get_info_hook("1. Spatial Attention")))
+    hooks.append(model.mixing_layer.register_forward_hook(get_info_hook("1.5. Mixing Layer (1x1)")))
+    hooks.append(model.subject_layer.register_forward_hook(get_info_hook("2. Subject Layer")))
+    hooks.append(model.backbone.register_forward_hook(get_info_hook("3. Backbone (ConvSeq)")))
+    hooks.append(model.feature_projection.register_forward_hook(get_info_hook("4. Feature Proj (->F')")))
+    hooks.append(model.temporal_aggregator.register_forward_hook(get_info_hook("5. Temporal Agg")))
+    
+    if 'clip' in model.heads:
+        hooks.append(model.heads['clip'].register_forward_hook(get_info_hook("Head: CLIP")))
+    if 'mse' in model.heads:
+        hooks.append(model.heads['mse'].register_forward_hook(get_info_hook("Head: MSE")))
 
-    # 1~3. 앞부분 레이어들
-    if model.merger: hooks.append(model.merger.register_forward_hook(get_info_hook("1. Spatial Attention")))
-    if hasattr(model, 'post_merger_linear'): hooks.append(model.post_merger_linear.register_forward_hook(get_info_hook("2. Linear Proj (Early)")))
-    if model.subject_layers: hooks.append(model.subject_layers.register_forward_hook(get_info_hook("3. Subject Layer")))
-
-    # 4~5. [핵심 수정] Res Blocks (Sequence + GLU 합산)
-    if 'meg' in model.encoders:
-        encoder = model.encoders['meg']
-        # Block 1
-        if len(encoder.sequence) > 0:
-            # GLU가 있으면 찾아서 같이 계산하도록 넘김
-            glu_module = encoder.glus[0] if len(encoder.glus) > 0 else None
-            hooks.append(encoder.sequence[0].register_forward_hook(get_info_hook("4. Res Block 1", glu_module)))
-        
-        # Block 2
-        if len(encoder.sequence) > 1:
-            glu_module = encoder.glus[1] if len(encoder.glus) > 1 else None
-            hooks.append(encoder.sequence[1].register_forward_hook(get_info_hook("5. Res Block 2", glu_module)))
-
-    # 6~9. 뒷부분 레이어들
-    if hasattr(model, 'linear_projection'): hooks.append(model.linear_projection.register_forward_hook(get_info_hook("6. Linear Proj (Deep)")))
-    hooks.append(model.temporal_aggregator.register_forward_hook(get_info_hook("7. Temporal Aggregation")))
-    hooks.append(model.head.register_forward_hook(get_info_hook("8. MLP Head")))
-
-    # --- 실행 ---
-    dummy_input = {'meg': torch.randn(1, 272, time_len)}
-    dummy_batch = MockBatchWithPositions(1, n_subjects)
+    # --- Execution ---
+    # Input: (B, 271, T)
+    dummy_x = torch.randn(1, 271, time_len).to(device)
+    dummy_subj = torch.zeros(1, dtype=torch.long).to(device)
 
     try:
-        _ = model(dummy_input, dummy_batch)
+        with torch.no_grad():
+            _ = model(dummy_x, dummy_subj)
         
         total = sum(p.numel() for p in model.parameters())
-        print("=" * 100)
+        print("=" * 110)
         print(f"📊 Total Parameters: {total:,}")
-        print("=" * 100)
+        print("=" * 110)
         
         df = pd.DataFrame(layer_stats)
-        print(f"{'Layer Name':<25} | {'Input Shape':<20} | {'Output Shape':<20} | {'Params':>15}")
-        print("-" * 100)
+        header = f"{'Layer Name':<30} | {'Input Shape':<22} | {'Output Shape':<30} | {'Params':>15}"
+        print(header)
+        print("-" * 110)
         for _, row in df.iterrows():
-            print(f"{row['Layer Name']:<25} | {row['Input Shape']:<20} | {row['Output Shape']:<20} | {row['Params']:>15}")
-        print("-" * 100)
+            print(f"{row['Layer Name']:<30} | {row['Input Shape']:<22} | {row['Output Shape']:<30} | {row['Params']:>15}")
+        print("-" * 110)
 
     except Exception as e:
         print(f"\n[Error] {e}")
+        import traceback
+        traceback.print_exc()
     finally:
         for h in hooks: h.remove()
 

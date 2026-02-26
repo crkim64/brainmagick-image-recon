@@ -3,12 +3,16 @@ import numpy as np
 import os
 import matplotlib.pyplot as plt
 
+import sys
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import config
 # ==========================================
 # 1. 설정
 # ==========================================
 subs = ["P1", "P2", "P3", "P4"]
-base_input_dir = "./data/LOCAL/ocontier/thingsmri/openneuro/THINGS-data/THINGS-MEG/ds004212/derivatives/preprocessed"
-save_dir = "./data/sensor_positions"
+base_input_dir = config.MEG_PREPROCESSED_DIR
+save_dir = config.SENSOR_POS_DIR
 os.makedirs(save_dir, exist_ok=True)
 
 # 2. 표준 레이아웃 로드 (CTF-275 전체 정보)

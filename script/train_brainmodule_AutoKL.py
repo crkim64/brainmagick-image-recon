@@ -23,29 +23,31 @@ except ImportError:
 # 1. 설정 (Configuration)
 # ==========================================
 CONFIG = {
-    'batch_size': 32,      
+    'batch_size': 128,      
     'lr': 3e-4,             
     'epochs': 100,
     'patience': 10,         
-    'device': 'cuda:1' if torch.cuda.is_available() else 'cpu',
+    'device': 'cuda' if torch.cuda.is_available() else 'cpu',
     'subjects': ['P1', 'P2', 'P3', 'P4'],
     
     # 데이터 스펙
     'in_channels': 271,     
-    'time_len': 281,        
+    'time_len': 180,        
     
-    # [수정] 둘 다 AutoKL에서 파생된 차원
-    'out_dim_clip': 16384,   # (4,64,64) -> Flatten (Full Info)
-    'out_dim_mse': 16384,   # (4,64,64) -> Flatten
+    # [수정] Hybrid Loss (Channel Averaged AutoKL)
+    # Target: (4, 64, 64) -> Mean(0) -> (64, 64) -> Flatten -> 4096
+    'out_dim_clip': 4096,   
+    'out_dim_mse': 4096,   
     
-    'lambda_loss': 0.0,     
+    'lambda_loss': 0.75,     
+    'target_normalization': True, # [NEW] User Request
     
     # 경로 설정
     'data_dir': './data',   
     'train_meg_path': './data/train/combined_train.h5',
-    'train_autokl_path': './data/extracted_features/combined_autokl_train.h5', # 이것만 사용
+    'train_autokl_path': './data/extracted_features/combined_autokl_train_mean.h5', 
     'pos_dir': './data/sensor_positions',
-    'ckpt_dir': './checkpoints/autokl_final', 
+    'ckpt_dir': './checkpoints/autokl_hybrid', # Save to new dir
     'log_dir': './logs'                 
 }
 
@@ -116,7 +118,7 @@ class BatchObject:
 # 4. 데이터셋 정의 (AutoKL Single Source)
 # ==========================================
 class MEGAutoKLDataset(Dataset):
-    def __init__(self, meg_path, autokl_path, pos_dir, subjects, stats_save_path):
+    def __init__(self, meg_path, autokl_path, pos_dir, subjects, stats_save_path, target_normalization=True):
         self.meg_path = meg_path
         self.autokl_path = autokl_path
         self.subjects = subjects
@@ -137,11 +139,19 @@ class MEGAutoKLDataset(Dataset):
                 pos = np.random.rand(271, 2)
             self.subject_positions_list.append(torch.tensor(pos, dtype=torch.float32))
             
-        # MSE Unnormalized이므로 로딩 시 정규화 하지 않음.
-        # 단, 추후 Generation을 위해 통계값은 저장해둠.
+        self.target_normalization = target_normalization
+        
+        # [수정] MSE Normalization
+        # Load Mean/Std and apply (target - mean) / std
         if not os.path.exists(stats_save_path):
-            log_print("📊 Calculating AutoKL Mean/Std (for future use)...")
+            log_print("📊 Calculating AutoKL Mean/Std...")
             self._compute_and_save_stats(autokl_path, stats_save_path)
+        else:
+            log_print(f"📊 AutoKL stats found at {stats_save_path}")
+        
+        stats = np.load(stats_save_path)
+        self.target_mean = torch.from_numpy(stats['mean']).float()
+        self.target_std = torch.from_numpy(stats['std']).float()
         
         self.meg_hf = None
         self.autokl_hf = None
@@ -150,14 +160,16 @@ class MEGAutoKLDataset(Dataset):
         with h5py.File(feat_path, 'r') as f:
             dset = f['features'] 
             n_samples = dset.shape[0]
-            out_dim = 16384 
+            out_dim = 4096 
             
             sum_features = np.zeros(out_dim, dtype=np.float64)
             sum_sq_features = np.zeros(out_dim, dtype=np.float64)
             
             for i in tqdm(range(0, n_samples, chunk_size), desc="Stats"):
                 chunk = dset[i : i + chunk_size] 
-                chunk = chunk.reshape(chunk.shape[0], -1) 
+                # [Optimized] Already flattened means in preprocessed file
+                # Shape: (B, 4096)
+                
                 sum_features += np.sum(chunk, axis=0)
                 sum_sq_features += np.sum(chunk ** 2, axis=0)
             
@@ -181,16 +193,21 @@ class MEGAutoKLDataset(Dataset):
         ex_id = self.exemplars[idx]
         unique_img_id = cat_id * 100 + ex_id
         
-        # AutoKL Feature Load
-        feat_raw = self.autokl_hf['features'][idx] # (4, 64, 64)
+        # [Optimized] Load Preprocessed Mean Feature
+        # Shape: (4096,)
+        feat_raw = self.autokl_hf['features'][idx]
         
-        # 1. MSE Target: Full Flatten (Unnormalized)
-        # Shape: (16384,)
-        target_mse = torch.from_numpy(feat_raw.reshape(-1)).float()
+        # [수정] No Normalization (User Request) -> Now Conditional
+        target_raw = torch.from_numpy(feat_raw).float()
         
-        # 2. CLIP Target: Full Flatten (Same as MSE) for Contrastive Loss
-        # Channel Mean previously failed (Loss stuck at ln(32))
-        target_clip = target_mse.clone() # (16384,)
+        if self.target_normalization:
+            target_raw = (target_raw - self.target_mean) / (self.target_std + 1e-6)
+        
+        # 1. MSE Target: Raw
+        target_mse = target_raw
+        
+        # 2. CLIP Target: Raw
+        target_clip = target_raw.clone() 
         
         meg_tensor = torch.from_numpy(meg_data).float()
         subj_tensor = torch.tensor(subj_idx, dtype=torch.long)
@@ -256,7 +273,8 @@ def main():
         autokl_path=CONFIG['train_autokl_path'],
         pos_dir=CONFIG['pos_dir'],
         subjects=CONFIG['subjects'],
-        stats_save_path=stats_path
+        stats_save_path=stats_path,
+        target_normalization=CONFIG['target_normalization']
     )
     
     train_size = int(0.8 * len(full_dataset))
@@ -270,32 +288,24 @@ def main():
     val_loader = DataLoader(val_dataset, batch_size=CONFIG['batch_size'], shuffle=False, num_workers=4, pin_memory=True, drop_last=True)
 
     # Model Init
+    # Model Init
     model = BrainModule(
-        in_channels={'meg': CONFIG['in_channels']}, 
-        out_dim_clip=CONFIG['out_dim_clip'], # 4096
-        out_dim_mse=CONFIG['out_dim_mse'],   # 16384
-        time_len=CONFIG['time_len'], 
-        hidden={'meg': 320}, 
+        n_time_steps=CONFIG['time_len'],
+        in_channels=CONFIG['in_channels'],
         n_subjects=len(CONFIG['subjects']),
-        merger=True, merger_pos_dim=512, merger_channels=270,
-        rewrite=True, glu=1, glu_context=1,
-        skip=True, batch_norm=True, post_skip=True, scale=1.0, 
-        subject_layers=True
+        target_dim=CONFIG['out_dim_clip'], # 4096 (Assuming MSE is same)
+        use_clip_head=True,
+        use_mse_head=True,
     ).to(CONFIG['device'])
-
-    if model.merger:
-        model.merger.position_getter.get_positions = lambda batch: batch.meg_positions.to(CONFIG['device'])
-        model.merger.position_getter.is_invalid = lambda pos: torch.zeros(pos.shape[0], pos.shape[1], dtype=torch.bool).to(pos.device)
 
     # Optimizer & Loss
     optimizer = optim.Adam(model.parameters(), lr=CONFIG['lr'], betas=(0.9, 0.999))
     criterion = BrainDecodingLoss(lambda_loss=CONFIG['lambda_loss']).to(CONFIG['device'])
-    scaler = torch.cuda.amp.GradScaler() # Fix: Add GradScaler
     
     best_model_path = os.path.join(CONFIG['ckpt_dir'], 'best_model.pth')
     early_stopping = EarlyStopping(patience=CONFIG['patience'], path=best_model_path)
 
-    log_print("🚀 Start Training Loop...")
+    log_print("🚀 Start Training Loop (Standard FP32)...")
 
     for epoch in range(CONFIG['epochs']):
         start_time = time.time()
@@ -305,9 +315,6 @@ def main():
         
         pbar = tqdm(train_loader, desc=f"Epoch {epoch+1}/{CONFIG['epochs']} [Train]")
         
-        accumulation_steps = 1
-        optimizer.zero_grad()
-        
         for i, (meg, t_clip, t_mse, subj_idx, pos, img_ids) in enumerate(pbar):
             meg = meg.to(CONFIG['device'])
             t_clip = t_clip.to(CONFIG['device']) # AutoKL Mean
@@ -315,26 +322,23 @@ def main():
             subj_idx = subj_idx.to(CONFIG['device'])
             img_ids = img_ids.to(CONFIG['device'])
             
-            batch = BatchObject(meg, subj_idx, pos)
+            # 1. Forward
+            outputs = model(meg, subj_idx)
+            out_clip = outputs['clip']
+            out_mse = outputs['mse']
             
-            with torch.cuda.amp.autocast(enabled=True):
-                out_clip, out_mse = model({'meg': meg}, batch)
-                loss, l_clip, l_mse = criterion(out_clip, out_mse, t_clip, t_mse, img_ids)
-                loss = loss / accumulation_steps
-
-            # loss.backward()
-            scaler.scale(loss).backward()
+            # 2. Loss
+            loss, l_clip, l_mse = criterion(out_clip, out_mse, t_clip, t_mse, img_ids)
             
-            if (i + 1) % accumulation_steps == 0:
-                scaler.step(optimizer)
-                scaler.update()
-                optimizer.zero_grad()
-                torch.cuda.empty_cache()
+            # 3. Backward
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
             
             train_loss += loss.item()
             train_clip += l_clip.item()
             train_mse += l_mse.item()
-            pbar.set_postfix({'L': f"{loss.item():.10f}", 'CLIP': f"{l_clip.item():.10f}", 'MSE': f"{l_mse.item():.10f}"})
+            pbar.set_postfix({'L': f"{loss.item():.6f}", 'CLIP': f"{l_clip.item():.6f}", 'MSE': f"{l_mse.item():.6f}"})
         
         avg_train_loss = train_loss / len(train_loader)
 
@@ -349,9 +353,10 @@ def main():
                 subj_idx = subj_idx.to(CONFIG['device'])
                 img_ids = img_ids.to(CONFIG['device'])
                 
-                batch = BatchObject(meg, subj_idx, pos)
+                outputs = model(meg, subj_idx)
+                out_clip = outputs['clip']
+                out_mse = outputs['mse']
                 
-                out_clip, out_mse = model({'meg': meg}, batch)
                 loss, l_clip, l_mse = criterion(out_clip, out_mse, t_clip, t_mse, img_ids)
                 
                 val_loss += loss.item()
@@ -365,8 +370,8 @@ def main():
         elapsed = time.time() - start_time
         
         log_msg = (f"Epoch {epoch+1} | Time: {elapsed:.1f}s | "
-                   f"Train Loss: {avg_train_loss:.10f} | "
-                   f"Val Loss: {avg_val_loss:.10f} (CLIP: {avg_val_clip:.6f}, MSE: {avg_val_mse:.10f})")
+                   f"Train Loss: {avg_train_loss:.6f} | "
+                   f"Val Loss: {avg_val_loss:.6f} (CLIP: {avg_val_clip:.6f}, MSE: {avg_val_mse:.6f})")
         log_print(log_msg)
         
         early_stopping(avg_val_loss, model)

@@ -225,3 +225,788 @@
 2026-02-05 21:34:15 - 🛑 EarlyStopping counter: 15 out of 15
 2026-02-05 21:34:15 - 🛑 Early stopping triggered!
 2026-02-05 21:34:15 - 🎉 Training Finished!
+2026-02-10 21:55:42 - 
+==================================================
+2026-02-10 21:55:42 - 🚀 Initializing Training (Target: CLIP Text Sequence)
+2026-02-10 21:55:42 -    CLIP Dim: 768 (Global)
+2026-02-10 21:55:42 -    MSE Dim:  768 (77*768 Full Seq)
+2026-02-10 21:55:42 - ==================================================
+2026-02-10 21:55:42 - 📊 Calculating CLIP Text Mean/Std (for generation)...
+2026-02-10 21:57:22 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-10 21:57:26 - 🚀 Start Training Loop...
+2026-02-10 22:00:30 - 
+==================================================
+2026-02-10 22:00:30 - 🚀 Initializing Training (Target: CLIP Text Sequence)
+2026-02-10 22:00:30 -    CLIP Dim: 768 (Global)
+2026-02-10 22:00:30 -    MSE Dim:  768 (77*768 Full Seq)
+2026-02-10 22:00:30 - ==================================================
+2026-02-10 22:00:30 - 📊 CLIP Text stats found at ./checkpoints/clip_text_hybrid/clip_text_stats.npz
+2026-02-10 22:00:30 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-10 22:00:34 - 🚀 Start Training Loop...
+2026-02-10 22:01:10 - 
+==================================================
+2026-02-10 22:01:10 - 🚀 Initializing Training (Target: CLIP Text Sequence)
+2026-02-10 22:01:10 -    CLIP Dim: 768 (Global)
+2026-02-10 22:01:10 -    MSE Dim:  768 (77*768 Full Seq)
+2026-02-10 22:01:10 - ==================================================
+2026-02-10 22:01:10 - 📊 Calculating CLIP Text Mean/Std (for generation)...
+2026-02-10 22:01:43 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-10 22:01:47 - 🚀 Start Training Loop...
+2026-02-10 23:47:43 - 
+==================================================
+2026-02-10 23:47:43 - 🚀 Initializing Training (Target: CLIP Text Sequence)
+2026-02-10 23:47:43 -    CLIP Dim: 768 (Global)
+2026-02-10 23:47:43 -    MSE Dim:  768 (Mean Token)
+2026-02-10 23:47:43 - ==================================================
+2026-02-10 23:47:43 - 📊 CLIP Text stats found at ./checkpoints/clip_text_hybrid/clip_text_stats.npz
+2026-02-10 23:47:43 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-10 23:47:47 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-10 23:59:38 - 
+==================================================
+2026-02-10 23:59:38 - 🚀 Initializing Training (Target: CLIP Text Sequence)
+2026-02-10 23:59:38 -    CLIP Dim: 768 (Global)
+2026-02-10 23:59:38 -    MSE Dim:  768 (Mean Token)
+2026-02-10 23:59:38 - ==================================================
+2026-02-10 23:59:38 - 📊 CLIP Text stats found at ./checkpoints/clip_text_hybrid/clip_text_stats.npz
+2026-02-10 23:59:38 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-10 23:59:43 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-11 00:41:08 - Epoch 1 | Time: 2485.1s | Train Loss: 2.429049 | Val Loss: 2.426889 (CLIP: 4.8534, MSE: 0.000338)
+2026-02-11 00:41:09 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-11 01:19:22 - Epoch 2 | Time: 2293.9s | Train Loss: 2.422426 | Val Loss: 2.412400 (CLIP: 4.8244, MSE: 0.000356)
+2026-02-11 01:19:23 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-11 01:54:10 - 
+==================================================
+2026-02-11 01:54:10 - 🚀 Initializing Training (Target: CLIP Text Sequence)
+2026-02-11 01:54:10 -    CLIP Dim: 768 (Global)
+2026-02-11 01:54:10 -    MSE Dim:  768 (Mean Token)
+2026-02-11 01:54:10 - ==================================================
+2026-02-11 01:54:10 - 📊 CLIP Text stats found at ./checkpoints/clip_text_hybrid/clip_text_stats.npz
+2026-02-11 01:54:10 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-11 01:54:14 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-11 01:58:24 - Epoch 1 | Time: 250.1s | Train Loss: 2.428052 | Val Loss: 2.426524 (CLIP: 4.8526, MSE: 0.000437)
+2026-02-11 01:58:24 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-11 02:01:43 - Epoch 2 | Time: 199.4s | Train Loss: 2.426279 | Val Loss: 2.426262 (CLIP: 4.8522, MSE: 0.000365)
+2026-02-11 02:01:43 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-11 02:05:05 - Epoch 3 | Time: 201.8s | Train Loss: 2.426200 | Val Loss: 2.426306 (CLIP: 4.8522, MSE: 0.000390)
+2026-02-11 02:05:05 - 🛑 EarlyStopping counter: 1 out of 15
+2026-02-11 02:08:27 - Epoch 4 | Time: 201.8s | Train Loss: 2.426181 | Val Loss: 2.426445 (CLIP: 4.8525, MSE: 0.000391)
+2026-02-11 02:08:27 - 🛑 EarlyStopping counter: 2 out of 15
+2026-02-11 02:11:46 - Epoch 5 | Time: 198.8s | Train Loss: 2.426053 | Val Loss: 2.426352 (CLIP: 4.8523, MSE: 0.000403)
+2026-02-11 02:11:46 - 🛑 EarlyStopping counter: 3 out of 15
+2026-02-11 02:15:06 - Epoch 6 | Time: 199.8s | Train Loss: 2.426291 | Val Loss: 2.430362 (CLIP: 4.8589, MSE: 0.001856)
+2026-02-11 02:15:06 - 🛑 EarlyStopping counter: 4 out of 15
+2026-02-11 02:18:25 - Epoch 7 | Time: 199.5s | Train Loss: 2.424022 | Val Loss: 2.420366 (CLIP: 4.8403, MSE: 0.000424)
+2026-02-11 02:18:25 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-11 02:21:43 - Epoch 8 | Time: 197.5s | Train Loss: 2.412475 | Val Loss: 2.407427 (CLIP: 4.8144, MSE: 0.000440)
+2026-02-11 02:21:43 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-11 02:25:02 - Epoch 9 | Time: 199.1s | Train Loss: 2.401767 | Val Loss: 2.401648 (CLIP: 4.8029, MSE: 0.000436)
+2026-02-11 02:25:02 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-11 02:28:20 - Epoch 10 | Time: 197.8s | Train Loss: 2.394005 | Val Loss: 2.399294 (CLIP: 4.7980, MSE: 0.000541)
+2026-02-11 02:28:20 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-11 02:28:20 - 💾 Checkpoint saved: ./checkpoints/clip_text_hybrid/epoch_10.pth
+2026-02-11 02:31:38 - Epoch 11 | Time: 198.2s | Train Loss: 2.386183 | Val Loss: 2.395257 (CLIP: 4.7900, MSE: 0.000524)
+2026-02-11 02:31:38 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-11 02:34:58 - Epoch 12 | Time: 199.3s | Train Loss: 2.377083 | Val Loss: 2.391598 (CLIP: 4.7826, MSE: 0.000560)
+2026-02-11 02:34:58 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-11 02:38:17 - Epoch 13 | Time: 199.6s | Train Loss: 2.366338 | Val Loss: 2.387242 (CLIP: 4.7739, MSE: 0.000540)
+2026-02-11 02:38:18 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-11 02:41:38 - Epoch 14 | Time: 200.9s | Train Loss: 2.352899 | Val Loss: 2.383087 (CLIP: 4.7656, MSE: 0.000583)
+2026-02-11 02:41:39 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-11 02:44:59 - Epoch 15 | Time: 200.2s | Train Loss: 2.339396 | Val Loss: 2.383175 (CLIP: 4.7658, MSE: 0.000537)
+2026-02-11 02:44:59 - 🛑 EarlyStopping counter: 1 out of 15
+2026-02-11 02:48:16 - Epoch 16 | Time: 197.2s | Train Loss: 2.325042 | Val Loss: 2.381992 (CLIP: 4.7634, MSE: 0.000545)
+2026-02-11 02:48:16 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-11 02:51:35 - Epoch 17 | Time: 199.3s | Train Loss: 2.307495 | Val Loss: 2.384034 (CLIP: 4.7675, MSE: 0.000530)
+2026-02-11 02:51:35 - 🛑 EarlyStopping counter: 1 out of 15
+2026-02-11 02:54:54 - Epoch 18 | Time: 198.2s | Train Loss: 2.295139 | Val Loss: 2.388249 (CLIP: 4.7759, MSE: 0.000553)
+2026-02-11 02:54:54 - 🛑 EarlyStopping counter: 2 out of 15
+2026-02-11 02:58:11 - Epoch 19 | Time: 197.5s | Train Loss: 2.278711 | Val Loss: 2.390298 (CLIP: 4.7801, MSE: 0.000536)
+2026-02-11 02:58:11 - 🛑 EarlyStopping counter: 3 out of 15
+2026-02-11 03:01:31 - Epoch 20 | Time: 199.4s | Train Loss: 2.259851 | Val Loss: 2.394962 (CLIP: 4.7894, MSE: 0.000483)
+2026-02-11 03:01:31 - 🛑 EarlyStopping counter: 4 out of 15
+2026-02-11 03:01:31 - 💾 Checkpoint saved: ./checkpoints/clip_text_hybrid/epoch_20.pth
+2026-02-11 03:04:52 - Epoch 21 | Time: 201.6s | Train Loss: 2.242035 | Val Loss: 2.397682 (CLIP: 4.7949, MSE: 0.000459)
+2026-02-11 03:04:52 - 🛑 EarlyStopping counter: 5 out of 15
+2026-02-11 03:08:12 - Epoch 22 | Time: 200.1s | Train Loss: 2.224543 | Val Loss: 2.400048 (CLIP: 4.7996, MSE: 0.000455)
+2026-02-11 03:08:12 - 🛑 EarlyStopping counter: 6 out of 15
+2026-02-11 03:11:32 - Epoch 23 | Time: 200.2s | Train Loss: 2.204885 | Val Loss: 2.405371 (CLIP: 4.8103, MSE: 0.000461)
+2026-02-11 03:11:32 - 🛑 EarlyStopping counter: 7 out of 15
+2026-02-11 03:14:12 - Epoch 24 | Time: 159.8s | Train Loss: 2.183657 | Val Loss: 2.408565 (CLIP: 4.8167, MSE: 0.000451)
+2026-02-11 03:14:12 - 🛑 EarlyStopping counter: 8 out of 15
+2026-02-11 03:16:46 - Epoch 25 | Time: 154.0s | Train Loss: 2.157442 | Val Loss: 2.414913 (CLIP: 4.8294, MSE: 0.000464)
+2026-02-11 03:16:46 - 🛑 EarlyStopping counter: 9 out of 15
+2026-02-11 03:19:23 - Epoch 26 | Time: 157.1s | Train Loss: 2.139018 | Val Loss: 2.418569 (CLIP: 4.8367, MSE: 0.000448)
+2026-02-11 03:19:23 - 🛑 EarlyStopping counter: 10 out of 15
+2026-02-11 03:21:59 - Epoch 27 | Time: 155.7s | Train Loss: 2.107354 | Val Loss: 2.422456 (CLIP: 4.8444, MSE: 0.000490)
+2026-02-11 03:21:59 - 🛑 EarlyStopping counter: 11 out of 15
+2026-02-11 03:24:36 - Epoch 28 | Time: 157.0s | Train Loss: 2.080464 | Val Loss: 2.429505 (CLIP: 4.8586, MSE: 0.000451)
+2026-02-11 03:24:36 - 🛑 EarlyStopping counter: 12 out of 15
+2026-02-11 03:27:55 - Epoch 29 | Time: 199.1s | Train Loss: 2.049661 | Val Loss: 2.435134 (CLIP: 4.8698, MSE: 0.000474)
+2026-02-11 03:27:55 - 🛑 EarlyStopping counter: 13 out of 15
+2026-02-11 03:31:19 - Epoch 30 | Time: 203.5s | Train Loss: 2.019384 | Val Loss: 2.438294 (CLIP: 4.8761, MSE: 0.000465)
+2026-02-11 03:31:19 - 🛑 EarlyStopping counter: 14 out of 15
+2026-02-11 03:31:19 - 💾 Checkpoint saved: ./checkpoints/clip_text_hybrid/epoch_30.pth
+2026-02-11 03:34:42 - Epoch 31 | Time: 203.2s | Train Loss: 1.992039 | Val Loss: 2.439744 (CLIP: 4.8790, MSE: 0.000494)
+2026-02-11 03:34:42 - 🛑 EarlyStopping counter: 15 out of 15
+2026-02-11 03:34:42 - 🛑 Early stopping triggered!
+2026-02-11 03:34:42 - 🎉 Training Finished!
+2026-02-11 17:33:29 - 
+==================================================
+2026-02-11 17:33:29 - 🚀 Initializing Training (Target: CLIP Text Sequence)
+2026-02-11 17:33:29 -    CLIP Dim: 768 (Global)
+2026-02-11 17:33:29 -    MSE Dim:  768 (Mean Token)
+2026-02-11 17:33:29 - ==================================================
+2026-02-11 17:33:29 - 📊 CLIP Text stats found at ./checkpoints/clip_text_hybrid/clip_text_stats.npz
+2026-02-11 17:33:29 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-11 17:33:31 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-11 17:33:59 - 
+==================================================
+2026-02-11 17:33:59 - 🚀 Initializing Training (Target: CLIP Text Sequence)
+2026-02-11 17:33:59 -    CLIP Dim: 768 (Global)
+2026-02-11 17:33:59 -    MSE Dim:  768 (Mean Token)
+2026-02-11 17:33:59 - ==================================================
+2026-02-11 17:33:59 - 📊 CLIP Text stats found at ./checkpoints/clip_text_hybrid/clip_text_stats.npz
+2026-02-11 17:33:59 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-11 17:34:01 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-11 17:37:13 - Epoch 1 | Time: 192.5s | Train Loss: 1.214668 | Val Loss: 1.213285 (CLIP: 4.8520, MSE: 0.000365)
+2026-02-11 17:37:14 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-11 17:40:29 - Epoch 2 | Time: 195.5s | Train Loss: 1.204151 | Val Loss: 1.193475 (CLIP: 4.7726, MSE: 0.000422)
+2026-02-11 17:40:29 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-11 17:43:43 - Epoch 3 | Time: 193.6s | Train Loss: 1.188870 | Val Loss: 1.185871 (CLIP: 4.7423, MSE: 0.000380)
+2026-02-11 17:43:43 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-11 17:46:55 - Epoch 4 | Time: 192.3s | Train Loss: 1.178043 | Val Loss: 1.179222 (CLIP: 4.7158, MSE: 0.000363)
+2026-02-11 17:46:56 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-11 17:50:05 - Epoch 5 | Time: 189.9s | Train Loss: 1.167829 | Val Loss: 1.177399 (CLIP: 4.7085, MSE: 0.000361)
+2026-02-11 17:50:06 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-11 17:53:15 - Epoch 6 | Time: 189.3s | Train Loss: 1.155783 | Val Loss: 1.175307 (CLIP: 4.7002, MSE: 0.000356)
+2026-02-11 17:53:15 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-11 17:56:23 - Epoch 7 | Time: 188.5s | Train Loss: 1.142677 | Val Loss: 1.177916 (CLIP: 4.7106, MSE: 0.000354)
+2026-02-11 17:56:23 - 🛑 EarlyStopping counter: 1 out of 15
+2026-02-11 17:59:31 - Epoch 8 | Time: 187.2s | Train Loss: 1.125343 | Val Loss: 1.178583 (CLIP: 4.7133, MSE: 0.000348)
+2026-02-11 17:59:31 - 🛑 EarlyStopping counter: 2 out of 15
+2026-02-11 18:02:41 - Epoch 9 | Time: 190.7s | Train Loss: 1.106549 | Val Loss: 1.183904 (CLIP: 4.7346, MSE: 0.000347)
+2026-02-11 18:02:41 - 🛑 EarlyStopping counter: 3 out of 15
+2026-02-11 18:05:55 - Epoch 10 | Time: 193.8s | Train Loss: 1.081037 | Val Loss: 1.187731 (CLIP: 4.7499, MSE: 0.000343)
+2026-02-11 18:05:55 - 🛑 EarlyStopping counter: 4 out of 15
+2026-02-11 18:05:55 - 💾 Checkpoint saved: ./checkpoints/clip_text_hybrid/epoch_10.pth
+2026-02-11 18:09:07 - Epoch 11 | Time: 191.6s | Train Loss: 1.049838 | Val Loss: 1.193381 (CLIP: 4.7725, MSE: 0.000342)
+2026-02-11 18:09:07 - 🛑 EarlyStopping counter: 5 out of 15
+2026-02-11 18:12:18 - Epoch 12 | Time: 191.1s | Train Loss: 1.009991 | Val Loss: 1.202139 (CLIP: 4.8075, MSE: 0.000339)
+2026-02-11 18:12:18 - 🛑 EarlyStopping counter: 6 out of 15
+2026-02-11 18:15:29 - Epoch 13 | Time: 191.0s | Train Loss: 0.962586 | Val Loss: 1.213231 (CLIP: 4.8519, MSE: 0.000340)
+2026-02-11 18:15:29 - 🛑 EarlyStopping counter: 7 out of 15
+2026-02-11 18:18:41 - Epoch 14 | Time: 192.5s | Train Loss: 0.912038 | Val Loss: 1.221791 (CLIP: 4.8861, MSE: 0.000340)
+2026-02-11 18:18:41 - 🛑 EarlyStopping counter: 8 out of 15
+2026-02-11 18:21:53 - Epoch 15 | Time: 191.2s | Train Loss: 0.864644 | Val Loss: 1.227228 (CLIP: 4.9079, MSE: 0.000340)
+2026-02-11 18:21:53 - 🛑 EarlyStopping counter: 9 out of 15
+2026-02-11 18:25:03 - Epoch 16 | Time: 190.1s | Train Loss: 0.805801 | Val Loss: 1.234581 (CLIP: 4.9373, MSE: 0.000341)
+2026-02-11 18:25:03 - 🛑 EarlyStopping counter: 10 out of 15
+2026-02-11 18:28:13 - Epoch 17 | Time: 189.9s | Train Loss: 0.764100 | Val Loss: 1.235713 (CLIP: 4.9418, MSE: 0.000340)
+2026-02-11 18:28:13 - 🛑 EarlyStopping counter: 11 out of 15
+2026-02-11 18:31:22 - Epoch 18 | Time: 189.8s | Train Loss: 0.708704 | Val Loss: 1.239550 (CLIP: 4.9572, MSE: 0.000341)
+2026-02-11 18:31:22 - 🛑 EarlyStopping counter: 12 out of 15
+2026-02-11 18:34:35 - Epoch 19 | Time: 192.5s | Train Loss: 0.657602 | Val Loss: 1.242842 (CLIP: 4.9703, MSE: 0.000345)
+2026-02-11 18:34:35 - 🛑 EarlyStopping counter: 13 out of 15
+2026-02-11 18:37:50 - Epoch 20 | Time: 195.2s | Train Loss: 0.620375 | Val Loss: 1.246596 (CLIP: 4.9853, MSE: 0.000346)
+2026-02-11 18:37:50 - 🛑 EarlyStopping counter: 14 out of 15
+2026-02-11 18:37:50 - 💾 Checkpoint saved: ./checkpoints/clip_text_hybrid/epoch_20.pth
+2026-02-11 18:41:04 - Epoch 21 | Time: 194.0s | Train Loss: 0.590651 | Val Loss: 1.245008 (CLIP: 4.9790, MSE: 0.000347)
+2026-02-11 18:41:04 - 🛑 EarlyStopping counter: 15 out of 15
+2026-02-11 18:41:04 - 🛑 Early stopping triggered!
+2026-02-11 18:41:04 - 🎉 Training Finished!
+2026-02-12 12:23:52 - 
+==================================================
+2026-02-12 12:23:52 - 🚀 Initializing Training (Target: CLIP Text Sequence)
+2026-02-12 12:23:52 -    CLIP Dim: 768 (Global)
+2026-02-12 12:23:52 -    MSE Dim:  768 (Mean Token)
+2026-02-12 12:23:52 - ==================================================
+2026-02-12 12:23:52 - 📊 CLIP Text stats found at ./checkpoints/clip_text_hybrid/clip_text_stats.npz
+2026-02-12 12:23:52 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-12 12:23:55 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-12 12:27:10 - Epoch 1 | Time: 195.2s | Train Loss: 0.244377 | Val Loss: 0.242956 (CLIP: 4.8522, MSE: 0.000367)
+2026-02-12 12:27:10 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-12 12:30:27 - Epoch 2 | Time: 196.9s | Train Loss: 0.242669 | Val Loss: 0.241645 (CLIP: 4.8254, MSE: 0.000393)
+2026-02-12 12:30:27 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-12 12:33:48 - Epoch 3 | Time: 201.3s | Train Loss: 0.240142 | Val Loss: 0.238686 (CLIP: 4.7666, MSE: 0.000377)
+2026-02-12 12:33:48 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-12 12:37:12 - Epoch 4 | Time: 203.2s | Train Loss: 0.237580 | Val Loss: 0.236976 (CLIP: 4.7325, MSE: 0.000370)
+2026-02-12 12:37:12 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-12 12:40:32 - Epoch 5 | Time: 200.6s | Train Loss: 0.235183 | Val Loss: 0.235685 (CLIP: 4.7068, MSE: 0.000361)
+2026-02-12 12:40:33 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-12 12:43:53 - Epoch 6 | Time: 200.7s | Train Loss: 0.232705 | Val Loss: 0.235010 (CLIP: 4.6934, MSE: 0.000360)
+2026-02-12 12:43:54 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-12 12:47:12 - Epoch 7 | Time: 198.8s | Train Loss: 0.230078 | Val Loss: 0.234834 (CLIP: 4.6899, MSE: 0.000356)
+2026-02-12 12:47:13 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-12 12:50:33 - Epoch 8 | Time: 200.7s | Train Loss: 0.226839 | Val Loss: 0.235543 (CLIP: 4.7041, MSE: 0.000358)
+2026-02-12 12:50:33 - 🛑 EarlyStopping counter: 1 out of 15
+2026-02-12 12:53:53 - Epoch 9 | Time: 199.3s | Train Loss: 0.223086 | Val Loss: 0.236055 (CLIP: 4.7144, MSE: 0.000353)
+2026-02-12 12:53:53 - 🛑 EarlyStopping counter: 2 out of 15
+2026-02-12 12:57:12 - Epoch 10 | Time: 199.4s | Train Loss: 0.218719 | Val Loss: 0.237064 (CLIP: 4.7346, MSE: 0.000350)
+2026-02-12 12:57:12 - 🛑 EarlyStopping counter: 3 out of 15
+2026-02-12 12:57:12 - 💾 Checkpoint saved: ./checkpoints/clip_text_hybrid/epoch_10.pth
+2026-02-12 13:00:31 - Epoch 11 | Time: 199.2s | Train Loss: 0.213580 | Val Loss: 0.238633 (CLIP: 4.7660, MSE: 0.000351)
+2026-02-12 13:00:31 - 🛑 EarlyStopping counter: 4 out of 15
+2026-02-12 13:03:52 - Epoch 12 | Time: 200.4s | Train Loss: 0.207355 | Val Loss: 0.239691 (CLIP: 4.7872, MSE: 0.000349)
+2026-02-12 13:03:52 - 🛑 EarlyStopping counter: 5 out of 15
+2026-02-12 13:07:10 - Epoch 13 | Time: 197.7s | Train Loss: 0.200060 | Val Loss: 0.241847 (CLIP: 4.8304, MSE: 0.000347)
+2026-02-12 13:07:10 - 🛑 EarlyStopping counter: 6 out of 15
+2026-02-12 13:10:28 - Epoch 14 | Time: 198.9s | Train Loss: 0.191611 | Val Loss: 0.243268 (CLIP: 4.8588, MSE: 0.000344)
+2026-02-12 13:10:28 - 🛑 EarlyStopping counter: 7 out of 15
+2026-02-12 13:13:49 - Epoch 15 | Time: 200.5s | Train Loss: 0.180860 | Val Loss: 0.244889 (CLIP: 4.8913, MSE: 0.000342)
+2026-02-12 13:13:49 - 🛑 EarlyStopping counter: 8 out of 15
+2026-02-12 13:17:08 - Epoch 16 | Time: 199.0s | Train Loss: 0.171639 | Val Loss: 0.245899 (CLIP: 4.9115, MSE: 0.000342)
+2026-02-12 13:17:08 - 🛑 EarlyStopping counter: 9 out of 15
+2026-02-12 13:20:30 - Epoch 17 | Time: 201.7s | Train Loss: 0.160301 | Val Loss: 0.247414 (CLIP: 4.9418, MSE: 0.000344)
+2026-02-12 13:20:30 - 🛑 EarlyStopping counter: 10 out of 15
+2026-02-12 13:23:50 - Epoch 18 | Time: 200.3s | Train Loss: 0.151258 | Val Loss: 0.247925 (CLIP: 4.9520, MSE: 0.000344)
+2026-02-12 13:23:50 - 🛑 EarlyStopping counter: 11 out of 15
+2026-02-12 13:27:08 - Epoch 19 | Time: 198.6s | Train Loss: 0.141070 | Val Loss: 0.248651 (CLIP: 4.9664, MSE: 0.000346)
+2026-02-12 13:27:08 - 🛑 EarlyStopping counter: 12 out of 15
+2026-02-12 13:30:26 - Epoch 20 | Time: 197.6s | Train Loss: 0.131702 | Val Loss: 0.249647 (CLIP: 4.9863, MSE: 0.000347)
+2026-02-12 13:30:26 - 🛑 EarlyStopping counter: 13 out of 15
+2026-02-12 13:30:26 - 💾 Checkpoint saved: ./checkpoints/clip_text_hybrid/epoch_20.pth
+2026-02-12 13:33:41 - Epoch 21 | Time: 194.9s | Train Loss: 0.123664 | Val Loss: 0.249854 (CLIP: 4.9905, MSE: 0.000347)
+2026-02-12 13:33:41 - 🛑 EarlyStopping counter: 14 out of 15
+2026-02-12 13:36:06 - Epoch 22 | Time: 145.3s | Train Loss: 0.117283 | Val Loss: 0.249793 (CLIP: 4.9892, MSE: 0.000348)
+2026-02-12 13:36:06 - 🛑 EarlyStopping counter: 15 out of 15
+2026-02-12 13:36:06 - 🛑 Early stopping triggered!
+2026-02-12 13:36:06 - 🎉 Training Finished!
+2026-02-12 13:49:26 - 
+==================================================
+2026-02-12 13:49:26 - 🚀 Initializing Training (Target: CLIP Text Sequence)
+2026-02-12 13:49:26 -    CLIP Dim: 768 (Global)
+2026-02-12 13:49:26 -    MSE Dim:  768 (Mean Token)
+2026-02-12 13:49:26 - ==================================================
+2026-02-12 13:49:26 - 📊 CLIP Text stats found at ./checkpoints/clip_text_hybrid/clip_text_stats.npz
+2026-02-12 13:49:26 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-12 13:49:29 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-12 13:52:39 - Epoch 1 | Time: 190.4s | Train Loss: 1.214636 | Val Loss: 1.213118 (CLIP: 4.8513, MSE: 0.000392)
+2026-02-12 13:52:39 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-12 13:55:56 - Epoch 2 | Time: 196.7s | Train Loss: 1.202853 | Val Loss: 1.191698 (CLIP: 4.7655, MSE: 0.000439)
+2026-02-12 13:55:56 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-12 13:59:14 - Epoch 3 | Time: 197.4s | Train Loss: 1.186604 | Val Loss: 1.182678 (CLIP: 4.7296, MSE: 0.000388)
+2026-02-12 13:59:14 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-12 14:02:35 - Epoch 4 | Time: 200.8s | Train Loss: 1.175693 | Val Loss: 1.177116 (CLIP: 4.7074, MSE: 0.000371)
+2026-02-12 14:02:35 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-12 14:05:51 - Epoch 5 | Time: 196.4s | Train Loss: 1.162646 | Val Loss: 1.174277 (CLIP: 4.6960, MSE: 0.000368)
+2026-02-12 14:05:51 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-12 14:09:07 - Epoch 6 | Time: 195.8s | Train Loss: 1.149393 | Val Loss: 1.172453 (CLIP: 4.6887, MSE: 0.000357)
+2026-02-12 14:09:07 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-12 14:12:21 - Epoch 7 | Time: 194.2s | Train Loss: 1.130633 | Val Loss: 1.175447 (CLIP: 4.7007, MSE: 0.000352)
+2026-02-12 14:12:21 - 🛑 EarlyStopping counter: 1 out of 15
+2026-02-12 14:15:38 - Epoch 8 | Time: 196.1s | Train Loss: 1.111749 | Val Loss: 1.180184 (CLIP: 4.7197, MSE: 0.000348)
+2026-02-12 14:15:38 - 🛑 EarlyStopping counter: 2 out of 15
+2026-02-12 14:18:52 - Epoch 9 | Time: 194.8s | Train Loss: 1.083993 | Val Loss: 1.187220 (CLIP: 4.7478, MSE: 0.000347)
+2026-02-12 14:18:52 - 🛑 EarlyStopping counter: 3 out of 15
+2026-02-12 14:22:09 - Epoch 10 | Time: 196.3s | Train Loss: 1.050225 | Val Loss: 1.194294 (CLIP: 4.7761, MSE: 0.000345)
+2026-02-12 14:22:09 - 🛑 EarlyStopping counter: 4 out of 15
+2026-02-12 14:22:09 - 💾 Checkpoint saved: ./checkpoints/clip_text_hybrid/epoch_10.pth
+2026-02-12 14:25:23 - Epoch 11 | Time: 194.5s | Train Loss: 1.011400 | Val Loss: 1.200343 (CLIP: 4.8003, MSE: 0.000342)
+2026-02-12 14:25:23 - 🛑 EarlyStopping counter: 5 out of 15
+2026-02-12 14:28:39 - Epoch 12 | Time: 195.3s | Train Loss: 0.963860 | Val Loss: 1.210947 (CLIP: 4.8428, MSE: 0.000341)
+2026-02-12 14:28:39 - 🛑 EarlyStopping counter: 6 out of 15
+2026-02-12 14:31:56 - Epoch 13 | Time: 196.9s | Train Loss: 0.912065 | Val Loss: 1.221455 (CLIP: 4.8848, MSE: 0.000341)
+2026-02-12 14:31:56 - 🛑 EarlyStopping counter: 7 out of 15
+2026-02-12 14:35:10 - Epoch 14 | Time: 194.4s | Train Loss: 0.855923 | Val Loss: 1.225894 (CLIP: 4.9026, MSE: 0.000340)
+2026-02-12 14:35:10 - 🛑 EarlyStopping counter: 8 out of 15
+2026-02-12 14:38:26 - Epoch 15 | Time: 195.6s | Train Loss: 0.797378 | Val Loss: 1.232173 (CLIP: 4.9277, MSE: 0.000341)
+2026-02-12 14:38:26 - 🛑 EarlyStopping counter: 9 out of 15
+2026-02-12 14:41:43 - Epoch 16 | Time: 197.3s | Train Loss: 0.746403 | Val Loss: 1.235297 (CLIP: 4.9402, MSE: 0.000343)
+2026-02-12 14:41:43 - 🛑 EarlyStopping counter: 10 out of 15
+2026-02-12 14:44:59 - Epoch 17 | Time: 196.2s | Train Loss: 0.700230 | Val Loss: 1.238359 (CLIP: 4.9524, MSE: 0.000342)
+2026-02-12 14:44:59 - 🛑 EarlyStopping counter: 11 out of 15
+2026-02-12 14:48:17 - Epoch 18 | Time: 198.5s | Train Loss: 0.654712 | Val Loss: 1.241775 (CLIP: 4.9661, MSE: 0.000346)
+2026-02-12 14:48:17 - 🛑 EarlyStopping counter: 12 out of 15
+2026-02-12 14:51:31 - Epoch 19 | Time: 193.2s | Train Loss: 0.617252 | Val Loss: 1.243380 (CLIP: 4.9725, MSE: 0.000346)
+2026-02-12 14:51:31 - 🛑 EarlyStopping counter: 13 out of 15
+2026-02-12 14:54:49 - Epoch 20 | Time: 198.1s | Train Loss: 0.571660 | Val Loss: 1.246051 (CLIP: 4.9832, MSE: 0.000347)
+2026-02-12 14:54:49 - 🛑 EarlyStopping counter: 14 out of 15
+2026-02-12 14:54:49 - 💾 Checkpoint saved: ./checkpoints/clip_text_hybrid/epoch_20.pth
+2026-02-12 14:57:27 - Epoch 21 | Time: 158.1s | Train Loss: 0.540093 | Val Loss: 1.247675 (CLIP: 4.9896, MSE: 0.000350)
+2026-02-12 14:57:27 - 🛑 EarlyStopping counter: 15 out of 15
+2026-02-12 14:57:27 - 🛑 Early stopping triggered!
+2026-02-12 14:57:27 - 🎉 Training Finished!
+2026-02-12 17:28:19 - 
+==================================================
+2026-02-12 17:28:19 - 🚀 Initializing Training (Target: CLIP Text Sequence)
+2026-02-12 17:28:19 -    CLIP Dim: 768 (Global)
+2026-02-12 17:28:19 -    MSE Dim:  768 (Mean Token)
+2026-02-12 17:28:19 - ==================================================
+2026-02-12 17:28:19 - 📊 CLIP Text stats found at ./checkpoints/clip_text_hybrid/clip_text_stats.npz
+2026-02-12 17:28:19 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-12 17:28:21 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-12 17:31:30 - Epoch 1 | Time: 188.2s | Train Loss: 2.927537 | Val Loss: 2.903705 (CLIP: 4.8067, MSE: 1.000696)
+2026-02-12 17:31:30 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-12 17:34:47 - Epoch 2 | Time: 197.0s | Train Loss: 2.900440 | Val Loss: 2.929972 (CLIP: 4.8563, MSE: 1.003633)
+2026-02-12 17:34:47 - 🛑 EarlyStopping counter: 1 out of 15
+2026-02-12 17:38:07 - Epoch 3 | Time: 200.6s | Train Loss: 2.930406 | Val Loss: 2.932484 (CLIP: 4.8634, MSE: 1.001530)
+2026-02-12 17:38:07 - 🛑 EarlyStopping counter: 2 out of 15
+2026-02-12 17:41:31 - Epoch 4 | Time: 203.8s | Train Loss: 2.928611 | Val Loss: 2.927724 (CLIP: 4.8543, MSE: 1.001184)
+2026-02-12 17:41:31 - 🛑 EarlyStopping counter: 3 out of 15
+2026-02-12 17:44:54 - Epoch 5 | Time: 203.3s | Train Loss: 2.927716 | Val Loss: 2.928518 (CLIP: 4.8561, MSE: 1.000972)
+2026-02-12 17:44:54 - 🛑 EarlyStopping counter: 4 out of 15
+2026-02-12 17:48:16 - Epoch 6 | Time: 201.7s | Train Loss: 2.927844 | Val Loss: 2.930519 (CLIP: 4.8601, MSE: 1.000903)
+2026-02-12 17:48:16 - 🛑 EarlyStopping counter: 5 out of 15
+2026-02-12 17:51:43 - Epoch 7 | Time: 206.9s | Train Loss: 2.927946 | Val Loss: 2.927288 (CLIP: 4.8538, MSE: 1.000813)
+2026-02-12 17:51:43 - 🛑 EarlyStopping counter: 6 out of 15
+2026-02-12 17:55:09 - Epoch 8 | Time: 206.0s | Train Loss: 2.926686 | Val Loss: 2.926798 (CLIP: 4.8529, MSE: 1.000703)
+2026-02-12 17:55:09 - 🛑 EarlyStopping counter: 7 out of 15
+2026-02-12 17:58:32 - Epoch 9 | Time: 203.4s | Train Loss: 2.926641 | Val Loss: 2.926822 (CLIP: 4.8530, MSE: 1.000672)
+2026-02-12 17:58:32 - 🛑 EarlyStopping counter: 8 out of 15
+2026-02-12 18:01:56 - Epoch 10 | Time: 203.2s | Train Loss: 2.926349 | Val Loss: 2.926465 (CLIP: 4.8523, MSE: 1.000674)
+2026-02-12 18:01:56 - 🛑 EarlyStopping counter: 9 out of 15
+2026-02-12 18:01:56 - 💾 Checkpoint saved: ./checkpoints/clip_text_hybrid/epoch_10.pth
+2026-02-12 18:05:20 - Epoch 11 | Time: 204.3s | Train Loss: 2.926113 | Val Loss: 2.926354 (CLIP: 4.8521, MSE: 1.000585)
+2026-02-12 18:05:20 - 🛑 EarlyStopping counter: 10 out of 15
+2026-02-12 18:08:46 - Epoch 12 | Time: 206.2s | Train Loss: 2.926062 | Val Loss: 2.926348 (CLIP: 4.8521, MSE: 1.000607)
+2026-02-12 18:08:46 - 🛑 EarlyStopping counter: 11 out of 15
+2026-02-12 18:12:07 - Epoch 13 | Time: 201.1s | Train Loss: 2.926073 | Val Loss: 2.926314 (CLIP: 4.8521, MSE: 1.000548)
+2026-02-12 18:12:07 - 🛑 EarlyStopping counter: 12 out of 15
+2026-02-12 18:15:32 - Epoch 14 | Time: 204.5s | Train Loss: 2.926055 | Val Loss: 2.926327 (CLIP: 4.8521, MSE: 1.000583)
+2026-02-12 18:15:32 - 🛑 EarlyStopping counter: 13 out of 15
+2026-02-12 18:18:58 - Epoch 15 | Time: 205.7s | Train Loss: 2.926040 | Val Loss: 2.926332 (CLIP: 4.8521, MSE: 1.000600)
+2026-02-12 18:18:58 - 🛑 EarlyStopping counter: 14 out of 15
+2026-02-12 18:22:16 - Epoch 16 | Time: 198.4s | Train Loss: 2.926056 | Val Loss: 2.926332 (CLIP: 4.8521, MSE: 1.000605)
+2026-02-12 18:22:16 - 🛑 EarlyStopping counter: 15 out of 15
+2026-02-12 18:22:16 - 🛑 Early stopping triggered!
+2026-02-12 18:22:16 - 🎉 Training Finished!
+2026-02-13 01:44:05 - 
+==================================================
+2026-02-13 01:44:05 - 🚀 Initializing Training (Target: CLIP Text Sequence)
+2026-02-13 01:44:05 -    CLIP Dim: 768 (Global)
+2026-02-13 01:44:05 -    MSE Dim:  768 (Mean Token)
+2026-02-13 01:44:05 - ==================================================
+2026-02-13 01:44:05 - 📊 Calculating CLIP Text Mean/Std...
+2026-02-13 01:44:05 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-13 01:44:09 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-13 01:47:34 - Epoch 1 | Time: 205.2s | Train Loss: 2.932427 | Val Loss: 2.927179 (CLIP: 4.8523, MSE: 1.002072)
+2026-02-13 01:47:34 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-13 01:50:54 - Epoch 2 | Time: 199.7s | Train Loss: 2.914348 | Val Loss: 2.894212 (CLIP: 4.7887, MSE: 0.999702)
+2026-02-13 01:50:54 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-13 01:54:12 - Epoch 3 | Time: 197.5s | Train Loss: 2.879753 | Val Loss: 2.867215 (CLIP: 4.7364, MSE: 0.998062)
+2026-02-13 01:54:12 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-13 01:57:29 - Epoch 4 | Time: 197.4s | Train Loss: 2.853067 | Val Loss: 2.854639 (CLIP: 4.7118, MSE: 0.997507)
+2026-02-13 01:57:30 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-13 02:00:49 - Epoch 5 | Time: 199.2s | Train Loss: 2.827710 | Val Loss: 2.848414 (CLIP: 4.6998, MSE: 0.997073)
+2026-02-13 02:00:49 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-13 02:04:10 - Epoch 6 | Time: 200.6s | Train Loss: 2.796892 | Val Loss: 2.846433 (CLIP: 4.6961, MSE: 0.996726)
+2026-02-13 02:04:10 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-13 02:07:37 - Epoch 7 | Time: 207.2s | Train Loss: 2.762311 | Val Loss: 2.850337 (CLIP: 4.7040, MSE: 0.996684)
+2026-02-13 02:07:37 - 🛑 EarlyStopping counter: 1 out of 15
+2026-02-13 02:11:06 - Epoch 8 | Time: 208.7s | Train Loss: 2.723373 | Val Loss: 2.843843 (CLIP: 4.6915, MSE: 0.996137)
+2026-02-13 02:11:06 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-13 02:14:36 - Epoch 9 | Time: 210.6s | Train Loss: 2.672869 | Val Loss: 2.871420 (CLIP: 4.7453, MSE: 0.997522)
+2026-02-13 02:14:36 - 🛑 EarlyStopping counter: 1 out of 15
+2026-02-13 02:18:08 - Epoch 10 | Time: 211.3s | Train Loss: 2.608860 | Val Loss: 2.896827 (CLIP: 4.7946, MSE: 0.999033)
+2026-02-13 02:18:08 - 🛑 EarlyStopping counter: 2 out of 15
+2026-02-13 02:18:08 - 💾 Checkpoint saved: ./checkpoints/clip_text_hybrid/epoch_10.pth
+2026-02-13 02:21:34 - Epoch 11 | Time: 206.1s | Train Loss: 2.518876 | Val Loss: 2.940414 (CLIP: 4.8803, MSE: 1.000534)
+2026-02-13 02:21:34 - 🛑 EarlyStopping counter: 3 out of 15
+2026-02-13 02:25:03 - Epoch 12 | Time: 209.2s | Train Loss: 2.400787 | Val Loss: 2.981742 (CLIP: 4.9590, MSE: 1.004489)
+2026-02-13 02:25:03 - 🛑 EarlyStopping counter: 4 out of 15
+2026-02-13 02:28:34 - Epoch 13 | Time: 211.3s | Train Loss: 2.243746 | Val Loss: 3.015249 (CLIP: 5.0234, MSE: 1.007091)
+2026-02-13 02:28:34 - 🛑 EarlyStopping counter: 5 out of 15
+2026-02-13 02:32:06 - Epoch 14 | Time: 211.8s | Train Loss: 2.078359 | Val Loss: 3.067296 (CLIP: 5.1213, MSE: 1.013295)
+2026-02-13 02:32:06 - 🛑 EarlyStopping counter: 6 out of 15
+2026-02-13 02:35:17 - Epoch 15 | Time: 191.0s | Train Loss: 1.880571 | Val Loss: 3.106208 (CLIP: 5.1916, MSE: 1.020824)
+2026-02-13 02:35:17 - 🛑 EarlyStopping counter: 7 out of 15
+2026-02-13 02:38:15 - Epoch 16 | Time: 177.8s | Train Loss: 1.691600 | Val Loss: 3.135342 (CLIP: 5.2417, MSE: 1.029031)
+2026-02-13 02:38:15 - 🛑 EarlyStopping counter: 8 out of 15
+2026-02-13 02:41:42 - Epoch 17 | Time: 207.0s | Train Loss: 1.546899 | Val Loss: 3.155797 (CLIP: 5.2767, MSE: 1.034879)
+2026-02-13 02:41:42 - 🛑 EarlyStopping counter: 9 out of 15
+2026-02-13 02:45:07 - Epoch 18 | Time: 205.2s | Train Loss: 1.375838 | Val Loss: 3.182817 (CLIP: 5.3186, MSE: 1.047008)
+2026-02-13 02:45:07 - 🛑 EarlyStopping counter: 10 out of 15
+2026-02-13 02:48:36 - Epoch 19 | Time: 208.6s | Train Loss: 1.277722 | Val Loss: 3.189137 (CLIP: 5.3270, MSE: 1.051307)
+2026-02-13 02:48:36 - 🛑 EarlyStopping counter: 11 out of 15
+2026-02-13 02:52:07 - Epoch 20 | Time: 211.4s | Train Loss: 1.152435 | Val Loss: 3.204853 (CLIP: 5.3473, MSE: 1.062381)
+2026-02-13 02:52:07 - 🛑 EarlyStopping counter: 12 out of 15
+2026-02-13 02:52:07 - 💾 Checkpoint saved: ./checkpoints/clip_text_hybrid/epoch_20.pth
+2026-02-13 02:55:37 - Epoch 21 | Time: 209.2s | Train Loss: 1.084044 | Val Loss: 3.212480 (CLIP: 5.3567, MSE: 1.068228)
+2026-02-13 02:55:37 - 🛑 EarlyStopping counter: 13 out of 15
+2026-02-13 02:59:05 - Epoch 22 | Time: 208.4s | Train Loss: 0.992394 | Val Loss: 3.224397 (CLIP: 5.3730, MSE: 1.075754)
+2026-02-13 02:59:05 - 🛑 EarlyStopping counter: 14 out of 15
+2026-02-13 03:02:31 - Epoch 23 | Time: 205.6s | Train Loss: 0.922289 | Val Loss: 3.226798 (CLIP: 5.3720, MSE: 1.081642)
+2026-02-13 03:02:31 - 🛑 EarlyStopping counter: 15 out of 15
+2026-02-13 03:02:31 - 🛑 Early stopping triggered!
+2026-02-13 03:02:31 - 🎉 Training Finished!
+2026-02-19 14:47:18 - 
+==================================================
+2026-02-19 14:47:18 - 🚀 Initializing Training (Target: CLIP Text Sequence)
+2026-02-19 14:47:18 -    CLIP Dim: 768 (Global)
+2026-02-19 14:47:18 -    MSE Dim:  768 (Mean Token)
+2026-02-19 14:47:18 - ==================================================
+2026-02-19 14:47:18 - 📊 CLIP Text stats found at ./checkpoints/clip_text_hybrid/clip_text_stats.npz
+2026-02-19 14:47:18 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-19 14:47:20 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-19 14:50:29 - Epoch 1 | Time: 188.6s | Train Loss: 2.934377 | Val Loss: 2.927662 (CLIP: 4.8524, MSE: 1.002934)
+2026-02-19 14:50:29 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 14:53:41 - Epoch 2 | Time: 191.9s | Train Loss: 2.922020 | Val Loss: 2.908896 (CLIP: 4.8161, MSE: 1.001731)
+2026-02-19 14:53:41 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 14:56:54 - Epoch 3 | Time: 192.9s | Train Loss: 2.899936 | Val Loss: 2.893645 (CLIP: 4.7866, MSE: 1.000678)
+2026-02-19 14:56:54 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 15:00:10 - Epoch 4 | Time: 196.7s | Train Loss: 2.877672 | Val Loss: 2.870747 (CLIP: 4.7408, MSE: 1.000712)
+2026-02-19 15:00:10 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 15:03:21 - Epoch 5 | Time: 190.1s | Train Loss: 2.849810 | Val Loss: 2.852465 (CLIP: 4.7059, MSE: 0.999008)
+2026-02-19 15:03:21 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 15:06:33 - Epoch 6 | Time: 191.9s | Train Loss: 2.827733 | Val Loss: 2.843482 (CLIP: 4.6888, MSE: 0.998159)
+2026-02-19 15:06:33 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 15:09:44 - Epoch 7 | Time: 191.2s | Train Loss: 2.809499 | Val Loss: 2.840178 (CLIP: 4.6821, MSE: 0.998214)
+2026-02-19 15:09:44 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 15:12:57 - Epoch 8 | Time: 193.2s | Train Loss: 2.790984 | Val Loss: 2.837635 (CLIP: 4.6775, MSE: 0.997729)
+2026-02-19 15:12:57 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 15:16:09 - Epoch 9 | Time: 191.4s | Train Loss: 2.768980 | Val Loss: 2.841708 (CLIP: 4.6840, MSE: 0.999395)
+2026-02-19 15:16:09 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-19 15:19:19 - Epoch 10 | Time: 190.4s | Train Loss: 2.741434 | Val Loss: 2.851656 (CLIP: 4.7034, MSE: 0.999914)
+2026-02-19 15:19:19 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-19 15:19:19 - 💾 Checkpoint saved: ./checkpoints/clip_text_hybrid/epoch_10.pth
+2026-02-19 15:22:33 - Epoch 11 | Time: 193.8s | Train Loss: 2.704173 | Val Loss: 2.857969 (CLIP: 4.7158, MSE: 1.000103)
+2026-02-19 15:22:33 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-19 15:25:12 - Epoch 12 | Time: 158.7s | Train Loss: 2.651209 | Val Loss: 2.877870 (CLIP: 4.7550, MSE: 1.000777)
+2026-02-19 15:25:12 - 🛑 EarlyStopping counter: 4 out of 10
+2026-02-19 15:27:22 - Epoch 13 | Time: 130.3s | Train Loss: 2.572676 | Val Loss: 2.918657 (CLIP: 4.8319, MSE: 1.005445)
+2026-02-19 15:27:22 - 🛑 EarlyStopping counter: 5 out of 10
+2026-02-19 15:29:31 - Epoch 14 | Time: 129.4s | Train Loss: 2.456718 | Val Loss: 2.970602 (CLIP: 4.9305, MSE: 1.010701)
+2026-02-19 15:29:31 - 🛑 EarlyStopping counter: 6 out of 10
+2026-02-19 15:31:41 - Epoch 15 | Time: 130.0s | Train Loss: 2.297569 | Val Loss: 3.032930 (CLIP: 5.0433, MSE: 1.022603)
+2026-02-19 15:31:41 - 🛑 EarlyStopping counter: 7 out of 10
+2026-02-19 15:33:52 - Epoch 16 | Time: 130.4s | Train Loss: 2.090182 | Val Loss: 3.105499 (CLIP: 5.1746, MSE: 1.036424)
+2026-02-19 15:33:52 - 🛑 EarlyStopping counter: 8 out of 10
+2026-02-19 15:36:02 - Epoch 17 | Time: 129.9s | Train Loss: 1.850975 | Val Loss: 3.157308 (CLIP: 5.2711, MSE: 1.043552)
+2026-02-19 15:36:02 - 🛑 EarlyStopping counter: 9 out of 10
+2026-02-19 15:38:11 - Epoch 18 | Time: 129.5s | Train Loss: 1.595401 | Val Loss: 3.221159 (CLIP: 5.3740, MSE: 1.068302)
+2026-02-19 15:38:11 - 🛑 EarlyStopping counter: 10 out of 10
+2026-02-19 15:38:11 - 🛑 Early stopping triggered!
+2026-02-19 15:38:11 - 🎉 Training Finished!
+2026-02-19 19:12:22 - 
+==================================================
+2026-02-19 19:12:22 - 🚀 Initializing Training (Target: CLIP Text Sequence)
+2026-02-19 19:12:22 -    CLIP Dim: 768 (Global)
+2026-02-19 19:12:22 -    MSE Dim:  768 (Mean Token)
+2026-02-19 19:12:22 - ==================================================
+2026-02-19 19:12:22 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-19 19:12:24 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-19 19:14:33 - Epoch 1 | Time: 128.9s | Train Loss: 2.428893 | Val Loss: 2.426334 (CLIP: 4.8522, MSE: 0.000421)
+2026-02-19 19:14:33 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 19:17:16 - Epoch 2 | Time: 163.5s | Train Loss: 2.425669 | Val Loss: 2.422683 (CLIP: 4.8449, MSE: 0.000420)
+2026-02-19 19:17:16 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 19:20:26 - Epoch 3 | Time: 190.0s | Train Loss: 2.408774 | Val Loss: 2.399278 (CLIP: 4.7981, MSE: 0.000492)
+2026-02-19 19:20:26 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 19:23:37 - Epoch 4 | Time: 190.5s | Train Loss: 2.391353 | Val Loss: 2.389998 (CLIP: 4.7795, MSE: 0.000461)
+2026-02-19 19:23:37 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 19:26:55 - Epoch 5 | Time: 197.7s | Train Loss: 2.380420 | Val Loss: 2.383818 (CLIP: 4.7672, MSE: 0.000460)
+2026-02-19 19:26:55 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 19:30:13 - Epoch 6 | Time: 198.4s | Train Loss: 2.369879 | Val Loss: 2.373134 (CLIP: 4.7457, MSE: 0.000525)
+2026-02-19 19:30:13 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 19:33:28 - Epoch 7 | Time: 194.2s | Train Loss: 2.356418 | Val Loss: 2.367368 (CLIP: 4.7342, MSE: 0.000495)
+2026-02-19 19:33:28 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 19:36:41 - Epoch 8 | Time: 193.6s | Train Loss: 2.344382 | Val Loss: 2.361102 (CLIP: 4.7217, MSE: 0.000535)
+2026-02-19 19:36:41 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 19:40:03 - Epoch 9 | Time: 201.9s | Train Loss: 2.334209 | Val Loss: 2.358730 (CLIP: 4.7169, MSE: 0.000539)
+2026-02-19 19:40:03 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 19:43:31 - Epoch 10 | Time: 207.5s | Train Loss: 2.323987 | Val Loss: 2.357498 (CLIP: 4.7145, MSE: 0.000524)
+2026-02-19 19:43:31 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 19:43:31 - 💾 Checkpoint saved: ./checkpoints/clip_text_hybrid/epoch_10.pth
+2026-02-19 19:46:45 - Epoch 11 | Time: 194.0s | Train Loss: 2.313667 | Val Loss: 2.361018 (CLIP: 4.7214, MSE: 0.000591)
+2026-02-19 19:46:45 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-19 19:50:12 - Epoch 12 | Time: 206.9s | Train Loss: 2.302544 | Val Loss: 2.359423 (CLIP: 4.7183, MSE: 0.000576)
+2026-02-19 19:50:12 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-19 23:11:44 - 
+==================================================
+2026-02-19 23:11:44 - 🚀 Initializing Training (Target: CLIP Text Sequence)
+2026-02-19 23:11:44 -    CLIP Dim: 768 (Global)
+2026-02-19 23:11:44 -    MSE Dim:  768 (Mean Token)
+2026-02-19 23:11:44 - ==================================================
+2026-02-19 23:11:44 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-19 23:11:46 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-19 23:15:29 - Epoch 1 | Time: 222.5s | Train Loss: 2.423150 | Val Loss: 2.408498 (CLIP: 4.8163, MSE: 0.000697)
+2026-02-19 23:15:29 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 23:18:35 - Epoch 2 | Time: 186.2s | Train Loss: 2.401220 | Val Loss: 2.393271 (CLIP: 4.7859, MSE: 0.000604)
+2026-02-19 23:18:35 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 23:21:44 - Epoch 3 | Time: 189.2s | Train Loss: 2.380887 | Val Loss: 2.378515 (CLIP: 4.7564, MSE: 0.000616)
+2026-02-19 23:21:44 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 23:24:53 - Epoch 4 | Time: 188.7s | Train Loss: 2.365081 | Val Loss: 2.368783 (CLIP: 4.7370, MSE: 0.000615)
+2026-02-19 23:24:53 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 23:28:11 - Epoch 5 | Time: 197.6s | Train Loss: 2.351995 | Val Loss: 2.360869 (CLIP: 4.7211, MSE: 0.000674)
+2026-02-19 23:28:11 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 23:31:20 - Epoch 6 | Time: 188.7s | Train Loss: 2.339236 | Val Loss: 2.358118 (CLIP: 4.7156, MSE: 0.000628)
+2026-02-19 23:31:20 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 23:34:25 - Epoch 7 | Time: 185.6s | Train Loss: 2.326959 | Val Loss: 2.354615 (CLIP: 4.7086, MSE: 0.000615)
+2026-02-19 23:34:25 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 23:37:37 - Epoch 8 | Time: 191.8s | Train Loss: 2.313647 | Val Loss: 2.353737 (CLIP: 4.7068, MSE: 0.000652)
+2026-02-19 23:37:37 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 23:40:51 - Epoch 9 | Time: 193.5s | Train Loss: 2.300763 | Val Loss: 2.352726 (CLIP: 4.7048, MSE: 0.000683)
+2026-02-19 23:40:51 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-19 23:43:58 - Epoch 10 | Time: 186.8s | Train Loss: 2.286762 | Val Loss: 2.353331 (CLIP: 4.7060, MSE: 0.000639)
+2026-02-19 23:43:58 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-19 23:43:58 - 💾 Checkpoint saved: ./checkpoints/clip_text_hybrid/epoch_10.pth
+2026-02-19 23:47:07 - Epoch 11 | Time: 189.1s | Train Loss: 2.271360 | Val Loss: 2.358625 (CLIP: 4.7165, MSE: 0.000717)
+2026-02-19 23:47:07 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-19 23:50:23 - Epoch 12 | Time: 195.7s | Train Loss: 2.253525 | Val Loss: 2.362445 (CLIP: 4.7242, MSE: 0.000687)
+2026-02-19 23:50:23 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-19 23:53:34 - Epoch 13 | Time: 191.1s | Train Loss: 2.231855 | Val Loss: 2.361289 (CLIP: 4.7219, MSE: 0.000652)
+2026-02-19 23:53:34 - 🛑 EarlyStopping counter: 4 out of 10
+2026-02-19 23:56:40 - Epoch 14 | Time: 186.8s | Train Loss: 2.206367 | Val Loss: 2.369617 (CLIP: 4.7385, MSE: 0.000711)
+2026-02-19 23:56:40 - 🛑 EarlyStopping counter: 5 out of 10
+2026-02-19 23:59:46 - Epoch 15 | Time: 185.1s | Train Loss: 2.174144 | Val Loss: 2.376392 (CLIP: 4.7521, MSE: 0.000680)
+2026-02-19 23:59:46 - 🛑 EarlyStopping counter: 6 out of 10
+2026-02-20 00:02:29 - Epoch 16 | Time: 163.6s | Train Loss: 2.131423 | Val Loss: 2.387319 (CLIP: 4.7740, MSE: 0.000641)
+2026-02-20 00:02:29 - 🛑 EarlyStopping counter: 7 out of 10
+2026-02-20 00:05:09 - Epoch 17 | Time: 159.5s | Train Loss: 2.080063 | Val Loss: 2.401870 (CLIP: 4.8031, MSE: 0.000623)
+2026-02-20 00:05:09 - 🛑 EarlyStopping counter: 8 out of 10
+2026-02-20 00:08:20 - Epoch 18 | Time: 191.3s | Train Loss: 2.015685 | Val Loss: 2.420105 (CLIP: 4.8396, MSE: 0.000579)
+2026-02-20 00:08:20 - 🛑 EarlyStopping counter: 9 out of 10
+2026-02-20 00:11:29 - Epoch 19 | Time: 188.8s | Train Loss: 1.938610 | Val Loss: 2.431434 (CLIP: 4.8623, MSE: 0.000556)
+2026-02-20 00:11:29 - 🛑 EarlyStopping counter: 10 out of 10
+2026-02-20 00:11:29 - 🛑 Early stopping triggered!
+2026-02-20 00:11:29 - 🎉 Training Finished!
+2026-02-20 10:28:29 - 
+==================================================
+2026-02-20 10:28:29 - 🚀 Initializing Training (Target: CLIP Text Sequence)
+2026-02-20 10:28:29 -    CLIP Dim: 768 (Global)
+2026-02-20 10:28:29 -    MSE Dim:  768 (Mean Token)
+2026-02-20 10:28:29 - ==================================================
+2026-02-20 10:28:29 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-20 10:28:31 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-20 10:31:41 - Epoch 1 | Time: 189.9s | Train Loss: 2.421024 | Val Loss: 2.409726 (CLIP: 4.8188, MSE: 0.000680)
+2026-02-20 10:31:41 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-20 10:34:57 - Epoch 2 | Time: 196.2s | Train Loss: 2.394491 | Val Loss: 2.387688 (CLIP: 4.7748, MSE: 0.000598)
+2026-02-20 10:34:57 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-20 10:38:15 - Epoch 3 | Time: 198.4s | Train Loss: 2.375556 | Val Loss: 2.373522 (CLIP: 4.7464, MSE: 0.000604)
+2026-02-20 10:38:16 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-20 10:41:32 - Epoch 4 | Time: 196.7s | Train Loss: 2.361281 | Val Loss: 2.366044 (CLIP: 4.7315, MSE: 0.000637)
+2026-02-20 10:41:32 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-20 10:44:52 - Epoch 5 | Time: 199.4s | Train Loss: 2.347167 | Val Loss: 2.360734 (CLIP: 4.7208, MSE: 0.000672)
+2026-02-20 10:44:52 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-20 10:48:15 - Epoch 6 | Time: 202.8s | Train Loss: 2.335687 | Val Loss: 2.355172 (CLIP: 4.7098, MSE: 0.000587)
+2026-02-20 10:48:15 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-20 10:51:28 - Epoch 7 | Time: 193.6s | Train Loss: 2.324711 | Val Loss: 2.356518 (CLIP: 4.7124, MSE: 0.000605)
+2026-02-20 10:51:28 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-20 10:54:51 - Epoch 8 | Time: 202.5s | Train Loss: 2.314344 | Val Loss: 2.350964 (CLIP: 4.7013, MSE: 0.000589)
+2026-02-20 10:54:51 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-20 10:58:14 - Epoch 9 | Time: 203.2s | Train Loss: 2.302227 | Val Loss: 2.354696 (CLIP: 4.7087, MSE: 0.000649)
+2026-02-20 10:58:14 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-20 11:01:37 - Epoch 10 | Time: 202.9s | Train Loss: 2.291048 | Val Loss: 2.358621 (CLIP: 4.7166, MSE: 0.000630)
+2026-02-20 11:01:37 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-20 11:01:37 - 💾 Checkpoint saved: ./checkpoints/clip_text_hybrid/epoch_10.pth
+2026-02-20 11:05:04 - Epoch 11 | Time: 206.4s | Train Loss: 2.278226 | Val Loss: 2.356000 (CLIP: 4.7113, MSE: 0.000659)
+2026-02-20 11:05:04 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-20 11:08:35 - Epoch 12 | Time: 211.4s | Train Loss: 2.264552 | Val Loss: 2.358059 (CLIP: 4.7155, MSE: 0.000666)
+2026-02-20 11:08:35 - 🛑 EarlyStopping counter: 4 out of 10
+2026-02-20 11:12:08 - Epoch 13 | Time: 212.8s | Train Loss: 2.249416 | Val Loss: 2.359266 (CLIP: 4.7179, MSE: 0.000631)
+2026-02-20 11:12:08 - 🛑 EarlyStopping counter: 5 out of 10
+2026-02-20 11:15:47 - Epoch 14 | Time: 219.7s | Train Loss: 2.233992 | Val Loss: 2.366023 (CLIP: 4.7314, MSE: 0.000657)
+2026-02-20 11:15:47 - 🛑 EarlyStopping counter: 6 out of 10
+2026-02-20 11:19:25 - Epoch 15 | Time: 217.5s | Train Loss: 2.214759 | Val Loss: 2.365730 (CLIP: 4.7308, MSE: 0.000615)
+2026-02-20 11:19:25 - 🛑 EarlyStopping counter: 7 out of 10
+2026-02-20 11:23:00 - Epoch 16 | Time: 215.2s | Train Loss: 2.192020 | Val Loss: 2.374446 (CLIP: 4.7483, MSE: 0.000623)
+2026-02-20 11:23:00 - 🛑 EarlyStopping counter: 8 out of 10
+2026-02-20 11:26:41 - Epoch 17 | Time: 221.0s | Train Loss: 2.166833 | Val Loss: 2.381984 (CLIP: 4.7634, MSE: 0.000590)
+2026-02-20 11:26:41 - 🛑 EarlyStopping counter: 9 out of 10
+2026-02-20 11:30:10 - Epoch 18 | Time: 209.0s | Train Loss: 2.138109 | Val Loss: 2.385279 (CLIP: 4.7700, MSE: 0.000566)
+2026-02-20 11:30:10 - 🛑 EarlyStopping counter: 10 out of 10
+2026-02-20 11:30:10 - 🛑 Early stopping triggered!
+2026-02-20 11:30:10 - 🎉 Training Finished!
+2026-02-20 13:49:58 - 
+==================================================
+2026-02-20 13:49:58 - 🚀 Initializing Training (Target: CLIP Text Sequence)
+2026-02-20 13:49:58 -    CLIP Dim: 768 (Global)
+2026-02-20 13:49:58 -    MSE Dim:  768 (Mean Token)
+2026-02-20 13:49:58 - ==================================================
+2026-02-20 13:49:58 - 📊 CLIP Text stats found at ./checkpoints/clip_text_hybrid/clip_text_stats.npz
+2026-02-20 13:49:58 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-20 13:50:01 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-20 13:54:17 - Epoch 1 | Time: 255.2s | Train Loss: 2.928375 | Val Loss: 2.911378 (CLIP: 4.8193, MSE: 1.003496)
+2026-02-20 13:54:17 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-20 13:57:47 - Epoch 2 | Time: 210.1s | Train Loss: 2.896664 | Val Loss: 2.884177 (CLIP: 4.7677, MSE: 1.000665)
+2026-02-20 13:57:47 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-20 14:01:07 - Epoch 3 | Time: 200.5s | Train Loss: 2.874191 | Val Loss: 2.871818 (CLIP: 4.7439, MSE: 0.999690)
+2026-02-20 14:01:07 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-20 14:04:31 - Epoch 4 | Time: 203.9s | Train Loss: 2.857969 | Val Loss: 2.860467 (CLIP: 4.7217, MSE: 0.999237)
+2026-02-20 14:04:31 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-20 14:07:52 - Epoch 5 | Time: 200.7s | Train Loss: 2.844164 | Val Loss: 2.853838 (CLIP: 4.7085, MSE: 0.999193)
+2026-02-20 14:07:52 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-20 14:11:13 - Epoch 6 | Time: 200.6s | Train Loss: 2.831729 | Val Loss: 2.850018 (CLIP: 4.7019, MSE: 0.998151)
+2026-02-20 14:11:13 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-20 14:14:36 - Epoch 7 | Time: 202.7s | Train Loss: 2.818010 | Val Loss: 2.842344 (CLIP: 4.6863, MSE: 0.998427)
+2026-02-20 14:14:36 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-20 14:18:03 - Epoch 8 | Time: 207.0s | Train Loss: 2.804972 | Val Loss: 2.841190 (CLIP: 4.6840, MSE: 0.998392)
+2026-02-20 14:18:03 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-20 14:21:35 - Epoch 9 | Time: 212.7s | Train Loss: 2.790949 | Val Loss: 2.844820 (CLIP: 4.6911, MSE: 0.998590)
+2026-02-20 14:21:35 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-20 14:25:03 - Epoch 10 | Time: 207.4s | Train Loss: 2.777183 | Val Loss: 2.843108 (CLIP: 4.6876, MSE: 0.998612)
+2026-02-20 14:25:03 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-20 14:25:03 - 💾 Checkpoint saved: ./checkpoints/clip_text_hybrid/epoch_10.pth
+2026-02-20 14:28:27 - Epoch 11 | Time: 204.3s | Train Loss: 2.762786 | Val Loss: 2.840650 (CLIP: 4.6831, MSE: 0.998193)
+2026-02-20 14:28:27 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-20 14:31:58 - Epoch 12 | Time: 210.4s | Train Loss: 2.746170 | Val Loss: 2.843027 (CLIP: 4.6874, MSE: 0.998625)
+2026-02-20 14:31:58 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-20 14:35:28 - Epoch 13 | Time: 210.6s | Train Loss: 2.727004 | Val Loss: 2.855402 (CLIP: 4.7111, MSE: 0.999705)
+2026-02-20 14:35:28 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-20 14:39:04 - Epoch 14 | Time: 215.8s | Train Loss: 2.706433 | Val Loss: 2.860340 (CLIP: 4.7211, MSE: 0.999623)
+2026-02-20 14:39:04 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-20 14:41:48 - Epoch 15 | Time: 163.6s | Train Loss: 2.682376 | Val Loss: 2.878813 (CLIP: 4.7545, MSE: 1.003175)
+2026-02-20 14:41:48 - 🛑 EarlyStopping counter: 4 out of 10
+2026-02-20 14:44:21 - Epoch 16 | Time: 153.0s | Train Loss: 2.654616 | Val Loss: 2.888615 (CLIP: 4.7737, MSE: 1.003558)
+2026-02-20 14:44:21 - 🛑 EarlyStopping counter: 5 out of 10
+2026-02-20 14:46:51 - Epoch 17 | Time: 150.5s | Train Loss: 2.620195 | Val Loss: 2.897158 (CLIP: 4.7899, MSE: 1.004412)
+2026-02-20 14:46:51 - 🛑 EarlyStopping counter: 6 out of 10
+2026-02-20 14:49:26 - Epoch 18 | Time: 154.9s | Train Loss: 2.581178 | Val Loss: 2.918373 (CLIP: 4.8284, MSE: 1.008349)
+2026-02-20 14:49:26 - 🛑 EarlyStopping counter: 7 out of 10
+2026-02-20 14:52:04 - Epoch 19 | Time: 158.2s | Train Loss: 2.534025 | Val Loss: 2.936563 (CLIP: 4.8625, MSE: 1.010588)
+2026-02-20 14:52:04 - 🛑 EarlyStopping counter: 8 out of 10
+2026-02-20 14:55:02 - Epoch 20 | Time: 177.6s | Train Loss: 2.483001 | Val Loss: 2.951081 (CLIP: 4.8906, MSE: 1.011594)
+2026-02-20 14:55:02 - 🛑 EarlyStopping counter: 9 out of 10
+2026-02-20 14:55:02 - 💾 Checkpoint saved: ./checkpoints/clip_text_hybrid/epoch_20.pth
+2026-02-20 14:58:49 - Epoch 21 | Time: 226.7s | Train Loss: 2.422877 | Val Loss: 2.972293 (CLIP: 4.9287, MSE: 1.015868)
+2026-02-20 14:58:49 - 🛑 EarlyStopping counter: 10 out of 10
+2026-02-20 14:58:49 - 🛑 Early stopping triggered!
+2026-02-20 14:58:49 - 🎉 Training Finished!
+2026-02-24 02:01:33 - 
+==================================================
+2026-02-24 02:01:33 - 🚀 Initializing Training (Target: CLIP Text Sequence)
+2026-02-24 02:01:33 -    CLIP Dim: 768 (Global)
+2026-02-24 02:01:33 -    MSE Dim:  768 (Mean Token)
+2026-02-24 02:01:33 - ==================================================
+2026-02-24 02:01:33 - 📊 Calculating CLIP Text Mean/Std...
+2026-02-24 02:01:34 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-24 02:01:35 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-24 02:03:57 - Epoch 1 | Time: 141.8s | Train Loss: 2.921697 | Val Loss: 2.870121 (CLIP: 4.7388, MSE: 1.001429)
+2026-02-24 02:03:57 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-24 02:06:25 - Epoch 2 | Time: 147.8s | Train Loss: 2.827871 | Val Loss: 2.800156 (CLIP: 4.6030, MSE: 0.997346)
+2026-02-24 02:06:25 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-24 02:08:27 - Epoch 3 | Time: 122.2s | Train Loss: 2.769941 | Val Loss: 2.757923 (CLIP: 4.5201, MSE: 0.995768)
+2026-02-24 02:08:27 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-24 02:10:32 - Epoch 4 | Time: 124.3s | Train Loss: 2.725282 | Val Loss: 2.727801 (CLIP: 4.4607, MSE: 0.994935)
+2026-02-24 02:10:32 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-24 02:12:38 - Epoch 5 | Time: 126.5s | Train Loss: 2.686445 | Val Loss: 2.703641 (CLIP: 4.4131, MSE: 0.994163)
+2026-02-24 02:12:38 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-24 02:14:44 - Epoch 6 | Time: 126.2s | Train Loss: 2.650799 | Val Loss: 2.684041 (CLIP: 4.3757, MSE: 0.992400)
+2026-02-24 02:14:44 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-24 02:16:47 - Epoch 7 | Time: 122.4s | Train Loss: 2.614980 | Val Loss: 2.672857 (CLIP: 4.3530, MSE: 0.992697)
+2026-02-24 02:16:47 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-24 02:18:50 - Epoch 8 | Time: 123.1s | Train Loss: 2.578985 | Val Loss: 2.660845 (CLIP: 4.3304, MSE: 0.991309)
+2026-02-24 02:18:50 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-24 02:20:55 - Epoch 9 | Time: 124.4s | Train Loss: 2.541457 | Val Loss: 2.654944 (CLIP: 4.3171, MSE: 0.992777)
+2026-02-24 02:20:55 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-24 02:22:55 - Epoch 10 | Time: 120.1s | Train Loss: 2.500159 | Val Loss: 2.652751 (CLIP: 4.3121, MSE: 0.993369)
+2026-02-24 02:22:55 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-24 02:22:55 - 💾 Checkpoint saved: ./checkpoints/clip_text_hybrid/epoch_10.pth
+2026-02-24 02:24:58 - Epoch 11 | Time: 123.2s | Train Loss: 2.455975 | Val Loss: 2.661543 (CLIP: 4.3284, MSE: 0.994643)
+2026-02-24 02:24:58 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-24 02:26:58 - Epoch 12 | Time: 119.5s | Train Loss: 2.403957 | Val Loss: 2.665875 (CLIP: 4.3331, MSE: 0.998640)
+2026-02-24 02:26:58 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-24 02:29:07 - Epoch 13 | Time: 129.2s | Train Loss: 2.345733 | Val Loss: 2.679076 (CLIP: 4.3589, MSE: 0.999274)
+2026-02-24 02:29:07 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-24 02:31:12 - Epoch 14 | Time: 125.7s | Train Loss: 2.279945 | Val Loss: 2.687473 (CLIP: 4.3745, MSE: 1.000483)
+2026-02-24 02:31:12 - 🛑 EarlyStopping counter: 4 out of 10
+2026-02-24 02:33:21 - Epoch 15 | Time: 128.1s | Train Loss: 2.207631 | Val Loss: 2.708699 (CLIP: 4.4117, MSE: 1.005664)
+2026-02-24 02:33:21 - 🛑 EarlyStopping counter: 5 out of 10
+2026-02-24 02:35:27 - Epoch 16 | Time: 126.2s | Train Loss: 2.130099 | Val Loss: 2.723826 (CLIP: 4.4388, MSE: 1.008814)
+2026-02-24 02:35:27 - 🛑 EarlyStopping counter: 6 out of 10
+2026-02-24 02:37:28 - Epoch 17 | Time: 121.3s | Train Loss: 2.047556 | Val Loss: 2.744839 (CLIP: 4.4770, MSE: 1.012670)
+2026-02-24 02:37:28 - 🛑 EarlyStopping counter: 7 out of 10
+2026-02-24 02:39:05 - Epoch 18 | Time: 96.7s | Train Loss: 1.962492 | Val Loss: 2.765570 (CLIP: 4.5148, MSE: 1.016372)
+2026-02-24 02:39:05 - 🛑 EarlyStopping counter: 8 out of 10
+2026-02-24 02:41:05 - Epoch 19 | Time: 120.5s | Train Loss: 1.881153 | Val Loss: 2.794168 (CLIP: 4.5650, MSE: 1.023362)
+2026-02-24 02:41:05 - 🛑 EarlyStopping counter: 9 out of 10
+2026-02-24 02:43:04 - Epoch 20 | Time: 118.3s | Train Loss: 1.796613 | Val Loss: 2.814559 (CLIP: 4.6015, MSE: 1.027611)
+2026-02-24 02:43:04 - 🛑 EarlyStopping counter: 10 out of 10
+2026-02-24 02:43:04 - 🛑 Early stopping triggered!
+2026-02-24 02:43:04 - 🎉 Training Finished!
+2026-02-25 00:37:39 - 
+==================================================
+2026-02-25 00:37:39 - 🚀 Initializing Training (Target: CLIP Text Sequence)
+2026-02-25 00:37:39 -    CLIP Dim: 768 (Global)
+2026-02-25 00:37:39 -    MSE Dim:  768 (Mean Token)
+2026-02-25 00:37:39 - ==================================================
+2026-02-25 00:37:39 - 📊 CLIP Text stats found at ./checkpoints/clip_text_hybrid/clip_text_stats.npz
+2026-02-25 00:37:39 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-25 00:37:41 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-25 00:39:57 - Epoch 1 | Time: 135.8s | Train Loss: 1.388200 | Val Loss: 1.384444 (CLIP: 4.8397, MSE: 1.000524)
+2026-02-25 00:39:57 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-25 00:42:06 - Epoch 2 | Time: 129.0s | Train Loss: 1.370767 | Val Loss: 1.360290 (CLIP: 4.6420, MSE: 0.995660)
+2026-02-25 00:42:06 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-25 00:44:23 - Epoch 3 | Time: 137.2s | Train Loss: 1.348848 | Val Loss: 1.349036 (CLIP: 4.5521, MSE: 0.993144)
+2026-02-25 00:44:23 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-25 00:46:34 - Epoch 4 | Time: 131.0s | Train Loss: 1.330673 | Val Loss: 1.343708 (CLIP: 4.5100, MSE: 0.991897)
+2026-02-25 00:46:34 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-25 00:48:52 - Epoch 5 | Time: 138.2s | Train Loss: 1.311654 | Val Loss: 1.344116 (CLIP: 4.5171, MSE: 0.991561)
+2026-02-25 00:48:52 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-25 00:51:10 - Epoch 6 | Time: 137.3s | Train Loss: 1.289244 | Val Loss: 1.348678 (CLIP: 4.5532, MSE: 0.992618)
+2026-02-25 00:51:10 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-25 00:53:15 - Epoch 7 | Time: 124.9s | Train Loss: 1.264736 | Val Loss: 1.350864 (CLIP: 4.5677, MSE: 0.993436)
+2026-02-25 00:53:15 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-25 00:55:27 - Epoch 8 | Time: 132.6s | Train Loss: 1.236736 | Val Loss: 1.356189 (CLIP: 4.5971, MSE: 0.996093)
+2026-02-25 00:55:27 - 🛑 EarlyStopping counter: 4 out of 10
+2026-02-25 00:57:40 - Epoch 9 | Time: 132.9s | Train Loss: 1.204530 | Val Loss: 1.363814 (CLIP: 4.6415, MSE: 0.999632)
+2026-02-25 00:57:40 - 🛑 EarlyStopping counter: 5 out of 10
+2026-02-25 00:59:50 - Epoch 10 | Time: 130.3s | Train Loss: 1.167652 | Val Loss: 1.375727 (CLIP: 4.6859, MSE: 1.007928)
+2026-02-25 00:59:50 - 🛑 EarlyStopping counter: 6 out of 10
+2026-02-25 00:59:50 - 💾 Checkpoint saved: ./checkpoints/clip_text_hybrid/epoch_10.pth
+2026-02-25 01:02:01 - Epoch 11 | Time: 131.0s | Train Loss: 1.126876 | Val Loss: 1.384926 (CLIP: 4.7249, MSE: 1.013814)
+2026-02-25 01:02:01 - 🛑 EarlyStopping counter: 7 out of 10
+2026-02-25 01:04:23 - Epoch 12 | Time: 141.6s | Train Loss: 1.083822 | Val Loss: 1.400380 (CLIP: 4.7718, MSE: 1.025773)
+2026-02-25 01:04:23 - 🛑 EarlyStopping counter: 8 out of 10
+2026-02-25 01:06:37 - Epoch 13 | Time: 133.8s | Train Loss: 1.041196 | Val Loss: 1.416832 (CLIP: 4.8393, MSE: 1.036560)
+2026-02-25 01:06:37 - 🛑 EarlyStopping counter: 9 out of 10
+2026-02-25 01:08:49 - Epoch 14 | Time: 132.3s | Train Loss: 0.999511 | Val Loss: 1.430404 (CLIP: 4.8802, MSE: 1.047093)
+2026-02-25 01:08:49 - 🛑 EarlyStopping counter: 10 out of 10
+2026-02-25 01:08:49 - 🛑 Early stopping triggered!
+2026-02-25 01:08:49 - 🎉 Training Finished!
+2026-02-25 01:12:50 - 
+==================================================
+2026-02-25 01:12:50 - 🚀 Initializing Training (Target: CLIP Text Sequence)
+2026-02-25 01:12:50 -    CLIP Dim: 768 (Global)
+2026-02-25 01:12:50 -    MSE Dim:  768 (Mean Token)
+2026-02-25 01:12:50 - ==================================================
+2026-02-25 01:12:50 - 📊 CLIP Text stats found at ./checkpoints/clip_text_hybrid/clip_text_stats.npz
+2026-02-25 01:12:50 - 📊 Dataset Split -> Train: 63513, Val: 15879
+2026-02-25 01:12:52 - 🚀 Start Training Loop (Standard FP32)...
+2026-02-25 01:15:00 - Epoch 1 | Time: 128.1s | Train Loss: 1.390956 | Val Loss: 1.387445 (CLIP: 4.8499, MSE: 1.002733)
+2026-02-25 01:15:01 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-25 01:17:10 - Epoch 2 | Time: 129.4s | Train Loss: 1.376060 | Val Loss: 1.365784 (CLIP: 4.6772, MSE: 0.997846)
+2026-02-25 01:17:10 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-25 01:19:19 - Epoch 3 | Time: 129.1s | Train Loss: 1.356567 | Val Loss: 1.351368 (CLIP: 4.5642, MSE: 0.994382)
+2026-02-25 01:19:19 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-25 01:21:29 - Epoch 4 | Time: 129.9s | Train Loss: 1.345280 | Val Loss: 1.345005 (CLIP: 4.5130, MSE: 0.993005)
+2026-02-25 01:21:29 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-25 01:23:39 - Epoch 5 | Time: 129.9s | Train Loss: 1.336027 | Val Loss: 1.338109 (CLIP: 4.4606, MSE: 0.991170)
+2026-02-25 01:23:39 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-25 01:25:47 - Epoch 6 | Time: 128.1s | Train Loss: 1.327910 | Val Loss: 1.332423 (CLIP: 4.4142, MSE: 0.990005)
+2026-02-25 01:25:47 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-25 01:27:56 - Epoch 7 | Time: 128.8s | Train Loss: 1.319808 | Val Loss: 1.328134 (CLIP: 4.3807, MSE: 0.988963)
+2026-02-25 01:27:56 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-25 01:30:06 - Epoch 8 | Time: 129.7s | Train Loss: 1.311822 | Val Loss: 1.325266 (CLIP: 4.3577, MSE: 0.988324)
+2026-02-25 01:30:06 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-25 01:32:16 - Epoch 9 | Time: 130.0s | Train Loss: 1.303973 | Val Loss: 1.323447 (CLIP: 4.3435, MSE: 0.987883)
+2026-02-25 01:32:16 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-25 01:34:25 - Epoch 10 | Time: 128.4s | Train Loss: 1.295578 | Val Loss: 1.323095 (CLIP: 4.3377, MSE: 0.988142)
+2026-02-25 01:34:25 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-25 01:34:25 - 💾 Checkpoint saved: ./checkpoints/clip_text_hybrid/epoch_10.pth
+2026-02-25 01:36:37 - Epoch 11 | Time: 131.8s | Train Loss: 1.286511 | Val Loss: 1.321590 (CLIP: 4.3312, MSE: 0.987190)
+2026-02-25 01:36:37 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-25 01:38:48 - Epoch 12 | Time: 131.5s | Train Loss: 1.276622 | Val Loss: 1.321035 (CLIP: 4.3273, MSE: 0.987000)
+2026-02-25 01:38:48 - ✅ Validation loss decreased. Saving best model to ./checkpoints/clip_text_hybrid/best_model.pth
+2026-02-25 01:40:59 - Epoch 13 | Time: 130.7s | Train Loss: 1.265156 | Val Loss: 1.325233 (CLIP: 4.3560, MSE: 0.988478)
+2026-02-25 01:40:59 - 🛑 EarlyStopping counter: 1 out of 10
+2026-02-25 01:43:08 - Epoch 14 | Time: 129.5s | Train Loss: 1.253658 | Val Loss: 1.324145 (CLIP: 4.3553, MSE: 0.987350)
+2026-02-25 01:43:08 - 🛑 EarlyStopping counter: 2 out of 10
+2026-02-25 01:45:20 - Epoch 15 | Time: 132.1s | Train Loss: 1.239994 | Val Loss: 1.329915 (CLIP: 4.3886, MSE: 0.990062)
+2026-02-25 01:45:20 - 🛑 EarlyStopping counter: 3 out of 10
+2026-02-25 01:47:32 - Epoch 16 | Time: 131.3s | Train Loss: 1.226265 | Val Loss: 1.336125 (CLIP: 4.4297, MSE: 0.992399)
+2026-02-25 01:47:32 - 🛑 EarlyStopping counter: 4 out of 10
+2026-02-25 01:49:42 - Epoch 17 | Time: 129.9s | Train Loss: 1.211646 | Val Loss: 1.340266 (CLIP: 4.4501, MSE: 0.994729)
+2026-02-25 01:49:42 - 🛑 EarlyStopping counter: 5 out of 10
+2026-02-25 01:51:50 - Epoch 18 | Time: 128.5s | Train Loss: 1.196707 | Val Loss: 1.345967 (CLIP: 4.4916, MSE: 0.996457)
+2026-02-25 01:51:50 - 🛑 EarlyStopping counter: 6 out of 10
+2026-02-25 01:54:00 - Epoch 19 | Time: 129.8s | Train Loss: 1.181859 | Val Loss: 1.347735 (CLIP: 4.5079, MSE: 0.996606)
+2026-02-25 01:54:00 - 🛑 EarlyStopping counter: 7 out of 10
+2026-02-25 01:56:09 - Epoch 20 | Time: 129.4s | Train Loss: 1.166719 | Val Loss: 1.358732 (CLIP: 4.5478, MSE: 1.004396)
+2026-02-25 01:56:09 - 🛑 EarlyStopping counter: 8 out of 10
+2026-02-25 01:56:09 - 💾 Checkpoint saved: ./checkpoints/clip_text_hybrid/epoch_20.pth
+2026-02-25 01:58:21 - Epoch 21 | Time: 131.8s | Train Loss: 1.151463 | Val Loss: 1.362353 (CLIP: 4.5809, MSE: 1.004734)
+2026-02-25 01:58:21 - 🛑 EarlyStopping counter: 9 out of 10
+2026-02-25 02:00:01 - Epoch 22 | Time: 99.5s | Train Loss: 1.137199 | Val Loss: 1.371350 (CLIP: 4.6089, MSE: 1.011620)
+2026-02-25 02:00:01 - 🛑 EarlyStopping counter: 10 out of 10
+2026-02-25 02:00:01 - 🛑 Early stopping triggered!
+2026-02-25 02:00:01 - 🎉 Training Finished!
