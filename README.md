@@ -2,6 +2,7 @@
 
 This repository is an implementation for the paper:  
 **[Decoding visual stimulus from non-invasive MEG recordings of brain activity](https://arxiv.org/abs/2310.19812)** 
+[Watch the detailed video explanation and walk-through here](https://youtu.be/8kQtN1Wgr98)
 
 ## 1. Introduction
 
